@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aprovação EMATER-MG — Assistente Administrativo II</title>
+<meta name="description" content="Cursinho completo para Assistente Administrativo II da EMATER-MG 2026 (banca Fundep): edital verticalizado com pegadinhas, aulas do zero, plano com horas por dia, simulados que corrigem sozinho e flashcards. Prova em 29/11/2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Public+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+  /* ===== Tema: água/saneamento (DMAE). Azul institucional + verde "tratada".
+     Claro por padrão; escuro via prefers-color-scheme e [data-theme]. ===== */
+  :root{
+    --bg:#eef3f6; --paper:#ffffff; --paper-2:#f4f8fa;
+    --ink:#122430; --ink-2:#3a5361; --muted:#647d8b; --line:#d7e2e8; --line-2:#e6eef2;
+    --blue:#0d5c86; --blue-2:#1785bf; --blue-soft:#e2f0f8;
+    --teal:#0e8f9c; --green:#1a8f4c; --green-soft:#e3f5ea;
+    --amber:#b45309; --amber-soft:#fbeede; --red:#c0392b; --red-soft:#fbe7e4;
+    --shadow:0 1px 2px rgba(18,36,48,.06),0 8px 24px rgba(18,36,48,.06);
+    --wrongbg:#fbe7e4; --rightbg:#e3f5ea;
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --bg:#0b1418; --paper:#0f1b21; --paper-2:#132430;
+    --ink:#e7eef2; --ink-2:#b3c4cd; --muted:#8399a4; --line:#22343d; --line-2:#1a2a32;
+    --blue:#3ea6dd; --blue-2:#57b6e8; --blue-soft:#12303f;
+    --teal:#2bb6c2; --green:#43c07e; --green-soft:#123026;
+    --amber:#e0a45c; --amber-soft:#2e2410; --red:#e8796c; --red-soft:#2e1613;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+    --wrongbg:#2e1613; --rightbg:#123026;
+  }}
+  :root[data-theme="dark"]{
+    --bg:#0b1418; --paper:#0f1b21; --paper-2:#132430;
+    --ink:#e7eef2; --ink-2:#b3c4cd; --muted:#8399a4; --line:#22343d; --line-2:#1a2a32;
+    --blue:#3ea6dd; --blue-2:#57b6e8; --blue-soft:#12303f;
+    --teal:#2bb6c2; --green:#43c07e; --green-soft:#123026;
+    --amber:#e0a45c; --amber-soft:#2e2410; --red:#e8796c; --red-soft:#2e1613;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+    --wrongbg:#2e1613; --rightbg:#123026;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:70px;overflow-x:clip}
+  body{overflow-x:clip}
+  img,table,pre,.tw{max-width:100%}
+  /* impede que textos longos (URLs, código) estourem a largura no celular */
+  p,li,td,th,dd,dt,h1,h2,h3,h4,span,a,b,strong,em,label{overflow-wrap:break-word}
+  code{white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Public Sans",system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:"Lora",Georgia,serif;line-height:1.2;text-wrap:balance}
+  a{color:var(--blue)}
+  .serif{font-family:"Lora",Georgia,serif}
+
+  /* topbar */
+  .top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .top .in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:10px 18px}
+  .brand{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:.01em}
+  .brand .drop{width:26px;height:26px;border-radius:50% 50% 50% 8px;transform:rotate(45deg);background:linear-gradient(135deg,var(--blue-2),var(--teal));box-shadow:inset 0 0 0 2px rgba(255,255,255,.25)}
+  .brand b{color:var(--blue)}
+  .top .sp{flex:1}
+  .cd{font-size:12.5px;color:var(--ink-2);font-weight:600;border:1px solid var(--line);border-radius:999px;padding:5px 11px;white-space:nowrap}
+  .cd b{color:var(--red);font-variant-numeric:tabular-nums}
+  .tbtn{border:1px solid var(--line);background:var(--paper);color:var(--ink-2);border-radius:9px;padding:6px 9px;cursor:pointer;font-size:14px}
+  .menub{display:none}
+
+  .wrap{max-width:1180px;margin:0 auto;padding:0 18px;display:grid;grid-template-columns:236px 1fr;gap:30px;align-items:start}
+  /* TOC */
+  nav.toc{position:sticky;top:64px;align-self:start;max-height:calc(100vh - 80px);overflow:auto;padding:18px 0 40px;font-size:14px}
+  nav.toc a{display:block;color:var(--ink-2);text-decoration:none;padding:6px 10px;border-radius:7px;border-left:2px solid transparent}
+  nav.toc a:hover{background:var(--paper-2);color:var(--ink)}
+  nav.toc a.on{color:var(--blue);border-left-color:var(--blue);background:var(--blue-soft);font-weight:600}
+  nav.toc .grp{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:16px 10px 4px;font-weight:700}
+  main{min-width:0;padding-bottom:80px}
+
+  section{scroll-margin-top:70px;margin:34px 0}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow)}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin:0 0 6px}
+  h2.sec{font-size:clamp(22px,3.2vw,30px);margin:0 0 14px;color:var(--ink);border-bottom:2px solid var(--blue);padding-bottom:8px;display:inline-block}
+  h3{font-size:19px;margin:22px 0 8px;color:var(--blue)}
+  h4{font-size:15.5px;margin:16px 0 6px}
+  p{margin:0 0 12px;max-width:72ch}
+  ul,ol{margin:0 0 12px;padding-left:22px}
+  li{margin:5px 0;max-width:72ch}
+  strong{color:var(--ink)}
+  .lead{font-size:17px;color:var(--ink-2)}
+  code{background:var(--paper-2);border:1px solid var(--line-2);border-radius:5px;padding:1px 5px;font-size:.9em}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;border-radius:20px;border:1px solid var(--line);background:
+     radial-gradient(120% 90% at 88% -10%, color-mix(in srgb,var(--blue-2) 24%, transparent), transparent 60%),
+     linear-gradient(180deg,var(--paper),var(--paper-2));padding:34px 28px;margin-top:22px}
+  .hero h1{font-size:clamp(28px,5vw,46px);margin:8px 0 6px;letter-spacing:-.01em}
+  .hero h1 em{font-style:normal;color:var(--blue)}
+  .hero .sub{font-size:17px;color:var(--ink-2);max-width:60ch}
+  .facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .fact{background:var(--paper);border:1px solid var(--line);border-radius:11px;padding:9px 13px;font-size:13.5px}
+  .fact b{display:block;font-size:16px;color:var(--blue);font-family:"Lora",serif}
+
+  /* alert */
+  .alert{border-radius:14px;padding:14px 16px;margin:14px 0;border:1px solid;font-size:14.5px}
+  .alert b{font-weight:800}
+  .alert.red{background:var(--red-soft);border-color:color-mix(in srgb,var(--red) 40%,var(--line))}
+  .alert.amber{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 40%,var(--line))}
+  .alert.blue{background:var(--blue-soft);border-color:color-mix(in srgb,var(--blue) 30%,var(--line))}
+  .alert .tag{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+  .alert.red .tag{color:var(--red)} .alert.amber .tag{color:var(--amber)} .alert.blue .tag{color:var(--blue)}
+
+  /* tables */
+  .tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:12px 0}
+  table{width:100%;border-collapse:collapse;font-size:14px;min-width:520px}
+  th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line-2)}
+  th{background:var(--paper-2);color:var(--blue);font-weight:700;position:sticky;top:0}
+  tbody tr:last-child td{border-bottom:0}
+  td.k{font-weight:600;color:var(--ink);white-space:nowrap}
+  .pri{font-weight:800;font-size:11px;padding:2px 7px;border-radius:6px}
+  .p1{background:var(--red-soft);color:var(--red)} .p2{background:var(--amber-soft);color:var(--amber)} .p3{background:var(--paper-2);color:var(--muted)}
+  .peg{color:var(--amber)}
+
+  /* weight bars */
+  .weights{display:grid;gap:9px;margin:10px 0}
+  .wrow{display:grid;grid-template-columns:200px 1fr 54px;gap:12px;align-items:center;font-size:14px}
+  .bar{height:14px;background:var(--paper-2);border-radius:999px;overflow:hidden;border:1px solid var(--line-2)}
+  .bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--blue-2),var(--teal));border-radius:999px}
+  @media(max-width:560px){.wrow{grid-template-columns:1fr;gap:3px}.wrow .bar{grid-row:2}}
+
+  /* simulado */
+  .q{border:1px solid var(--line);border-radius:13px;padding:16px 18px;margin:14px 0;background:var(--paper)}
+  .q .qn{font-weight:700;color:var(--blue);font-size:13px;letter-spacing:.02em}
+  .q .qt{margin:4px 0 12px;font-weight:500}
+  .opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;margin:6px 0;cursor:pointer;transition:background .12s,border-color .12s}
+  .opt:hover{background:var(--paper-2)}
+  .opt input{margin-top:3px}
+  .opt .lt{font-weight:700;color:var(--ink-2)}
+  .opt.right{background:var(--rightbg);border-color:var(--green)}
+  .opt.wrong{background:var(--wrongbg);border-color:var(--red)}
+  .expl{display:none;margin-top:10px;border-left:3px solid var(--blue);background:var(--paper-2);padding:9px 13px;border-radius:0 8px 8px 0;font-size:14px}
+  .expl.show{display:block}
+  .expl b.ok{color:var(--green)} .expl b.no{color:var(--red)}
+  .passage{background:var(--paper-2);border:1px solid var(--line-2);border-left:3px solid var(--teal);border-radius:0 10px 10px 0;padding:12px 16px;margin:10px 0;font-style:italic}
+  .simbar{position:sticky;bottom:0;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-top:16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;box-shadow:var(--shadow)}
+  .btn{background:var(--blue);color:#fff;border:0;border-radius:10px;padding:11px 20px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit}
+  .btn:hover{background:var(--blue-2)}
+  .btn.ghost{background:transparent;color:var(--blue);border:1px solid var(--line)}
+  .score{font-weight:800;font-size:16px}
+  .score b{font-family:"Lora",serif;font-size:20px}
+  .blocklabel{font-family:"Lora",serif;font-size:17px;color:var(--teal);margin:22px 0 4px;font-weight:700}
+
+  /* flashcards */
+  .fctools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:8px 0 14px}
+  .fc{border:1px solid var(--line);border-radius:13px;padding:16px 18px;background:var(--paper);cursor:pointer;min-height:96px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow)}
+  .fc .fq{font-weight:600}
+  .fc .fn{font-size:12px;color:var(--muted);font-weight:700}
+  .fc .fa{display:none;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);color:var(--ink-2)}
+  .fc.open .fa{display:block}
+  .fc .hint{font-size:12px;color:var(--muted);margin-top:6px}
+  .fc.open .hint{display:none}
+
+  /* aula (ensino antes do treino) */
+  .aula{background:var(--blue-soft);border:1px solid color-mix(in srgb,var(--blue) 25%,var(--line));border-radius:12px;padding:14px 16px;margin:6px 0 14px;font-size:14.5px;line-height:1.65}
+  .aula b{color:var(--ink)}
+  .matfilter{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 4px}
+  .matfilter button{border:1px solid var(--line);background:var(--paper);color:var(--ink-2);border-radius:999px;padding:6px 13px;cursor:pointer;font:inherit;font-size:13.5px}
+  .matfilter button.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .matdiv{font-family:"Lora",serif;color:var(--teal);font-size:20px;margin:28px 2px 2px;padding-top:14px;border-top:2px solid var(--line)}
+  /* central de estudos (hub) */
+  .hubgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:14px 0}
+  @media(max-width:640px){.hubgrid{grid-template-columns:1fr}}
+  .hubc{display:block;border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--ink);background:var(--paper-2);transition:border-color .12s,transform .12s}
+  .hubc:hover{border-color:var(--blue);transform:translateY(-1px)}
+  .hubc .hn{display:inline-flex;width:24px;height:24px;align-items:center;justify-content:center;background:var(--blue);color:#fff;border-radius:50%;font-weight:800;font-size:13px;margin-bottom:6px;font-family:"Public Sans",sans-serif}
+  .hubc b{display:block;color:var(--blue);margin:2px 0 4px}
+  .hubc .d{font-size:13.5px;color:var(--ink-2)}
+  /* plano checklist */
+  .chk{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--line-2)}
+  .chk input{margin-top:5px;width:16px;height:16px;accent-color:var(--green);flex:0 0 auto}
+  .chk label{cursor:pointer}
+  .chk.done label{color:var(--muted);text-decoration:line-through}
+  h4.wk{margin:22px 0 4px;color:var(--blue);font-size:.98rem;border-bottom:2px solid var(--line-2);padding-bottom:5px}
+  .callout{background:var(--paper-2);border:1px solid var(--line-2);border-left:4px solid var(--green);border-radius:12px;padding:16px 20px}
+  /* domínio por prioridade */
+  .prband{display:flex;align-items:center;gap:12px;margin:30px 0 6px}
+  .prband .tag{font-weight:800;font-size:.85rem;color:#fff;padding:4px 12px;border-radius:20px;letter-spacing:.03em}
+  .prband.p1 .tag{background:var(--p1,#c0392b)} .prband.p2 .tag{background:var(--p2,#d68910)} .prband.p3 .tag{background:var(--p3,#5d6d7e)}
+  .prband h3{margin:0;font-size:1.05rem;color:var(--ink)}
+  .prband .cnt{margin-left:auto;font-size:.82rem;color:var(--muted)}
+  .domgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+  @media(max-width:760px){.domgrid{grid-template-columns:1fr}}
+  .domc{background:var(--paper-2);border:1px solid var(--line-2);border-radius:12px;padding:14px 16px}
+  .domc h4{margin:0 0 7px;color:var(--blue);font-size:1rem;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .domc h4 .mt{font-size:.72rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+  .domc p{margin:0 0 8px;font-size:.93rem;line-height:1.5}
+  .domc .na{margin:0;font-size:.9rem;background:var(--paper);border-left:3px solid var(--green);border-radius:0 8px 8px 0;padding:8px 11px}
+  .domc .na b{color:var(--green)}
+  .domc .ap{margin:0 0 8px;font-size:.92rem;line-height:1.55;background:var(--blue-soft);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:8px 11px}
+  .domc .ap b{color:var(--blue)}
+  /* painel Revise seus erros */
+  .errpanel{margin-top:16px;background:var(--paper-2);border:1px solid var(--line-2);border-left:4px solid var(--p1,#c0392b);border-radius:12px;padding:14px 18px}
+  .errpanel h4{margin:0 0 6px;color:var(--p1,#c0392b);font-size:1.05rem}
+  .errpanel>p{margin:0 0 6px;font-size:.93rem}
+  .errpanel ol{margin:8px 0 0;padding-left:22px}
+  .errpanel li{margin-bottom:13px;line-height:1.5}
+  .errpanel .eq{font-style:italic;color:var(--ink-2);margin:3px 0}
+  .errpanel .ei{background:var(--paper);border-radius:8px;padding:7px 11px;margin-top:4px;font-size:.92rem}
+  .errpanel .you{color:var(--p1,#c0392b)} .errpanel .ok{color:var(--green)}
+  .errpanel .tip{font-size:.86rem;color:var(--muted);margin:10px 0 0}
+  .errpanel a{font-weight:700;color:var(--blue)}
+  .errpanel.zero{border-left-color:var(--green)} .errpanel.zero h4{color:var(--green)}
+  /* cronômetro */
+  .timer{display:inline-flex;align-items:center;gap:8px;margin-left:auto}
+  .timer .tdisp{font-variant-numeric:tabular-nums;font-size:15px;color:var(--ink-2);white-space:nowrap;font-family:"Lora",serif}
+  .timer .tdisp.low{color:var(--red)}
+  .timer .tbtn2{padding:8px 12px;font-size:13px}
+  /* meu desempenho */
+  .desempenho .dhint{font-size:14px;color:var(--ink-2);margin:0}
+  .desempenho .dbest{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:2px 0 10px}
+  .desempenho .dlbl{font-weight:700;color:var(--ink)}
+  .desempenho .dchip{background:var(--green-soft);color:var(--ink);border:1px solid color-mix(in srgb,var(--green) 30%,var(--line));border-radius:999px;padding:4px 11px;font-size:13px}
+  .desempenho .dlast{margin:0 0 10px;padding-left:20px;font-size:14px}
+  .desempenho .dlast li{margin:3px 0}
+  .desempenho .dclear{padding:7px 12px;font-size:13px}
+  /* próxima ação (recomendação personalizada) */
+  .proxima{background:var(--green-soft);border:1px solid color-mix(in srgb,var(--green) 30%,var(--line));border-left:4px solid var(--green);border-radius:12px;padding:14px 16px;margin:2px 0 14px}
+  .proxima h4{margin:0 0 4px;color:var(--green);font-size:1rem}
+  .proxima p{margin:0 0 10px;font-size:.95rem;max-width:none}
+  .proxima .btn{padding:9px 16px;font-size:14px;text-decoration:none;display:inline-block}
+  .proxima .foco{font-size:13px;color:var(--ink-2);margin:8px 0 0}
+  .proxima[hidden]{display:none!important}
+  /* caderno de erros */
+  .dhint{font-size:14px;color:var(--ink-2)}
+  .cadtools{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 6px}
+  .cadtools .btn{padding:8px 13px;font-size:13.5px}
+  .cadcount{font-family:"Public Sans",sans-serif;font-size:14px;color:var(--muted);font-weight:700}
+  /* progresso do cronograma */
+  .cprog{margin:8px 0 14px}
+  .cprow{display:grid;grid-template-columns:200px 1fr auto;gap:12px;align-items:center;font-size:13.5px}
+  .cbar{height:13px;background:var(--paper-2);border:1px solid var(--line-2);border-radius:999px;overflow:hidden}
+  .cbar>i{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--teal));border-radius:999px;transition:width .3s}
+  @media(max-width:560px){.cprog .cprow{grid-template-columns:1fr;gap:3px}.cprog .cbar{grid-row:2}}
+  @media(max-width:560px){
+    .timer{margin-left:0;width:100%;justify-content:space-between;order:3}
+    .q .qt{font-size:15.5px} .opt{padding:11px 13px}
+    .card{padding:18px 15px}
+  }
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:720px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--paper-2);border:1px solid var(--line-2);border-radius:11px;padding:14px 16px}
+  .mini h4{margin-top:0;color:var(--blue)}
+  footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding:24px 0;text-align:center}
+  .back{position:fixed;right:16px;bottom:16px;z-index:40;background:var(--blue);color:#fff;border:0;border-radius:50%;width:44px;height:44px;font-size:18px;cursor:pointer;box-shadow:var(--shadow);display:none}
+  .back.show{display:block}
+  /* login / perfis */
+  .authwall{position:fixed;inset:0;z-index:100;background:var(--bg);display:flex;align-items:flex-start;justify-content:center;padding:24px 18px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .authcard{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:26px 24px;max-width:390px;width:100%;margin:auto}
+  :root.authlock,:root.authlock body{overflow:hidden;height:100%}
+  .authwall[hidden]{display:none!important}
+  .authbrand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:18px;font-family:"Lora",serif}
+  .authbrand b{color:var(--blue)}
+  .authbrand .drop{width:24px;height:24px;border-radius:50% 50% 50% 8px;transform:rotate(45deg);background:linear-gradient(135deg,var(--blue-2),var(--teal))}
+  .authsub{font-size:14px;color:var(--ink-2);margin:8px 0 16px}
+  .authcard input{width:100%;padding:11px 13px;margin:0 0 10px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:16px;background:var(--paper);color:var(--ink)}
+  .authcard input:focus{outline:2px solid var(--blue-2);border-color:var(--blue-2)}
+  .pwwrap{position:relative;margin:0 0 10px}
+  .pwwrap input{margin:0!important;padding-right:82px}
+  .pwtoggle{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--blue);font:inherit;font-size:13px;font-weight:600;cursor:pointer;padding:6px 8px}
+  .authcard .btn{width:100%;margin-top:2px}
+  .authtoggle{font-size:13.5px;color:var(--ink-2);text-align:center;margin:12px 0 0}
+  .authmsg{background:var(--red-soft);color:var(--red);border-radius:8px;padding:8px 11px;font-size:13.5px;margin-bottom:10px}
+  .authnote{font-size:11.5px;color:var(--muted);margin:16px 0 0;line-height:1.5}
+  .userbox{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-2)}
+  .userbox[hidden]{display:none!important}
+  .userbox #whoami{font-weight:700;color:var(--ink);max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  @media(max-width:560px){.userbox #whoami{max-width:80px}}
+
+  @media(max-width:900px){
+    .wrap{grid-template-columns:1fr;gap:0}
+    nav.toc{position:fixed;inset:54px 0 0 0;z-index:45;background:var(--paper);max-height:none;overflow-y:auto;padding:14px 18px;display:none;border-right:1px solid var(--line)}
+    nav.toc.open{display:block}
+    .menub{display:inline-block}
+    .cd{display:none}
+    /* sem desfoque (evita "tremer" ao rolar) e barra de Corrigir no fluxo (não flutua) */
+    .top{backdrop-filter:none;background:var(--paper)}
+    .simbar{position:static;backdrop-filter:none;background:var(--paper)}
+    .top .in{padding:9px 14px;gap:8px}
+    .brand{font-size:15px}
+    body.navopen{overflow:hidden}
+  }
+  @media print{
+    .top,nav.toc,.simbar,.back,.fctools,.menub,.authwall,.userbox{display:none!important}
+    html.authlock,html.authlock body{overflow:visible!important;height:auto!important}
+    .wrap{display:block;max-width:none;padding:0}
+    body{background:#fff}
+    .card,.q,.fc,.hero{box-shadow:none;break-inside:avoid}
+    .expl{display:block!important}
+    .fc .fa{display:block!important} .fc .hint{display:none}
+    a{color:inherit;text-decoration:none}
+    section{margin:16px 0}
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.116.0/dist/umd/supabase.js"></script>
+<script>
+  window.DMAE_SLUG="emater"; /* identifica ESTE concurso no backend compartilhado */
+  try{ window.sb = window.supabase.createClient(
+    "https://eruszwjnekrvfbtylbuv.supabase.co",
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVydXN6d2puZWtydmZidHlsYnV2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODkxOTM3MTksImV4cCI6MjEwNDc2OTcxOX0.XfxqmgTu9OLI6moAk6XhasQc9RmgI9w-lpbzbHSJqqo",
+    {auth:{persistSession:true,autoRefreshToken:true}}
+  ); }catch(e){ window.sb=null; }
+</script>
+</head>
+<body>
+<div id="authwall" class="authwall">
+  <div class="authcard">
+    <div class="authbrand"><span class="drop" aria-hidden="true"></span> Aprovação <b>EMATER-MG</b></div>
+    <p class="authsub">Cada pessoa tem a <strong>sua conta e o seu progresso</strong>, separados. Coloque seu e-mail e uma senha: se já tiver conta, você <strong>entra</strong>; se não tiver, ela é <strong>criada na hora</strong>.</p>
+    <div id="auth-msg" class="authmsg" hidden></div>
+    <input id="au-name" type="text" placeholder="Seu nome (opcional)" autocomplete="name">
+    <input id="au-email" type="email" placeholder="Seu e-mail" autocomplete="username" inputmode="email" autocapitalize="none" autocorrect="off" spellcheck="false">
+    <div class="pwwrap">
+      <input id="au-pass" type="password" placeholder="Sua senha (mín. 4 caracteres)" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false">
+      <button type="button" class="pwtoggle" id="au-eye" aria-label="Mostrar senha">Mostrar</button>
+    </div>
+    <button class="btn" id="au-btn" type="button">Entrar / Criar minha conta</button>
+    <p class="authnote">Sua conta funciona em <strong>qualquer aparelho</strong> (celular e computador): o progresso fica salvo <strong>na nuvem</strong> e é privado — ninguém vê o que você errou ou acertou. Use uma senha só para este site (não repita a do banco/e-mail).</p>
+  </div>
+</div>
+<script>
+/* ===== Autenticação Supabase (contas reais, sincroniza entre aparelhos) ===== */
+window.DMAE_KEY=function(k){var u="";try{u=localStorage.getItem("dmae:uid")||"";}catch(e){}return "dmae:u:"+u+":"+k;};
+window.DMAE_logout=function(){var done=function(){try{localStorage.removeItem("dmae:uid");}catch(e){}location.reload();};if(window.sb){window.sb.auth.signOut().then(done,done);}else{done();}};
+(function(){
+  var wall=document.getElementById("authwall");
+  function show(){if(wall){wall.hidden=false;wall.style.display="";}document.documentElement.classList.add("authlock");}
+  function hide(){if(wall){wall.hidden=true;wall.style.display="none";}document.documentElement.classList.remove("authlock");}
+  function msg(t){var m=document.getElementById("auth-msg");if(m){m.textContent=t;m.hidden=!t;}}
+  function busy(b){var x=document.getElementById("au-btn");if(x){x.disabled=b;x.textContent=b?"Entrando…":"Entrar / Criar minha conta";}}
+  show();
+  if(!window.sb){msg("Não consegui conectar ao servidor de contas. Confira sua internet e recarregue a página.");return;}
+  function onLogin(session){
+    try{localStorage.setItem("dmae:uid",session.user.id);}catch(e){}
+    var md=session.user.user_metadata||{};
+    var nome=md.name||md.nome||session.user.email;
+    var who=document.getElementById("whoami"),box=document.getElementById("userbox");
+    if(who)who.textContent=nome; if(box)box.hidden=false;
+    var lo=document.getElementById("logout"); if(lo)lo.onclick=window.DMAE_logout;
+    hide();
+    if(window.DMAE_syncPull)window.DMAE_syncPull();
+  }
+  async function go(){
+    var n=(document.getElementById("au-name").value||"").trim();
+    var e=(document.getElementById("au-email").value||"").trim().toLowerCase();
+    var pw=document.getElementById("au-pass").value||"";
+    if(!e||e.indexOf("@")<0){msg("Digite um e-mail válido.");return;}
+    if(pw.length<4){msg("A senha precisa ter pelo menos 4 caracteres.");return;}
+    msg("");busy(true);
+    try{
+      var r=await window.sb.auth.signInWithPassword({email:e,password:pw});
+      if(r.data&&r.data.session){onLogin(r.data.session);return;}
+      var su=await window.sb.auth.signUp({email:e,password:pw,options:{data:{name:(n||e.split("@")[0])}}});
+      if(su.error){
+        var t=(su.error.message||"").toLowerCase();
+        if(t.indexOf("already")>=0||t.indexOf("registered")>=0){msg("Essa conta já existe, mas a senha não confere. Tente a senha correta.");}
+        else{msg("Não foi possível entrar: "+su.error.message);}
+        busy(false);return;
+      }
+      if(su.data&&su.data.session){onLogin(su.data.session);return;}
+      msg("Conta criada — confirme pelo link no seu e-mail para entrar.");busy(false);
+    }catch(err){msg("Erro de conexão. Tente novamente.");busy(false);}
+  }
+  var b=document.getElementById("au-btn"); if(b)b.onclick=go;
+  ["au-email","au-pass","au-name"].forEach(function(id){var el=document.getElementById(id);if(el)el.addEventListener("keydown",function(ev){if(ev.key==="Enter")go();});});
+  var eye=document.getElementById("au-eye"),pwf=document.getElementById("au-pass");
+  if(eye&&pwf)eye.onclick=function(){var s=pwf.type==="password";pwf.type=s?"text":"password";eye.textContent=s?"Ocultar":"Mostrar";pwf.focus();};
+  window.sb.auth.getSession().then(function(r){if(r.data&&r.data.session)onLogin(r.data.session);});
+})();
+</script>
+<header class="top">
+  <div class="in">
+    <button class="tbtn menub" id="menub" aria-label="Menu">☰</button>
+    <span class="brand"><span class="drop" aria-hidden="true"></span> Aprovação <b>EMATER-MG</b></span>
+    <span class="sp"></span>
+    <span class="cd" id="cd">Prova 29/11/2026 · faltam <b id="cddays">—</b> dias</span>
+    <span class="userbox" id="userbox" hidden><span id="whoami"></span><button class="tbtn" id="logout" type="button">Sair</button></span>
+    <button class="tbtn" id="theme" aria-label="Alternar tema">◐</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="toc" id="toc" aria-label="Índice">
+    <div class="grp">Comece aqui</div>
+    <a href="#inicio">Início</a>
+    <a href="#hub">Central de estudos</a>
+    <a href="#plano">Plano de estudos</a>
+    <a href="#memoria">Como fixar na memória</a>
+    <div class="grp">1 · Aprender + treinar</div>
+    <a href="#dominio">Domínio por prioridade</a>
+    <a href="#treinos-sec">Aulas + treinos por tema</a>
+    <div class="grp">2 · Praticar</div>
+    <a href="#antes-sim">Antes de cada simulado</a>
+    <a href="#simulado">Simulado 1</a>
+    <a href="#simulado2">Simulado 2</a>
+    <a href="#simulado3">Simulado 3</a>
+    <a href="#simulado4">Simulado 4</a>
+    <a href="#aleatorio">Simulado aleatório</a>
+    <a href="#especifico">Só Específicos</a>
+    <div class="grp">3 · Revisar</div>
+    <a href="#caderno">Caderno de erros</a>
+    <a href="#flashcards">Flashcards</a>
+    <a href="#vespera">Revisão de véspera</a>
+    <div class="grp">4 · Consultar</div>
+    <a href="#ficha">Ficha do edital</a>
+    <a href="#portugues">O que estudar (verticalizado)</a>
+    <a href="#mudou">Sobre o edital</a>
+    <a href="#correcoes">Correções</a>
+    <a href="#perfil">Perfil da banca</a>
+    <a href="#fontes">Fontes oficiais</a>
+    <a href="#claude">Tutor no Claude Code</a>
+  </nav>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="inicio" class="hero">
+      <p class="eyebrow">Concurso EMATER-MG · Edital 01/2026 · Banca Fundep</p>
+      <h1>Seu cursinho completo para <em>Assistente Administrativo II</em> da EMATER-MG 2026</h1>
+      <p class="sub">Do zero ao dia da prova: edital verticalizado com as pegadinhas da Fundep, aulas que ensinam passo a passo, quatro simulados que corrigem sozinho, caderno de erros e plano de estudos com horas por dia — tudo baseado no conteúdo programático oficial (Anexo VI).</p>
+      <div class="facts">
+        <div class="fact"><b>40</b> questões · 4 h</div>
+        <div class="fact"><b>29/11/2026</b> domingo</div>
+        <div class="fact"><b>7 vagas</b> + cadastro reserva</div>
+        <div class="fact"><b>R$ 3.008,66</b> inicial · 40h</div>
+        <div class="fact"><b>Ensino Médio</b> completo</div>
+      </div>
+      <a class="btn" href="#hub" style="margin-top:20px;display:inline-block;text-decoration:none">Começar a estudar agora →</a>
+</section>
+
+    <div class="alert red" style="margin-top:16px">
+      <span class="tag">Peso máximo</span> — <b>Conhecimentos Específicos vale o DOBRO</b> (2 pontos por questão = 40% da nota) e é o <b>1º critério de desempate</b>. Ataque essa matéria primeiro. E como <b>não há desconto por erro</b>, <b>nunca deixe questão em branco</b>.
+    </div>
+    <div class="alert amber">
+      <span class="tag">Prazos</span> — Inscrições de <b>30/09 a 30/10/2026</b> no site <code>gestaodeconcursos.com.br</code> (banca Fundep). Isenção de taxa: 30/09 a 04/10. <b>Prova objetiva: 29/11/2026.</b> Gabarito e caderno de questões: 01/12/2026. Uberlândia é uma das cidades com vaga para o cargo.
+    </div>
+
+    <!-- ============ CENTRAL DE ESTUDOS (HUB) ============ -->
+    <section id="hub">
+      <div class="card">
+        <p class="eyebrow">Central de estudos</p>
+        <h2 class="sec">Por onde começar</h2>
+        <div id="proxima" class="proxima"></div>
+        <p>Siga a trilha na ordem — do aprender ao revisar. Está tudo aqui dentro: você não precisa pesquisar fora.</p>
+        <div class="hubgrid">
+          <a class="hubc" href="#dominio"><span class="hn">1</span><b>Aprender + treinar</b><span class="d">Domínio por prioridade (P1/P2/P3) e aulas por tema, cada uma ensinando do zero: Aprenda → Entenda → Na prova. Comece pelos P1.</span></a>
+          <a class="hubc" href="#simulado"><span class="hn">2</span><b>Praticar</b><span class="d">Quatro simulados de 40 questões que corrigem sozinho (com cronômetro de 3 h) e o painel “Revise seus erros”.</span></a>
+          <a class="hubc" href="#flashcards"><span class="hn">3</span><b>Revisar</b><span class="d">Flashcards + plano dia a dia com horários (progresso salvo na sua conta) até a prova de 29/11.</span></a>
+          <a class="hubc" href="#ficha"><span class="hn">4</span><b>Consultar</b><span class="d">Ficha do edital, o que estudar (verticalizado), fontes oficiais e o tutor infinito no Claude Code.</span></a>
+        </div>
+        <div class="alert blue"><span class="tag">Prioridade</span> — <b>Conhecimentos Específicos vale o DOBRO</b> (2 pontos por questão = 40% da nota) e é o 1º critério de desempate. Depois vêm Português, Matemática/RLM e Conhecimentos Gerais (20% cada, este último com foco na <b>EMATER-MG e no meio rural mineiro</b>). <b>Ataque Específicos primeiro</b>, e dentro de cada matéria os temas marcados <b>P1</b>.</div>
+        <h3 style="margin:18px 0 8px">Meu desempenho</h3>
+        <div id="desempenho" class="desempenho"></div>
+      </div>
+    </section>
+
+    <!-- ============ 1. FICHA ============ -->
+    <section id="ficha">
+      <div class="card">
+        <p class="eyebrow">Seção 1</p>
+        <h2 class="sec">Ficha técnica do concurso</h2>
+        <div class="tw"><table>
+          <tbody>
+          <tr><td class="k">Órgão</td><td>EMATER-MG — Empresa de Assistência Técnica e Extensão Rural do Estado de Minas Gerais. Empresa pública estadual vinculada à <strong>Secretaria de Estado de Agricultura, Pecuária e Abastecimento (SEAPA-MG)</strong>; atua em todo o território mineiro com assistência técnica e extensão rural (ATER) à agricultura familiar.</td></tr>
+          <tr><td class="k">Edital</td><td>Nº 01/2026, de 28/07/2026 (+ Retificações I e II). Portal: fundep.selecao.net.br/informacoes/71/</td></tr>
+          <tr><td class="k">Banca</td><td><strong>Fundep / Gestão de Concursos</strong> (ligada à UFMG) — gestaodeconcursos.com.br</td></tr>
+          <tr><td class="k">Cargo (foco deste cursinho)</td><td><strong>Assistente Administrativo II</strong> — Nível Médio (Ensino Médio completo).</td></tr>
+          <tr><td class="k">Vagas do cargo</td><td>7 (uma em cada cidade: Almenara, Belo Horizonte, Guaxupé, Manhuaçu, Passos, Sete Lagoas e <strong>Uberlândia</strong>) + cadastro de reserva. Concurso total: 120 vagas.</td></tr>
+          <tr><td class="k">Remuneração</td><td>R$ 3.008,66 · Jornada 40h semanais.</td></tr>
+          <tr><td class="k">Prova objetiva</td><td><strong>29/11/2026</strong>, duração <strong>4h</strong> · <strong>40 questões</strong>, 4 alternativas (A–D), uma correta.</td></tr>
+          <tr><td class="k">Distribuição</td><td>Português 10 · Matemática/RLM 10 · Conhecimentos Gerais 10 · <strong>Conhecimentos Específicos 10 (peso 2)</strong>.</td></tr>
+          <tr><td class="k">Aprovação</td><td>Obter, <strong>no mínimo, 30 pontos (60%)</strong> do total de 50 <strong>e não zerar nenhuma disciplina</strong>.</td></tr>
+          <tr><td class="k">Gabarito / caderno</td><td>01/12/2026. Resultado preliminar dos aprovados: 19/12/2026. Recursos fundamentados no prazo do edital.</td></tr>
+          <tr><td class="k">Conteúdo (Anexo VI)</td><td>Publicado no site da Fundep/EMATER-MG — este cursinho segue exatamente esse programa.</td></tr>
+          </tbody>
+        </table></div>
+
+        <h3 id="dist">1.1 As 40 questões e o peso em pontos</h3>
+        <div class="weights">
+          <div class="wrow"><span>Conhec. Específicos</span><span class="bar"><i style="width:100%"></i></span><span>10 q × 2 = 20 pts · 40%</span></div>
+          <div class="wrow"><span>Língua Portuguesa</span><span class="bar"><i style="width:50%"></i></span><span>10 q × 1 = 10 pts · 20%</span></div>
+          <div class="wrow"><span>Matemática e RLM</span><span class="bar"><i style="width:50%"></i></span><span>10 q × 1 = 10 pts · 20%</span></div>
+          <div class="wrow"><span>Conhec. Gerais</span><span class="bar"><i style="width:50%"></i></span><span>10 q × 1 = 10 pts · 20%</span></div>
+        </div>
+        <p class="peg"><strong>Confirmado no edital:</strong> cada questão de <strong>Conhecimentos Específicos vale 2 pontos</strong>; as demais valem 1 ponto. A prova vale <strong>50 pontos</strong>, e Específicos sozinho é <strong>40% da nota</strong> — é a matéria número 1 e o 1º critério de desempate.</p>
+
+        <h3 id="desempate">1.2 Critérios de desempate (Nível Médio, nesta ordem)</h3>
+        <ol>
+          <li>Idade ≥ 60 anos (Estatuto da Pessoa Idosa);</li>
+          <li><strong>Mais pontos em Conhecimentos Específicos</strong>;</li>
+          <li>Mais pontos em Língua Portuguesa;</li>
+          <li>Mais pontos em Matemática e Raciocínio Lógico;</li>
+          <li>Mais pontos em Conhecimentos Gerais;</li>
+          <li>Maior idade;</li>
+          <li>Sorteio.</li>
+        </ol>
+        <div class="alert blue"><span class="tag">Consequência</span> — com poucas vagas, quem empata ganha por <b>Específicos</b>. É a matéria que decide a vaga: estude-a com prioridade máxima.</div>
+
+        <h3 id="regras">1.3 Regras do dia da prova</h3>
+        <ul>
+          <li>Chegar <strong>com antecedência</strong>; após o fechamento dos portões = eliminado.</li>
+          <li>Levar <strong>documento oficial com foto</strong> e <strong>caneta esferográfica azul ou preta, corpo transparente</strong>.</li>
+          <li>Proibido, mesmo desligado: celular, <strong>relógio</strong>, fone, calculadora, boné etc. (confira o edital).</li>
+          <li><strong>Não há desconto por erro → nunca deixe questão em branco.</strong> Questão rasurada ou com 2 marcações = erro.</li>
+          <li>Preencha a Folha de Respostas com caneta, sem rasura.</li>
+        </ul>
+      </div>
+</section>
+
+    <!-- ============ 2. MUDOU ============ -->
+    <section id="mudou">
+      <div class="card">
+        <p class="eyebrow">Seção 2</p>
+        <h2 class="sec">O que você precisa saber sobre este edital</h2>
+        <p>Diferente de PRF/PF, aqui o <strong>edital já saiu</strong> (28/07/2026) e a <strong>prova é em 29/11/2026</strong> — o tempo é curto, então o plano deste site já está calibrado para essa data.</p>
+        <ul>
+          <li>Banca <strong>Fundep</strong> (a mesma do DMAE Uberlândia e de vários concursos de MG): prova de <strong>múltipla escolha (A–D)</strong>, cobrança literal em Legislação/Específicos e interpretação fina em Português.</li>
+          <li>O <strong>último concurso da EMATER-MG foi em 2018</strong> — provas antigas ajudam, mas confirme tudo pelo Anexo VI atual.</li>
+          <li>Conhecimentos Gerais tem <strong>foco na própria EMATER-MG</strong> (histórico, missão, ATER), no <strong>meio rural mineiro</strong> e em <strong>ética/integridade, LAI e LGPD</strong>.</li>
+        </ul>
+        <p class="peg">Como a Fundep repete o estilo, resolver provas Fundep anteriores (inclusive de outros órgãos) é um ótimo treino — sempre conferindo o conteúdo pelo edital atual.</p>
+      </div>
+</section>
+
+    <!-- ============ 3. CORREÇÕES ============ -->
+    <section id="correcoes">
+      <div class="card">
+        <p class="eyebrow">Seção 3</p>
+        <h2 class="sec">Erros comuns de quem estuda por material genérico</h2>
+        <div class="tw"><table>
+          <thead><tr><th>O material genérico diz</th><th>O que o edital EMATER-MG 2026 diz</th></tr></thead>
+          <tbody>
+          <tr><td>Conhecimentos Gerais = só atualidades</td><td>Inclui <strong>a EMATER-MG</strong> (histórico, natureza jurídica, missão, ATER), <strong>território e meio rural mineiro</strong>, <strong>ética/integridade, LAI e LGPD</strong> e noções sobre o Brasil</td></tr>
+          <tr><td>Licitação é a Lei 8.666</td><td>É a <strong>Lei 14.133/2021</strong> (a 8.666 foi revogada). E cai também <strong>convênios/parcerias — Lei 13.019/2014</strong></td></tr>
+          <tr><td>Específicos = só administração</td><td>Inclui <strong>RH e departamento de pessoal</strong> (SISPATRI, jovem aprendiz), <strong>estoques/almoxarifado</strong>, <strong>logística e gestão de frotas</strong>, <strong>redação oficial e arquivos</strong>, e <strong>contabilidade/finanças</strong> (GMD/GMR)</td></tr>
+          <tr><td>Chutar não ajuda</td><td>Como <strong>não há desconto por erro</strong>, marque todas — eliminando 2 alternativas, o chute vira 50%</td></tr>
+          </tbody>
+        </table></div>
+        <p class="peg">Permanece correto: "Respeitosamente" (superior) e "Atenciosamente" (mesma hierarquia/inferior); Convite e Tomada de Preços não existem mais (Lei 14.133); arquivo permanente nunca é eliminado.</p>
+      </div>
+</section>
+
+    <!-- ============ 4. PERFIL ============ -->
+    <section id="perfil">
+      <div class="card">
+        <p class="eyebrow">Seção 4</p>
+        <h2 class="sec">Como a Fundep cobra (perfil da banca)</h2>
+        <ul>
+          <li><strong>4 alternativas (A–D)</strong> → eliminando 2, o chute vira 50%. Nunca deixe em branco.</li>
+          <li>Comandos frequentes: "assinale a <strong>INCORRETA</strong>", "todas estão corretas, <strong>EXCETO</strong>", "marque V ou F e assinale a sequência", "reescreva preservando o sentido".</li>
+          <li><strong>Português:</strong> texto + questões de compreensão e o resto de gramática aplicada (conectivo, reescrita, crase, concordância, pontuação, colocação).</li>
+          <li><strong>Matemática/RLM:</strong> problemas contextualizados em 2–3 etapas; RLM com proposições, negações, equivalências e sequências.</li>
+          <li><strong>Conhecimentos Gerais:</strong> a própria EMATER-MG, meio rural mineiro, ética/integridade (LAI, LGPD), atualidades de agro/meio ambiente.</li>
+          <li><strong>Específicos:</strong> definições e classificações (administração, RH, estoques, logística, redação, arquivos, contabilidade) e <strong>cobrança literal</strong> das leis (14.133, 13.019, 13.303).</li>
+          <li>Recursos são deferidos só com <strong>fundamentação bibliográfica</strong> — guarde a referência (letra da lei, Manual de Redação, autor).</li>
+        </ul>
+      </div>
+</section>
+
+    <!-- ============ 5. VERTICALIZADO ============ -->
+    <section>
+      <p class="eyebrow" style="margin-left:2px">Seção 5 · Edital verticalizado (Anexo VI oficial)</p>
+      <h2 class="sec" style="margin-left:2px">O que estudar em cada item — com a pegadinha</h2>
+      <p style="margin-left:2px">Prioridade: <span class="pri p1">P1</span> cai com certeza e pesa · <span class="pri p2">P2</span> cai com frequência · <span class="pri p3">P3</span> cai pouco.</p>
+      <div class="alert blue" style="margin-left:2px">
+        <span class="tag">Como definimos as prioridades — pelo conteúdo oficial (Anexo VI)</span>
+        <p style="margin:6px 0 4px">As marcações P1/P2/P3 seguem o programa oficial do cargo e o peso em pontos:</p>
+        <ul style="margin:0">
+          <li><b>Peso oficial:</b> <b>Conhecimentos Específicos 20 pts (40%)</b> — vale 2 pts/questão · Português 10 pts · Matemática/RLM 10 pts · Conhecimentos Gerais 10 pts (total 50). Específicos pesa o dobro e é o 1º critério de desempate → matéria nº 1.</li>
+          <li><b>Programa do cargo (Anexo VI):</b> em Específicos, forte presença de <b>administração geral e pública, RH/departamento de pessoal, estoques/almoxarifado, logística e frotas, redação oficial e arquivos, contabilidade/finanças e licitações (Lei 14.133)</b>.</li>
+          <li><b>Perfil da banca Fundep:</b> interpretação de texto e gramática aplicada em Português; problemas contextualizados em Matemática; e <b>cobrança literal</b> das leis em Específicos (14.133, 13.019, 13.303) e Conhecimentos Gerais (LAI, LGPD, Código de Ética estadual).</li>
+        </ul>
+        <p class="peg" style="margin:8px 0 0;font-size:13px">Fontes: Edital 01/2026 e <b>Anexo VI (Conteúdo Programático e Referências)</b> da EMATER-MG/Fundep. Prova em 29/11/2026.</p>
+      </div>
+    </section>
+
+    <section id="portugues"><div class="card">
+      <h3 style="margin-top:0">5.1 Língua Portuguesa <span style="color:var(--muted);font-family:Public Sans;font-size:14px">(10 questões · 10 pts · 20%)</span></h3>
+      <div class="tw"><table>
+        <thead><tr><th>Item</th><th>Pri.</th><th>O que dominar</th><th>Pegadinha</th></tr></thead>
+        <tbody>
+        <tr><td class="k">Interpretação</td><td><span class="pri p1">P1</span></td><td>Compreensão (o que diz) × inferência (o que se conclui) × extrapolação. Ideia central × secundária.</td><td class="peg">Alternativa "verdadeira no mundo real" mas ausente do texto; generalizar ("sempre", "todos") o que o texto restringe.</td></tr>
+        <tr><td class="k">Tipos e gêneros</td><td><span class="pri p2">P2</span></td><td>Tipos: narrativo, descritivo, dissertativo-argumentativo, expositivo, injuntivo. Gêneros: crônica, notícia, editorial, charge, ofício…</td><td class="peg">Confundir tipo (estrutura) com gênero (função social).</td></tr>
+        <tr><td class="k">Sentido figurado</td><td><span class="pri p2">P2</span></td><td>Denotação × conotação; metáfora, metonímia, hipérbole, eufemismo, ironia, antítese, paradoxo.</td><td class="peg">Metonímia (parte pelo todo) confundida com metáfora.</td></tr>
+        <tr><td class="k">Coesão/coerência</td><td><span class="pri p1">P1</span></td><td>Anáfora (retoma) × catáfora (antecipa), elipse, conectivos; coerência = sem contradição.</td><td class="peg">"A que se refere o pronome?" — localize o antecedente exato.</td></tr>
+        <tr><td class="k">Concordância</td><td><span class="pri p1">P1</span></td><td>"Haver"(existir) e "fazer"(tempo) impessoais → singular ("Houve/Faz dois anos"). "Existir" concorda. "Vendem-se casas" × "Precisa-se de".</td><td class="peg">"Houveram" e "fazem dois anos" (errados).</td></tr>
+        <tr><td class="k">Crase</td><td><span class="pri p1">P1</span></td><td>a+artigo; a+aquele; locuções femininas (às vezes, à noite, à medida que). Teste: troca por masculino → "ao" = crase.</td><td class="peg">Cidade sem artigo ("vou a Belo Horizonte"); antes de verbo/masculino/plural com "a".</td></tr>
+        <tr><td class="k">Formação de palavras</td><td><span class="pri p2">P2</span></td><td>Derivação (prefixal, sufixal, parassintética, regressiva, imprópria) × composição (justaposição, aglutinação).</td><td class="peg">Parassíntese × prefixal-e-sufixal: "infelizmente" não é parassíntese ("infeliz" existe); "entardecer" é.</td></tr>
+        <tr><td class="k">Colocação pronominal</td><td><span class="pri p2">P2</span></td><td>Próclise com atrativas (não, que, advérbios); ênclise no início e imperativo; mesóclise no futuro sem atrativo.</td><td class="peg">"Me avisaram", "nunca esqueça-se", "que inscreveu-se" (todos errados).</td></tr>
+        <tr><td class="k">Sin/ant/polissemia</td><td><span class="pri p2">P2</span></td><td>Polissemia (um vocábulo, vários sentidos) × homonímia; sinônimo no contexto.</td><td class="peg">Sinônimo correto no dicionário mas errado no contexto.</td></tr>
+        <tr><td class="k">Acentuação (Novo Acordo)</td><td><span class="pri p2">P2</span></td><td>Sem trema; sem acento em "ei/oi" de paroxítona (ideia, heroico, assembleia); "voo/creem" sem acento; mantém "pôde/pôr". Hífen.</td><td class="peg">Grafia antiga (idéia, vôo, pára) posta como "correta".</td></tr>
+        <tr><td class="k">Pontuação</td><td><span class="pri p1">P1</span></td><td>Vírgula nunca separa sujeito do verbo; obrigatória em aposto, vocativo, adverbial anteposta, adjetiva explicativa.</td><td class="peg">Explicativa × restritiva muda o sentido ("Os servidores, que…" = todos; sem vírgula = só alguns).</td></tr>
+        <tr><td class="k">Morfossintaxe</td><td><span class="pri p1">P1</span></td><td>10 classes; funções (sujeito, objeto, predicativo, adjunto, aposto). Adjunto adnominal × complemento nominal.</td><td class="peg">"Que" pronome relativo × conjunção integrante.</td></tr>
+        <tr><td class="k">Tempos/modos verbais</td><td><span class="pri p2">P2</span></td><td>Indicativo/subjuntivo/imperativo; correlação "Se tivesse… teria", "Quando chegar… avisarei".</td><td class="peg">Verbos irregulares: "se ele vir" × "se ele vier"; pôr, ter, haver.</td></tr>
+        <tr><td class="k">Sintaxe do período</td><td><span class="pri p1">P1</span></td><td>Coordenadas (aditiva, adversativa, conclusiva, explicativa) e subordinadas (substantivas, adjetivas, adverbiais).</td><td class="peg">"Embora/ainda que" = concessão; "pois" antes do verbo = explicação, depois = conclusão.</td></tr>
+        <tr><td class="k">Variação linguística</td><td><span class="pri p3">P3</span></td><td>Diatópica, diastrática, diafásica, diacrônica; norma-padrão × variedades.</td><td class="peg">Tratar variedade popular como "erro" → alternativa considerada incorreta.</td></tr>
+        </tbody>
+      </table></div>
+      <p class="peg"><strong>Estratégia:</strong> leia as perguntas antes do texto; marque conectivos e pronomes; nas reescritas, teste o sentido lógico (causa, oposição, concessão), não a "beleza".</p>
+    </div></section>
+
+    <section id="matematica"><div class="card">
+      <h3 style="margin-top:0">5.2 Matemática e Raciocínio Lógico <span style="color:var(--muted);font-family:Public Sans;font-size:14px">(10 questões · 10 pts · 20%)</span></h3>
+      <div class="tw"><table>
+        <thead><tr><th>Item</th><th>Pri.</th><th>Fórmulas / pontos-chave</th><th>Pegadinha</th></tr></thead>
+        <tbody>
+        <tr><td class="k">Conjuntos</td><td><span class="pri p2">P2</span></td><td>n(A∪B)=n(A)+n(B)−n(A∩B); Venn 2–3 conjuntos; N⊂Z⊂Q⊂R.</td><td class="peg">"Quantos não leem nenhum": monte o Venn pela interseção.</td></tr>
+        <tr><td class="k">Funções afim/quadrática</td><td><span class="pri p1">P1</span></td><td>Bhaskara; vértice xv=−b/2a, yv=−Δ/4a; a&gt;0 mínimo.</td><td class="peg">Pedem o valor mínimo (yv) e o candidato marca xv.</td></tr>
+        <tr><td class="k">Exponencial/log</td><td><span class="pri p2">P2</span></td><td>Igualar bases; log(a·b)=log a+log b; mudança de base.</td><td class="peg">Condição de existência: logaritmando&gt;0, base&gt;0 e ≠1.</td></tr>
+        <tr><td class="k">Trigonometria</td><td><span class="pri p3">P3</span></td><td>sen/cos/tg de 30/45/60; sen²+cos²=1; leis dos senos/cossenos.</td><td class="peg">Trocar seno por cosseno (qual cateto é o oposto?).</td></tr>
+        <tr><td class="k">PA/PG e financeira</td><td><span class="pri p1">P1</span></td><td>an=a1+(n−1)r; regra de três; aumentos sucessivos multiplicam (10%+20%=32%); J=C·i·t; M=C(1+i)ᵗ.</td><td class="peg">Pedem montante e você marca só o juro; juros simples onde é composto; n em vez de n−1.</td></tr>
+        <tr><td class="k">Combinatória/probab.</td><td><span class="pri p1">P1</span></td><td>Arranjo (ordem importa) × combinação; P=favoráveis/possíveis; "pelo menos um"=1−P(nenhum).</td><td class="peg">Senha/pódio = arranjo; comissão = combinação. Sem reposição muda o denominador.</td></tr>
+        <tr><td class="k">Geometria</td><td><span class="pri p2">P2</span></td><td>Áreas; volume cilindro=πr²h; 1 m³ = 1.000 L; distância entre pontos.</td><td class="peg">Esquecer de converter m³→litros ou cm→m; raio × diâmetro.</td></tr>
+        <tr><td class="k">Matrizes/sistemas</td><td><span class="pri p3">P3</span></td><td>Produto linha×coluna (A·B≠B·A); determinante 2×2 = ad−bc; Cramer.</td><td class="peg">Ordem do produto; sinal do determinante.</td></tr>
+        <tr><td class="k">Estatística</td><td><span class="pri p1">P1</span></td><td>Média, moda, mediana (ordenar!), variância, desvio padrão = √variância.</td><td class="peg">Mediana sem ordenar; confundir moda com média.</td></tr>
+        <tr><td class="k">Raciocínio lógico</td><td><span class="pri p1">P1</span></td><td>Conectivos (∧,∨,→,↔); ~(p∧q)=~p∨~q; ~(p→q)=p∧~q; contrapositiva p→q ≡ ~q→~p; casa dos pombos.</td><td class="peg">Negar "se p então q" com "se não p então não q" (errado); recíproca × contrapositiva.</td></tr>
+        </tbody>
+      </table></div>
+      <p class="peg"><strong>Estratégia:</strong> leia o comando final 2× (juros ou montante? litros ou m³?). Escreva a fórmula antes de calcular. Confira a unidade. Deixe as longas para o fim.</p>
+    </div></section>
+
+    <section id="gerais"><div class="card">
+      <h3 style="margin-top:0">5.3 Conhecimentos Gerais <span style="color:var(--muted);font-family:Public Sans;font-size:14px">(10 questões · 10 pts · 20%)</span></h3>
+      <div class="grid2">
+        <div class="mini">
+          <h4>A EMATER-MG <span class="pri p1">P1</span></h4>
+          <ul>
+            <li><strong>O que é:</strong> Empresa de Assistência Técnica e Extensão Rural do Estado de Minas Gerais — <strong>empresa pública estadual</strong> vinculada à <strong>SEAPA-MG</strong> (Secretaria de Agricultura, Pecuária e Abastecimento).</li>
+            <li><strong>Missão:</strong> promover o desenvolvimento rural sustentável por meio da <strong>assistência técnica e extensão rural (ATER)</strong>, com foco na <strong>agricultura familiar</strong>.</li>
+            <li>Atua em <strong>todo o território mineiro</strong> (escritórios locais nos municípios). Guarde: histórico, natureza jurídica, vinculação, missão, visão e valores.</li>
+            <li>Referência nacional: <strong>Pnater</strong> (Política Nacional de ATER).</li>
+          </ul>
+        </div>
+        <div class="mini">
+          <h4>Ética e integridade no serviço público <span class="pri p1">P1</span></h4>
+          <ul>
+            <li><strong>LIMPE</strong> (art. 37 CF): Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência.</li>
+            <li><strong>Código de Conduta e Integridade</strong> da EMATER-MG: integridade, <strong>conflito de interesses</strong>, <strong>vedação ao nepotismo</strong>.</li>
+            <li><strong>Transparência e acesso à informação — LAI (Lei 12.527/2011)</strong>; <strong>proteção de dados — LGPD (Lei 13.709/2018)</strong>.</li>
+            <li><strong>Código de Conduta Ética do Agente Público (MG) — Decreto 46.644/2014.</strong></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mini" style="margin-top:14px">
+        <h4>Minas Gerais e o meio rural <span class="pri p2">P2</span></h4>
+        <ul>
+          <li><strong>Território mineiro:</strong> aspectos físicos, divisão regional e organização do território; MG tem <strong>853 municípios</strong> (mais do país), capital Belo Horizonte.</li>
+          <li><strong>Meio rural:</strong> aspectos socioeconômicos e ambientais e sua relação com o <strong>desenvolvimento sustentável</strong>; agricultura familiar, café, leite, pecuária.</li>
+          <li><strong>Cidadania, sustentabilidade e responsabilidade socioambiental</strong> aplicadas ao serviço público.</li>
+        </ul>
+      </div>
+      <div class="mini" style="margin-top:14px">
+        <h4>Atualidades e Brasil <span class="pri p2">P2</span></h4>
+        <ul>
+          <li><strong>Atualidades:</strong> fatos relevantes (estaduais e nacionais) ligados a <strong>meio ambiente, agropecuária e desenvolvimento rural</strong>.</li>
+          <li><strong>Noções gerais sobre o Brasil:</strong> organização político-administrativa, aspectos geográficos e formação do território nacional.</li>
+          <li>Fique atento a: clima e eventos extremos, segurança alimentar, políticas para o campo, economia (Selic, IPCA), reforma tributária (transição em 2026).</li>
+        </ul>
+        <p class="peg" style="margin:6px 0 0;font-size:13px">Fontes: site oficial da EMATER-MG, Pnater/MDA, IBGE (panorama de MG), Decreto MG 46.644/2014, LAI e LGPD. <strong>Atualidades mudam — reveja perto de 29/11/2026.</strong></p>
+      </div>
+      <p class="peg"><strong>Método:</strong> comece pela <strong>EMATER-MG</strong> e pela <strong>ética/integridade</strong> (P1, cobrança quase certa). 15 min/dia de manchetes de agro e meio ambiente, anotando 3 linhas por fato.</p>
+    </div></section>
+
+    <section id="legislacao"><div class="card">
+      <h3 style="margin-top:0">5.4 Conhecimentos Específicos — Bloco A <span style="color:var(--muted);font-family:Public Sans;font-size:14px">(parte dos 10 q · peso 2 · cobrança literal)</span></h3>
+
+      <h4>Recursos Humanos e Departamento de Pessoal <span class="pri p1">P1</span></h4>
+      <ul>
+        <li>Rotinas de pessoal: <strong>controle de férias</strong>, licença-prêmio, <strong>recrutamento, seleção, admissão e demissão</strong>; treinamento e desenvolvimento; avaliação de desempenho; coordenação e comunicação.</li>
+        <li><strong>Frequência e controle de ponto</strong>, banco de horas, <strong>absenteísmo</strong>.</li>
+        <li><strong>SISPATRI</strong> — Sistema de Registro de Bens dos Agentes Públicos (declaração de bens).</li>
+        <li><strong>Jovem Aprendiz</strong> (atividades / SENAC).</li>
+        <li class="peg">Pegadinha: confundir recrutamento (atrair candidatos) com seleção (escolher); efeito halo na avaliação de desempenho.</li>
+      </ul>
+
+      <h4>Compras, Contratos, Licitações e Convênios <span class="pri p1">P1</span></h4>
+      <ul>
+        <li><strong>Lei 14.133/2021</strong> (Licitações e Contratos): modalidades (<strong>pregão, concorrência, concurso, leilão, diálogo competitivo</strong> — Convite e Tomada de Preços não existem mais); critérios de julgamento; fases (a <strong>habilitação vem depois do julgamento</strong>); dispensa × inexigibilidade; sanções.</li>
+        <li><strong>Lei 13.019/2014</strong> — parcerias/<strong>convênios</strong> entre a administração pública e organizações da sociedade civil (termo de colaboração, de fomento e acordo de cooperação; chamamento público).</li>
+        <li><strong>Lei 13.303/2016</strong> — estatuto jurídico das <strong>empresas públicas</strong> e sociedades de economia mista (importante: a EMATER-MG é empresa pública).</li>
+        <li class="peg">Pegadinha: aplicar a Lei 8.666 (revogada) ou dizer que existe "convite/tomada de preços".</li>
+      </ul>
+
+      <h4>Gestão de Estoques e Almoxarifado <span class="pri p1">P1</span></h4>
+      <ul>
+        <li>Funções: recebimento (confere NF × pedido × material), <strong>armazenagem</strong>, distribuição/expedição, controle, <strong>inventário</strong> e patrimônio.</li>
+        <li>Compras e fornecedores (pesquisa e classificação); classificação de estoques; políticas e previsão; custos (pedido, armazenagem, custo total).</li>
+        <li><strong>Curva ABC</strong>: A ≈ 20% dos itens / 80% do valor. <strong>Giro de estoque</strong> = consumo / estoque médio. <strong>Ponto de pedido</strong> = consumo médio × prazo de reposição + estoque de segurança.</li>
+        <li class="peg">Pegadinha: trocar níveis de estoque (mínimo, máximo, segurança) e a lógica do ponto de pedido.</li>
+      </ul>
+
+      <h4>Logística e Gestão de Frotas <span class="pri p2">P2</span></h4>
+      <ul>
+        <li>Transporte e distribuição de materiais; gestão da informação.</li>
+        <li><strong>Gestão de veículos e frotas</strong>: fluxos, gerenciamento de rotas, planejamento e controles; circulação de veículos, regras básicas de segurança e sinalização; análise e <strong>controle de abastecimento</strong>.</li>
+      </ul>
+    </div></section>
+
+    <section id="especificos"><div class="card">
+      <h3 style="margin-top:0">5.5 Conhecimentos Específicos — Bloco B <span style="color:var(--muted);font-family:Public Sans;font-size:14px">(o restante dos 10 q · peso 2 · decide o desempate)</span></h3>
+
+      <h4>Administração Geral e Pública <span class="pri p1">P1</span></h4>
+      <ul>
+        <li>Funções da administração: <strong>planejamento, organização, direção e controle</strong> (PODC). Áreas: financeira, pessoal/gestão de pessoas, marketing, produção/serviços. Rotinas administrativas, coordenação, distribuição de tarefas e recursos.</li>
+        <li><strong>Serviço público:</strong> conceito, princípios fundamentais, elementos (subjetivo, material, formal), formas de prestação e o <strong>usuário</strong>.</li>
+        <li><strong>Administração pública:</strong> princípios; funcionamento no Brasil; órgãos e entidades; <strong>administração direta e indireta</strong>; <strong>descentralização, desconcentração e delegação</strong>.</li>
+        <li class="peg">Pegadinha: administração direta × indireta (autarquia, fundação, empresa pública, sociedade de economia mista); desconcentração (dentro do mesmo órgão) × descentralização (para outra pessoa jurídica).</li>
+      </ul>
+
+      <h4>Gestão de Documentos e Redação Oficial <span class="pri p1">P1</span></h4>
+      <ul>
+        <li>Documentos administrativos e <strong>redação oficial</strong> (Manual de Redação da Presidência, 3ª ed.): <strong>padrão ofício</strong>; fechos <strong>Respeitosamente</strong> (a superior) / <strong>Atenciosamente</strong> (a igual ou inferior); pronomes de tratamento.</li>
+        <li>Expedientes: ofício, memorando, <strong>ata</strong>, portaria, circular, requerimento, parecer, certidão, declaração, atestado, edital, procuração, mensagem eletrônica, relatório.</li>
+        <li>Normatizações técnicas; organização e apresentação de dados; registros, controles, cadastros e correspondências.</li>
+        <li class="peg">Pegadinha: usar "Ilmo./DD." (abolidos); trocar os fechos; vírgula separando sujeito do verbo.</li>
+      </ul>
+
+      <h4>Gestão de Arquivos <span class="pri p1">P1</span></h4>
+      <ul>
+        <li><strong>Teoria das 3 idades:</strong> corrente (uso frequente, valor primário) → intermediário (aguarda destinação) → permanente (valor secundário, <strong>jamais eliminado</strong>).</li>
+        <li>Transferência (corrente→intermediário) × recolhimento (→permanente); <strong>tabela de temporalidade</strong>; conceitos, funções e práticas de arquivo.</li>
+        <li class="peg">Pegadinha: dizer que arquivo permanente pode ser eliminado; confundir transferência com recolhimento.</li>
+      </ul>
+
+      <h4>Contabilidade e Finanças <span class="pri p2">P2</span></h4>
+      <ul>
+        <li>Rotinas: <strong>contas a pagar e a receber</strong>; lançamento de notas fiscais e pagamentos (sistema <strong>Protheus</strong>); prestação de contas (adiantamentos e relatórios de viagem); demonstrativos financeiros; contas patrimoniais.</li>
+        <li><strong>GMD</strong> (Gerenciamento Matricial de Despesas) e <strong>GMR</strong> (Gerenciamento Matricial de Receitas): planejamento financeiro do mês, <strong>fechamento de caixa</strong> mensal, <strong>previsão do orçamento anual</strong>.</li>
+        <li>Noções: Ativo = Passivo + Patrimônio Líquido; regime de competência.</li>
+        <li class="peg">Pegadinha: confundir GMD (despesa) com GMR (receita); trocar competência por caixa.</li>
+      </ul>
+      <div class="alert blue"><span class="tag">Referências oficiais</span> — Manual de Redação da Presidência (3ª ed.); Lei 14.133/2021; Lei 13.019/2014; Lei 13.303/2016; Chiavenato (Administração e RH); Di Pietro (Direito Administrativo); Dias/Carretoni (Administração de Materiais).</div>
+    </div></section>
+
+    <!-- ============ 6. PLANO ============ -->
+    <section id="plano">
+      <p class="eyebrow">Seção 6</p>
+      <h2 class="sec">Plano de estudos — até a prova (29/11/2026), com horas por dia</h2>
+      <div class="alert amber"><span class="tag">Contagem regressiva</span> — a prova é <b>29/11/2026</b>. Este plano leva você de agora até lá, com <b>Específicos primeiro</b> (vale o dobro). Ajuste os horários à sua rotina; o importante é cumprir os blocos e os simulados de sábado.</div>
+      <p>Ritmo recomendado: <strong>~2 h nos dias úteis</strong> (19h–21h) e <strong>~3 h no sábado</strong> (simulado). Tempo integral? Dobre os blocos na mesma ordem. Pouco tempo? Corte P3 antes — <strong>nunca corte os Específicos nem os P1</strong>.</p>
+
+      <h3>Ciclo semanal (horas por matéria — Específicos pesa o dobro)</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Matéria</th><th>Horas/sem.</th><th>Por quê</th></tr></thead>
+        <tbody>
+        <tr><td class="k">Conhecimentos Específicos</td><td>6 h</td><td><strong>40% da nota (2 pts/questão)</strong> e 1º desempate. Extenso e “decorável”. Matéria nº 1.</td></tr>
+        <tr><td class="k">Português</td><td>4 h</td><td>20%; evolui com questões comentadas.</td></tr>
+        <tr><td class="k">Matemática/RLM</td><td>4 h</td><td>20%; exige treino.</td></tr>
+        <tr><td class="k">Conhecimentos Gerais</td><td>2 h30</td><td>20%; foco na EMATER-MG, ética e meio rural.</td></tr>
+        <tr><td class="k">Simulado + correção</td><td>3 h30</td><td>Todo sábado, cronometrado.</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>Rotina diária (para quem trabalha)</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Quando</th><th>O quê</th><th>Tempo</th></tr></thead>
+        <tbody>
+        <tr><td class="k">Ao acordar</td><td>Flashcards do dia anterior (revisão espaçada)</td><td>20 min</td></tr>
+        <tr><td class="k">Almoço</td><td>Manchetes de agro/meio ambiente (Gerais)</td><td>15 min</td></tr>
+        <tr><td class="k">19h00 · bloco 1</td><td>Matéria mais difícil do dia (teoria + esquema)</td><td>50 min</td></tr>
+        <tr><td class="k">20h00 · bloco 2</td><td>Questões da mesma matéria (mín. 15) + caderno de erros</td><td>50 min</td></tr>
+        <tr><td class="k">21h00 · bloco 3</td><td>Lei seca/tabela (14.133, 13.019, redação, arquivos)</td><td>40 min</td></tr>
+        <tr><td class="k">Antes de dormir</td><td>Reler as anotações do dia (só reler)</td><td>10 min</td></tr>
+        </tbody>
+      </table></div>
+      <p class="peg">A matéria difícil vai no <strong>1º bloco após um descanso</strong> (pico de atenção). Reler antes de dormir aproveita a consolidação no sono. <strong>Dormir 7–8 h vale mais que 1 h extra à meia-noite.</strong></p>
+
+      <h3>Cronograma por fases (marque conforme avança — fica salvo na sua conta)</h3>
+      <div id="plano-list">
+        <div class="chk"><input type="checkbox" id="f0"><label for="f0"><b>Fase 0 — Preparação (agora):</b> baixe o Edital 01/2026 e o <b>Anexo VI</b> (conteúdo programático); faça o <a href="#simulado">simulado diagnóstico</a>; inscreva-se de 30/09 a 30/10.</label></div>
+        <div class="chk"><input type="checkbox" id="f1"><label for="f1"><b>Fase 1 — Específicos: Administração e RH:</b> administração geral e pública (PODC, direta/indireta) e RH/departamento de pessoal (recrutamento, ponto, SISPATRI).</label></div>
+        <div class="chk"><input type="checkbox" id="f2"><label for="f2"><b>Fase 2 — Específicos: Estoques, Logística e Licitações:</b> almoxarifado/estoques (curva ABC, ponto de pedido), logística/frotas e Lei 14.133 + convênios 13.019.</label></div>
+        <div class="chk"><input type="checkbox" id="f3"><label for="f3"><b>Fase 3 — Específicos: Redação, Arquivos e Contabilidade:</b> redação oficial e documentos, gestão de arquivos (3 idades) e contabilidade/finanças (GMD/GMR).</label></div>
+        <div class="chk"><input type="checkbox" id="f4"><label for="f4"><b>Fase 4 — Português:</b> interpretação, conectivos/reescrita, crase, concordância, pontuação, colocação.</label></div>
+        <div class="chk"><input type="checkbox" id="f5"><label for="f5"><b>Fase 5 — Matemática e RLM:</b> porcentagem/juros, razão/proporção, estatística, conjuntos e raciocínio lógico (proposições e negações).</label></div>
+        <div class="chk"><input type="checkbox" id="f6"><label for="f6"><b>Fase 6 — Conhecimentos Gerais:</b> EMATER-MG e ATER, ética/integridade, LAI e LGPD, Minas Gerais e meio rural, atualidades.</label></div>
+        <div class="chk"><input type="checkbox" id="f7"><label for="f7"><b>Fase 7 — Revisão + simulados:</b> refaça o caderno de erros por matéria; 2ª leitura das tabelas; simulados completos cronometrados.</label></div>
+        <div class="chk"><input type="checkbox" id="f8"><label for="f8"><b>Fase 8 — Reta final:</b> só revisão: caderno de erros, flashcards e mnemônicos. Nada de matéria nova.</label></div>
+      </div>
+
+      <h3 style="margin-top:34px">Plano dia a dia com horários (até 29/11)</h3>
+      <p>Cada dia já tem o que estudar e em que horário. Marque conforme faz; o progresso fica salvo. Se faltar tempo num dia, empurre o bloco 3 para o dia seguinte — <strong>nunca pule o simulado de sábado</strong>.</p>
+      <div id="crono-prog" class="cprog"></div>
+      <div id="diario-list">
+        <h4 class="wk">Semana 1 (21/09–27/09) · Específicos — Administração geral e pública (PODC, direta × indireta)</h4>
+        <div class="chk"><input type="checkbox" id="pd1"><label for="pd1"><b>Seg 21/09:</b> 19h teoria do tema da semana (aula) · 20h treino de questões · 21h montar tabela/resumo.</label></div>
+        <div class="chk"><input type="checkbox" id="pd2"><label for="pd2"><b>Ter 22/09:</b> 19h teoria (2ª parte) · 20h treino · 21h flashcards do dia.</label></div>
+        <div class="chk"><input type="checkbox" id="pd3"><label for="pd3"><b>Qua 23/09:</b> 19h Português do dia (aula+treino) · 21h releitura das anotações.</label></div>
+        <div class="chk"><input type="checkbox" id="pd4"><label for="pd4"><b>Qui 24/09:</b> 19h Matemática/RLM (aula+treino) · 21h flashcards.</label></div>
+        <div class="chk"><input type="checkbox" id="pd5"><label for="pd5"><b>Sex 25/09:</b> 19h Conhecimentos Gerais / lei seca do tema · 20h treino misto.</label></div>
+        <div class="chk"><input type="checkbox" id="pd6"><label for="pd6"><b>Sáb 26/09:</b> 08h30 simulado cronometrado (Simulado 1) + correção e caderno de erros.</label></div>
+        <div class="chk"><input type="checkbox" id="pd7"><label for="pd7"><b>Dom 27/09:</b> 09h revisão leve: refazer os erros da semana + flashcards. Descanso.</label></div>
+        <h4 class="wk">Semana 2 (28/09–04/10) · Específicos — RH e Departamento de Pessoal + Estoques/almoxarifado</h4>
+        <div class="chk"><input type="checkbox" id="pd8"><label for="pd8"><b>Seg 28/09:</b> 19h teoria do tema da semana (aula) · 20h treino de questões · 21h montar tabela/resumo.</label></div>
+        <div class="chk"><input type="checkbox" id="pd9"><label for="pd9"><b>Ter 29/09:</b> 19h teoria (2ª parte) · 20h treino · 21h flashcards do dia.</label></div>
+        <div class="chk"><input type="checkbox" id="pd10"><label for="pd10"><b>Qua 30/09:</b> 19h Português do dia (aula+treino) · 21h releitura das anotações.</label></div>
+        <div class="chk"><input type="checkbox" id="pd11"><label for="pd11"><b>Qui 01/10:</b> 19h Matemática/RLM (aula+treino) · 21h flashcards.</label></div>
+        <div class="chk"><input type="checkbox" id="pd12"><label for="pd12"><b>Sex 02/10:</b> 19h Conhecimentos Gerais / lei seca do tema · 20h treino misto.</label></div>
+        <div class="chk"><input type="checkbox" id="pd13"><label for="pd13"><b>Sáb 03/10:</b> 08h30 simulado cronometrado (Simulado 2) + correção e caderno de erros.</label></div>
+        <div class="chk"><input type="checkbox" id="pd14"><label for="pd14"><b>Dom 04/10:</b> 09h revisão leve: refazer os erros da semana + flashcards. Descanso.</label></div>
+        <h4 class="wk">Semana 3 (05/10–11/10) · Específicos — Licitações (14.133), convênios (13.019) e logística/frotas</h4>
+        <div class="chk"><input type="checkbox" id="pd15"><label for="pd15"><b>Seg 05/10:</b> 19h teoria do tema da semana (aula) · 20h treino de questões · 21h montar tabela/resumo.</label></div>
+        <div class="chk"><input type="checkbox" id="pd16"><label for="pd16"><b>Ter 06/10:</b> 19h teoria (2ª parte) · 20h treino · 21h flashcards do dia.</label></div>
+        <div class="chk"><input type="checkbox" id="pd17"><label for="pd17"><b>Qua 07/10:</b> 19h Português do dia (aula+treino) · 21h releitura das anotações.</label></div>
+        <div class="chk"><input type="checkbox" id="pd18"><label for="pd18"><b>Qui 08/10:</b> 19h Matemática/RLM (aula+treino) · 21h flashcards.</label></div>
+        <div class="chk"><input type="checkbox" id="pd19"><label for="pd19"><b>Sex 09/10:</b> 19h Conhecimentos Gerais / lei seca do tema · 20h treino misto.</label></div>
+        <div class="chk"><input type="checkbox" id="pd20"><label for="pd20"><b>Sáb 10/10:</b> 08h30 simulado cronometrado (Simulado 3) + correção e caderno de erros.</label></div>
+        <div class="chk"><input type="checkbox" id="pd21"><label for="pd21"><b>Dom 11/10:</b> 09h revisão leve: refazer os erros da semana + flashcards. Descanso.</label></div>
+        <h4 class="wk">Semana 4 (12/10–18/10) · Específicos — Redação oficial, arquivos e contabilidade (GMD/GMR)</h4>
+        <div class="chk"><input type="checkbox" id="pd22"><label for="pd22"><b>Seg 12/10:</b> 19h teoria do tema da semana (aula) · 20h treino de questões · 21h montar tabela/resumo.</label></div>
+        <div class="chk"><input type="checkbox" id="pd23"><label for="pd23"><b>Ter 13/10:</b> 19h teoria (2ª parte) · 20h treino · 21h flashcards do dia.</label></div>
+        <div class="chk"><input type="checkbox" id="pd24"><label for="pd24"><b>Qua 14/10:</b> 19h Português do dia (aula+treino) · 21h releitura das anotações.</label></div>
+        <div class="chk"><input type="checkbox" id="pd25"><label for="pd25"><b>Qui 15/10:</b> 19h Matemática/RLM (aula+treino) · 21h flashcards.</label></div>
+        <div class="chk"><input type="checkbox" id="pd26"><label for="pd26"><b>Sex 16/10:</b> 19h Conhecimentos Gerais / lei seca do tema · 20h treino misto.</label></div>
+        <div class="chk"><input type="checkbox" id="pd27"><label for="pd27"><b>Sáb 17/10:</b> 08h30 simulado cronometrado (Simulado 4) + correção e caderno de erros.</label></div>
+        <div class="chk"><input type="checkbox" id="pd28"><label for="pd28"><b>Dom 18/10:</b> 09h revisão leve: refazer os erros da semana + flashcards. Descanso.</label></div>
+        <h4 class="wk">Semana 5 (19/10–25/10) · Português — interpretação, conectivos, crase e concordância</h4>
+        <div class="chk"><input type="checkbox" id="pd29"><label for="pd29"><b>Seg 19/10:</b> 19h teoria do tema da semana (aula) · 20h treino de questões · 21h montar tabela/resumo.</label></div>
+        <div class="chk"><input type="checkbox" id="pd30"><label for="pd30"><b>Ter 20/10:</b> 19h teoria (2ª parte) · 20h treino · 21h flashcards do dia.</label></div>
+        <div class="chk"><input type="checkbox" id="pd31"><label for="pd31"><b>Qua 21/10:</b> 19h Português do dia (aula+treino) · 21h releitura das anotações.</label></div>
+        <div class="chk"><input type="checkbox" id="pd32"><label for="pd32"><b>Qui 22/10:</b> 19h Matemática/RLM (aula+treino) · 21h flashcards.</label></div>
+        <div class="chk"><input type="checkbox" id="pd33"><label for="pd33"><b>Sex 23/10:</b> 19h Conhecimentos Gerais / lei seca do tema · 20h treino misto.</label></div>
+        <div class="chk"><input type="checkbox" id="pd34"><label for="pd34"><b>Sáb 24/10:</b> 08h30 simulado cronometrado (Simulado 1) + correção e caderno de erros.</label></div>
+        <div class="chk"><input type="checkbox" id="pd35"><label for="pd35"><b>Dom 25/10:</b> 09h revisão leve: refazer os erros da semana + flashcards. Descanso.</label></div>
+        <h4 class="wk">Semana 6 (26/10–01/11) · Matemática/RLM — porcentagem, juros, estatística e lógica</h4>
+        <div class="chk"><input type="checkbox" id="pd36"><label for="pd36"><b>Seg 26/10:</b> 19h teoria do tema da semana (aula) · 20h treino de questões · 21h montar tabela/resumo.</label></div>
+        <div class="chk"><input type="checkbox" id="pd37"><label for="pd37"><b>Ter 27/10:</b> 19h teoria (2ª parte) · 20h treino · 21h flashcards do dia.</label></div>
+        <div class="chk"><input type="checkbox" id="pd38"><label for="pd38"><b>Qua 28/10:</b> 19h Português do dia (aula+treino) · 21h releitura das anotações.</label></div>
+        <div class="chk"><input type="checkbox" id="pd39"><label for="pd39"><b>Qui 29/10:</b> 19h Matemática/RLM (aula+treino) · 21h flashcards.</label></div>
+        <div class="chk"><input type="checkbox" id="pd40"><label for="pd40"><b>Sex 30/10:</b> 19h Conhecimentos Gerais / lei seca do tema · 20h treino misto.</label></div>
+        <div class="chk"><input type="checkbox" id="pd41"><label for="pd41"><b>Sáb 31/10:</b> 08h30 simulado cronometrado (Simulado 2) + correção e caderno de erros.</label></div>
+        <div class="chk"><input type="checkbox" id="pd42"><label for="pd42"><b>Dom 01/11:</b> 09h revisão leve: refazer os erros da semana + flashcards. Descanso.</label></div>
+        <h4 class="wk">Semana 7 (02/11–08/11) · Conhecimentos Gerais — EMATER-MG, ATER, ética, LAI/LGPD, MG</h4>
+        <div class="chk"><input type="checkbox" id="pd43"><label for="pd43"><b>Seg 02/11:</b> 19h teoria do tema da semana (aula) · 20h treino de questões · 21h montar tabela/resumo.</label></div>
+        <div class="chk"><input type="checkbox" id="pd44"><label for="pd44"><b>Ter 03/11:</b> 19h teoria (2ª parte) · 20h treino · 21h flashcards do dia.</label></div>
+        <div class="chk"><input type="checkbox" id="pd45"><label for="pd45"><b>Qua 04/11:</b> 19h Português do dia (aula+treino) · 21h releitura das anotações.</label></div>
+        <div class="chk"><input type="checkbox" id="pd46"><label for="pd46"><b>Qui 05/11:</b> 19h Matemática/RLM (aula+treino) · 21h flashcards.</label></div>
+        <div class="chk"><input type="checkbox" id="pd47"><label for="pd47"><b>Sex 06/11:</b> 19h Conhecimentos Gerais / lei seca do tema · 20h treino misto.</label></div>
+        <div class="chk"><input type="checkbox" id="pd48"><label for="pd48"><b>Sáb 07/11:</b> 08h30 simulado cronometrado (Simulado 3) + correção e caderno de erros.</label></div>
+        <div class="chk"><input type="checkbox" id="pd49"><label for="pd49"><b>Dom 08/11:</b> 09h revisão leve: refazer os erros da semana + flashcards. Descanso.</label></div>
+        <h4 class="wk">Semana 8 (09/11–15/11) · Revisão 1 — refazer o caderno de erros por matéria + tabelas</h4>
+        <div class="chk"><input type="checkbox" id="pd50"><label for="pd50"><b>Seg 09/11:</b> 19h teoria do tema da semana (aula) · 20h treino de questões · 21h montar tabela/resumo.</label></div>
+        <div class="chk"><input type="checkbox" id="pd51"><label for="pd51"><b>Ter 10/11:</b> 19h teoria (2ª parte) · 20h treino · 21h flashcards do dia.</label></div>
+        <div class="chk"><input type="checkbox" id="pd52"><label for="pd52"><b>Qua 11/11:</b> 19h Português do dia (aula+treino) · 21h releitura das anotações.</label></div>
+        <div class="chk"><input type="checkbox" id="pd53"><label for="pd53"><b>Qui 12/11:</b> 19h Matemática/RLM (aula+treino) · 21h flashcards.</label></div>
+        <div class="chk"><input type="checkbox" id="pd54"><label for="pd54"><b>Sex 13/11:</b> 19h Conhecimentos Gerais / lei seca do tema · 20h treino misto.</label></div>
+        <div class="chk"><input type="checkbox" id="pd55"><label for="pd55"><b>Sáb 14/11:</b> 08h30 simulado cronometrado (Simulado 4) + correção e caderno de erros.</label></div>
+        <div class="chk"><input type="checkbox" id="pd56"><label for="pd56"><b>Dom 15/11:</b> 09h revisão leve: refazer os erros da semana + flashcards. Descanso.</label></div>
+        <h4 class="wk">Semana 9 (16/11–22/11) · Revisão 2 — campeões (Específicos + Português) e simulados</h4>
+        <div class="chk"><input type="checkbox" id="pd57"><label for="pd57"><b>Seg 16/11:</b> 19h teoria do tema da semana (aula) · 20h treino de questões · 21h montar tabela/resumo.</label></div>
+        <div class="chk"><input type="checkbox" id="pd58"><label for="pd58"><b>Ter 17/11:</b> 19h teoria (2ª parte) · 20h treino · 21h flashcards do dia.</label></div>
+        <div class="chk"><input type="checkbox" id="pd59"><label for="pd59"><b>Qua 18/11:</b> 19h Português do dia (aula+treino) · 21h releitura das anotações.</label></div>
+        <div class="chk"><input type="checkbox" id="pd60"><label for="pd60"><b>Qui 19/11:</b> 19h Matemática/RLM (aula+treino) · 21h flashcards.</label></div>
+        <div class="chk"><input type="checkbox" id="pd61"><label for="pd61"><b>Sex 20/11:</b> 19h Conhecimentos Gerais / lei seca do tema · 20h treino misto.</label></div>
+        <div class="chk"><input type="checkbox" id="pd62"><label for="pd62"><b>Sáb 21/11:</b> 08h30 simulado cronometrado (Simulado 1) + correção e caderno de erros.</label></div>
+        <div class="chk"><input type="checkbox" id="pd63"><label for="pd63"><b>Dom 22/11:</b> 09h revisão leve: refazer os erros da semana + flashcards. Descanso.</label></div>
+        <h4 class="wk">Semana 10 (23/11–29/11) · Reta final — caderno de erros, flashcards e mnemônicos</h4>
+        <div class="chk"><input type="checkbox" id="pd64"><label for="pd64"><b>Seg 23/11:</b> 19h teoria do tema da semana (aula) · 20h treino de questões · 21h montar tabela/resumo.</label></div>
+        <div class="chk"><input type="checkbox" id="pd65"><label for="pd65"><b>Ter 24/11:</b> 19h teoria (2ª parte) · 20h treino · 21h flashcards do dia.</label></div>
+        <div class="chk"><input type="checkbox" id="pd66"><label for="pd66"><b>Qua 25/11:</b> 19h Português do dia (aula+treino) · 21h releitura das anotações.</label></div>
+        <div class="chk"><input type="checkbox" id="pd67"><label for="pd67"><b>Qui 26/11:</b> 19h Matemática/RLM (aula+treino) · 21h flashcards.</label></div>
+        <div class="chk"><input type="checkbox" id="pd68"><label for="pd68"><b>Sex 27/11:</b> 19h Conhecimentos Gerais / lei seca do tema · 20h treino misto.</label></div>
+        <div class="chk"><input type="checkbox" id="pd69"><label for="pd69"><b>Sáb 28/11:</b> 08h30 simulado cronometrado (Simulado 2) + correção e caderno de erros.</label></div>
+        <div class="chk"><input type="checkbox" id="pd70"><label for="pd70"><b>Dom 29/11:</b> 09h revisão leve: refazer os erros da semana + flashcards. Descanso.</label></div>
+      </div>
+      <div style="margin-top:14px"><button class="btn ghost" id="plano-reset" type="button">Zerar meu progresso do cronograma</button></div>
+
+      <div class="callout" style="margin-top:22px">
+        <h3 style="margin-top:0">🗓️ Semana da prova (23–29/11) — só revisão</h3>
+        <p><b>Nada de matéria nova.</b> Reveja caderno de erros, tabelas e flashcards. No dia 29/11 (domingo), chegue cedo, com documento e caneta transparente.</p>
+        <div class="tw"><table>
+          <thead><tr><th>Momento</th><th>O quê</th></tr></thead>
+          <tbody>
+          <tr><td class="k">Últimos 3 dias</td><td>Só caderno de erros, tabelas (14.133, 3 idades, GMD/GMR) e flashcards campeões.</td></tr>
+          <tr><td class="k">Véspera (28/11)</td><td>Descanso. Checklist de documentos. Dormir cedo.</td></tr>
+          <tr><td class="k">Na prova (4 h)</td><td>Priorize os Específicos (valem 2 pts). <b>Não deixe nada em branco</b> — eliminando 2 alternativas, chute. Reserve tempo para passar o gabarito a limpo.</td></tr>
+          </tbody>
+        </table></div>
+        <p class="peg" style="margin-bottom:0">Lembrete do desempate: em empate, quem fez mais pontos em <strong>Conhecimentos Específicos</strong> passa na frente.</p>
+      </div>
+</section>
+
+    <section id="memoria"><div class="card">
+      <p class="eyebrow">O método que fixa</p>
+      <h2 class="sec">Como fixar na memória (com base em evidências)</h2>
+      <div class="grid2">
+        <div class="mini"><h4>1. Recuperação ativa</h4><p style="margin:0">Feche o material e escreva/explique de memória; só depois confira. Reler passivamente é a técnica mais fraca.</p></div>
+        <div class="mini"><h4>2. Revisão espaçada</h4><p style="margin:0">Reveja cada tema em <strong>24 h, 7 dias e 21 dias</strong>. Flashcards automatizam.</p></div>
+        <div class="mini"><h4>3. Questões como método</h4><p style="margin:0">Metade do tempo resolvendo questões no estilo Fundep. Cada erro vira uma linha no caderno de erros (o quê, por quê, regra, como não repetir).</p></div>
+        <div class="mini"><h4>4. Intercalação</h4><p style="margin:0">Alterne matérias no mesmo dia (Específicos + Português + Gerais).</p></div>
+        <div class="mini"><h4>5. Técnica Feynman</h4><p style="margin:0">Explique como para uma criança de 12 anos. Onde travar, falta entendimento.</p></div>
+        <div class="mini"><h4>6. Tabelas próprias</h4><p style="margin:0">Transforme listas (modalidades da 14.133, 3 idades do arquivo) em tabelas. Escrever à mão fixa mais.</p></div>
+      </div>
+      <h4>Mnemônicos que salvam (EMATER-MG)</h4>
+      <ul>
+        <li><strong>LIMPE</strong> — Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência (art. 37).</li>
+        <li><strong>PODC</strong> — Planejar, Organizar, Dirigir, Controlar (funções da administração).</li>
+        <li><strong>Indireta = “A-FES”</strong>: Autarquia, Fundação, Empresa pública, Sociedade de economia mista.</li>
+        <li><strong>14.133 — modalidades:</strong> “Pregão, Concorrência, Concurso, Leilão, Diálogo” (sem convite/tomada de preços).</li>
+        <li><strong>Fases 14.133:</strong> julga e DEPOIS habilita.</li>
+        <li><strong>Arquivo — 3 idades:</strong> Corrente → Intermediário → Permanente (nunca elimina).</li>
+        <li><strong>Fechos:</strong> Respeitosamente (superior) · Atenciosamente (igual/inferior).</li>
+        <li><strong>GMD = Despesas · GMR = Receitas.</strong></li>
+        <li><strong>LAI:</strong> reservado 5 · secreto 15 · ultrassecreto 25 anos.</li>
+        <li><strong>Crase:</strong> troque por masculino — deu “ao” = tem crase.</li>
+      </ul>
+    </div></section>
+
+    <!-- ============ DOMÍNIO POR PRIORIDADE ============ -->
+    <section id="dominio">
+      <p class="eyebrow">Domínio por prioridade</p>
+      <h2 class="sec">Dominar cada P1, P2 e P3 — do jeito certo</h2>
+      <p>A prova tem 40 questões. <strong>Conhecimentos Específicos vale o dobro</strong> (40%) e decide o desempate — por isso vários P1 são de Específicos. Estude nesta ordem: <strong>primeiro TODOS os P1</strong>, depois P2, e só então P3. Em cada tema: <b>Aprenda</b> (do zero) → <b>Entenda</b> (a regra) → <b class="okc">🎯 Na prova</b> (o movimento + a pegadinha). Pratique nas <a href="#treinos-sec">aulas + treinos</a>.</p>
+      <div class="prband p1"><span class="tag">P1</span><h3>Cai com certeza e pesa — domine 100%</h3><span class="cnt">comece por aqui</span></div>
+      <div class="domgrid">
+<div class="domc"><h4>Interpretação de texto <span class="mt">Português</span></h4>
+  <p class="ap"><b>Aprenda:</b> interpretar é responder “o que ESTE texto diz?” usando só o que está escrito. Uma alternativa verdadeira “no mundo real”, mas fora do texto, está errada.</p>
+  <p><b>Entenda:</b> compreensão (o que diz) × inferência (o que se conclui) × extrapolação (ir além — quase sempre errada). Separe ideia central de secundária.</p>
+  <p class="na"><b>🎯 Na prova:</b> desconfie de “sempre/todos” quando o texto restringe, e de informação plausível mas ausente.</p></div>
+<div class="domc"><h4>Concordância <span class="mt">Português</span></h4>
+  <p class="ap"><b>Aprenda:</b> o verbo combina com quem faz a ação. Os verbos sem dono — <i>haver</i>(existir) e <i>fazer</i>(tempo) — ficam no singular. Por isso “houveram” é sempre erro.</p>
+  <p><b>Entenda:</b> haver/fazer impessoais → singular (“Houve falhas”, “Faz dois anos”); existir concorda (“Existem falhas”). Voz passiva sintética: “Vendem-se produtos”.</p>
+  <p class="na"><b>🎯 Na prova:</b> “Houveram” e “fazem X anos” são sempre erro; cuidado com sujeito posposto (“Chegaram os autos”).</p></div>
+<div class="domc"><h4>Crase <span class="mt">Português</span></h4>
+  <p class="ap"><b>Aprenda:</b> crase é o acento no “a” quando dois “a” se encontram. Teste: troque por masculino — se virar “ao”, tem crase.</p>
+  <p><b>Entenda:</b> preposição a + artigo a(s), só diante de feminino. Locuções: às vezes, à noite, à vista, à medida que.</p>
+  <p class="na"><b>🎯 Na prova:</b> nunca antes de verbo, masculino ou pronome (a você). Cidade sem artigo: “vou a Uberlândia”.</p></div>
+<div class="domc"><h4>Conectivos e reescrita <span class="mt">Português</span></h4>
+  <p class="ap"><b>Aprenda:</b> cada conectivo tem um valor fixo; a reescrita só mantém o sentido se a relação continuar a mesma.</p>
+  <p><b>Entenda:</b> mas=oposição, portanto=conclusão, porque=causa, embora=concessão, se=condição.</p>
+  <p class="na"><b>🎯 Na prova:</b> “substituir X por Y mantém o sentido” → se trocaram causa por concessão (porque→embora), está errado.</p></div>
+<div class="domc"><h4>Raciocínio lógico <span class="mt">Matemática</span></h4>
+  <p class="ap"><b>Aprenda:</b> o que mais cai é a negação. Negar “se p, então q” NÃO é “se não p...”; é “p e não q”.</p>
+  <p><b>Entenda:</b> conectivos ∧, ∨, →; ~(p→q)=p∧~q; equivalente = contrapositiva ~q→~p. Negar “todo” vira “existe um que não”.</p>
+  <p class="na"><b>🎯 Na prova:</b> a equivalente é a contrapositiva, não a recíproca (q→p).</p></div>
+<div class="domc"><h4>Porcentagem e juros <span class="mt">Matemática</span></h4>
+  <p class="ap"><b>Aprenda:</b> aumentar 20% = ×1,20; tirar 20% = ×0,80. Aumentos sucessivos multiplicam. Juros simples crescem igual; compostos rendem juro sobre juro.</p>
+  <p><b>Entenda:</b> J=C·i·t (simples); M=C·(1+i)ᵗ (compostos). +10% e +20% = ×1,32 (32%).</p>
+  <p class="na"><b>🎯 Na prova:</b> veja se pedem o juro ou o montante; mais de um período costuma ser composto.</p></div>
+<div class="domc"><h4>A EMATER-MG e a ATER <span class="mt">Conhecimentos Gerais</span></h4>
+  <p class="ap"><b>Aprenda:</b> a EMATER-MG é empresa pública estadual vinculada à SEAPA-MG; faz assistência técnica e extensão rural (ATER) à agricultura familiar, em todo MG.</p>
+  <p><b>Entenda:</b> guarde: natureza jurídica, vinculação, missão/visão/valores, papel na agricultura familiar (Pnater).</p>
+  <p class="na"><b>🎯 Na prova:</b> cai quase certo: não confundir com autarquia federal nem com órgão da administração direta.</p></div>
+<div class="domc"><h4>Ética, integridade, LAI e LGPD <span class="mt">Conhecimentos Gerais</span></h4>
+  <p class="ap"><b>Aprenda:</b> integridade é agir certo mesmo sem ninguém vendo: sem nepotismo e sem conflito de interesses. LAI dá acesso à informação; LGPD protege dados.</p>
+  <p><b>Entenda:</b> LIMPE (art. 37); LAI 12.527/2011 (publicidade é regra); LGPD 13.709/2018; Código de Conduta Ética do Agente Público de MG (Dec. 46.644/2014).</p>
+  <p class="na"><b>🎯 Na prova:</b> “sigilo é a regra” = errado (é exceção); nepotismo e uso do cargo em proveito próprio são vedados.</p></div>
+<div class="domc"><h4>Administração geral e pública <span class="mt">Específicos</span></h4>
+  <p class="ap"><b>Aprenda:</b> administrar é planejar, organizar, dirigir e controlar (PODC). A administração pública se divide em direta e indireta.</p>
+  <p><b>Entenda:</b> indireta = autarquia, fundação, empresa pública, sociedade de economia mista. Descentralização (outra PJ) × desconcentração (mesmo órgão).</p>
+  <p class="na"><b>🎯 Na prova:</b> empresa pública é indireta; desconcentração NÃO cria nova pessoa jurídica.</p></div>
+<div class="domc"><h4>RH e Departamento de Pessoal <span class="mt">Específicos</span></h4>
+  <p class="ap"><b>Aprenda:</b> o DP cuida de recrutamento (atrair) × seleção (escolher), férias, ponto, banco de horas e faltas (absenteísmo). SISPATRI = declaração de bens.</p>
+  <p><b>Entenda:</b> recrutamento interno (de dentro) × externo (de fora); avaliação de desempenho tem vícios (efeito halo).</p>
+  <p class="na"><b>🎯 Na prova:</b> não confundir recrutamento com seleção; absenteísmo = ausência ao trabalho.</p></div>
+<div class="domc"><h4>Estoques e almoxarifado <span class="mt">Específicos</span></h4>
+  <p class="ap"><b>Aprenda:</b> o almoxarifado recebe, armazena, distribui e controla, com inventário. A Curva ABC mostra que poucos itens valem muito.</p>
+  <p><b>Entenda:</b> classe A ≈ 20% dos itens / 80% do valor. Ponto de pedido = consumo médio × prazo de reposição + estoque de segurança.</p>
+  <p class="na"><b>🎯 Na prova:</b> inventário confere físico × registrado; cuidado com os níveis de estoque (mínimo, segurança, máximo).</p></div>
+<div class="domc"><h4>Licitações (Lei 14.133/2021) <span class="mt">Específicos</span></h4>
+  <p class="ap"><b>Aprenda:</b> desde 2021 é a única lei geral (8.666 revogada). Modalidades: pregão, concorrência, concurso, leilão e diálogo competitivo.</p>
+  <p><b>Entenda:</b> em regra, o julgamento vem antes da habilitação. Dispensa (competição possível) × inexigibilidade (inviável).</p>
+  <p class="na"><b>🎯 Na prova:</b> convite e tomada de preços NÃO existem mais; não aplicar a 8.666.</p></div>
+<div class="domc"><h4>Redação oficial e arquivos <span class="mt">Específicos</span></h4>
+  <p class="ap"><b>Aprenda:</b> na redação oficial há o padrão ofício; fechos: Respeitosamente (superior) / Atenciosamente (igual/inferior). Nos arquivos, 3 idades: corrente → intermediário → permanente.</p>
+  <p><b>Entenda:</b> documentos: ofício, memorando, ata, portaria, requerimento, parecer. Permanente = valor secundário, jamais eliminado.</p>
+  <p class="na"><b>🎯 Na prova:</b> arquivo permanente nunca é eliminado; recolhimento = →permanente, transferência = corrente→intermediário.</p></div>
+      </div>
+      <div class="prband p2"><span class="tag">P2</span><h3>Cai bastante — garanta depois dos P1</h3><span class="cnt">segundo bloco</span></div>
+      <div class="domgrid">
+<div class="domc"><h4>Pontuação <span class="mt">Português</span></h4>
+  <p class="ap"><b>Aprenda:</b> a vírgula nunca separa sujeito do verbo. Isola vocativo, aposto, adverbial anteposta e a adjetiva explicativa.</p>
+  <p><b>Entenda:</b> explicativa (com vírgula) = todos; restritiva (sem vírgula) = alguns.</p>
+  <p class="na"><b>🎯 Na prova:</b> a vírgula muda o sentido da adjetiva; não separe verbo do complemento.</p></div>
+<div class="domc"><h4>Estatística e conjuntos <span class="mt">Matemática</span></h4>
+  <p class="ap"><b>Aprenda:</b> média = soma÷quantidade; moda = mais frequente; mediana = valor central com os dados ordenados.</p>
+  <p><b>Entenda:</b> n(A∪B)=n(A)+n(B)−n(A∩B). Mediana par = média dos dois centrais.</p>
+  <p class="na"><b>🎯 Na prova:</b> mediana sempre ordenando primeiro; não confunda moda com média.</p></div>
+<div class="domc"><h4>Logística e gestão de frotas <span class="mt">Específicos</span></h4>
+  <p class="ap"><b>Aprenda:</b> transporte/distribuição de materiais; na frota controla-se rotas, manutenção e abastecimento.</p>
+  <p><b>Entenda:</b> gestão de veículos: fluxos, rotas, planejamento e controle de abastecimento.</p>
+  <p class="na"><b>🎯 Na prova:</b> controle de abastecimento evita desperdício/fraude; manutenção preventiva × corretiva.</p></div>
+<div class="domc"><h4>Convênios (13.019) e estatais (13.303) <span class="mt">Específicos</span></h4>
+  <p class="ap"><b>Aprenda:</b> parcerias com a sociedade civil seguem a Lei 13.019/2014; as empresas públicas (como a EMATER-MG) seguem a Lei 13.303/2016.</p>
+  <p><b>Entenda:</b> 13.019: termo de colaboração, de fomento e acordo de cooperação (chamamento público). 13.303: estatuto das estatais.</p>
+  <p class="na"><b>🎯 Na prova:</b> não confundir a lei de licitações (14.133) com a de convênios (13.019).</p></div>
+<div class="domc"><h4>Contabilidade e GMD/GMR <span class="mt">Específicos</span></h4>
+  <p class="ap"><b>Aprenda:</b> rotina financeira: contas a pagar/receber, notas fiscais (Protheus), prestação de contas. GMD = despesas, GMR = receitas.</p>
+  <p><b>Entenda:</b> Ativo = Passivo + PL; regime de competência (fato gerador, não caixa).</p>
+  <p class="na"><b>🎯 Na prova:</b> GMD (despesas) ≠ GMR (receitas); competência ≠ caixa.</p></div>
+<div class="domc"><h4>Minas Gerais e o meio rural <span class="mt">Conhecimentos Gerais</span></h4>
+  <p class="ap"><b>Aprenda:</b> MG tem 853 municípios (o maior número do país), capital BH, forte agropecuária (café, leite). Desenvolvimento sustentável concilia economia, sociedade e ambiente.</p>
+  <p><b>Entenda:</b> território, divisão regional, meio rural e sustentabilidade; cidadania e responsabilidade socioambiental.</p>
+  <p class="na"><b>🎯 Na prova:</b> sustentável = 3 dimensões (econômica, social, ambiental), não só ambiental.</p></div>
+      </div>
+      <div class="prband p3"><span class="tag">P3</span><h3>Cai menos — pegue os pontos fáceis</h3><span class="cnt">por último</span></div>
+      <div class="domgrid">
+<div class="domc"><h4>Atualidades <span class="mt">Conhecimentos Gerais</span></h4>
+  <p class="ap"><b>Aprenda:</b> cai o noticiário de meio ambiente, agropecuária e desenvolvimento rural (estadual e nacional). Leia manchetes e guarde fatos com data.</p>
+  <p><b>Entenda:</b> foco em agro, clima, segurança alimentar, economia (Selic, IPCA) e políticas para o campo.</p>
+  <p class="na"><b>🎯 Na prova:</b> guarde fatos, nomes e datas; reveja perto de 29/11/2026.</p></div>
+      </div>
+      <div class="alert blue"><span class="tag">Estratégia</span> — como <b>não há desconto por erro</b>, responda TODAS as questões. Priorize os <b>Específicos</b> (valem 2 pts) e chegue neles com convicção; nas demais, elimine 2 alternativas e decida.</div>
+</section>
+
+    <!-- ============ AULAS + TREINOS ============ -->
+    <section id="treinos-sec">
+      <div class="card">
+        <p class="eyebrow">Aula + prática</p>
+        <h2 class="sec">Aulas e treinos por tema</h2>
+        <p>Aqui você <strong>aprende primeiro</strong> (uma aula curta com exemplo) e <strong>treina em seguida</strong>. Em cada questão aparece o gabarito e a <strong>explicação do porquê</strong> — leia mesmo quando acertar: é o que fixa na memória. Tudo aqui dentro; você não precisa pesquisar fora.</p>
+        <div class="matfilter" id="matfilter"></div>
+      </div>
+      <div id="treinos"></div>
+    </section>
+
+    <!-- ============ ANTES DE CADA SIMULADO ============ -->
+    <section id="antes-sim"><div class="card">
+      <p class="eyebrow">Praticar · o que estudar antes</p>
+      <h2 class="sec">Antes de cada simulado — o que estudar</h2>
+      <p>Não faça os simulados no escuro. Estude o tema (na seção <strong>Aulas e treinos por tema</strong>, com filtro por matéria) e só depois faça o simulado. O ciclo que fixa é: <strong>estudar o treino → fazer o simulado → o erro cai no caderno → voltar e estudar só o que errou.</strong> Está tudo aqui dentro; você não precisa sair do site.</p>
+      <div class="grid2">
+        <div class="mini"><h4>Simulado 1 — faça agora, SEM estudar</h4><p style="margin:0">É o seu <strong>diagnóstico</strong>. Faça cronometrado para o site mostrar (no placar em pontos e no caderno de erros) onde você está mais fraco. Não se cobre nota aqui.</p></div>
+        <div class="mini"><h4>Antes do Simulado 2 — o núcleo (Específicos)</h4><p style="margin:0"><strong>Específicos (vale o dobro!):</strong> administração geral e pública; RH/departamento de pessoal; estoques e almoxarifado.<br><strong>Português:</strong> interpretação, crase, concordância.</p></div>
+        <div class="mini"><h4>Antes do Simulado 3 — o resto dos Específicos</h4><p style="margin:0"><strong>Específicos:</strong> licitações (14.133), convênios (13.019), logística/frotas, redação oficial, arquivos, contabilidade/GMD-GMR.<br><strong>Matemática/RLM:</strong> porcentagem, juros, estatística, lógica.</p></div>
+        <div class="mini"><h4>Antes do Simulado 4 — revisar, não aprender de novo</h4><p style="margin:0">Rode <strong>Só Conhecimentos Específicos</strong> até acertar 8–10 de 10. Refaça o seu <strong>Caderno de erros</strong>. Passe os <strong>Flashcards</strong> e a <strong>Revisão de véspera</strong>. Reforce <strong>Conhecimentos Gerais</strong> (EMATER-MG, ética, LAI/LGPD).</p></div>
+      </div>
+      <div class="callout" style="margin-top:16px">
+        <h4 style="margin-top:0">A ordem de prioridade dentro de cada estudo</h4>
+        <p style="margin:0">Sempre nesta ordem: <strong>1º Conhecimentos Específicos</strong> (40% e decide o desempate) → <strong>2º Português e Matemática/RLM</strong> (20% cada) → <strong>3º Conhecimentos Gerais</strong> (20%, foco EMATER-MG/ética). E dentro de cada matéria, ataque primeiro os temas <strong>P1</strong>. Meta: passar dos <strong>30 pontos</strong> sem zerar nenhuma matéria, subindo a nota a cada simulado.</p>
+      </div>
+    </div></section>
+
+    <!-- ============ 7. SIMULADO ============ -->
+    <section id="simulado"><div class="card">
+      <p class="eyebrow">Seção 7 · 40 questões · 4 alternativas · 3 horas</p>
+      <h2 class="sec">Simulado no formato da prova</h2>
+      <p>Marque uma alternativa em cada questão e clique em <strong>Corrigir prova</strong>. O site mostra sua nota e o comentário de cada questão. Use como diagnóstico (Semana 0) e refaça na Semana 6.</p>
+      <div id="sim"></div>
+      <div class="simbar">
+        <button class="btn" id="corrigir">Corrigir prova</button>
+        <button class="btn ghost" id="limpar">Limpar</button>
+        <span class="score" id="scorebox" aria-live="polite"></span>
+      </div>
+    </div></section>
+
+    <!-- ============ SIMULADO 2 ============ -->
+    <section id="simulado2"><div class="card">
+      <p class="eyebrow">Prova online 2 · 40 questões · 3 horas</p>
+      <h2 class="sec">Simulado 2 (inédito)</h2>
+      <p>Segunda prova completa no formato Fundep (10 Português · 10 Matemática/RLM · 5 Gerais · 5 Legislação · 10 Específicos). Marque tudo e clique em <strong>Corrigir</strong> — a explicação de cada questão aparece embaixo dela.</p>
+      <div id="quiz-sim2"></div>
+    </div></section>
+
+    <!-- ============ SIMULADO 3 ============ -->
+    <section id="simulado3"><div class="card">
+      <p class="eyebrow">Prova online 3 · 40 questões · 3 horas</p>
+      <h2 class="sec">Simulado 3 (inédito)</h2>
+      <p>Terceira prova completa no formato Fundep (10 Português · 10 Matemática/RLM · 5 Gerais · 5 Legislação · 10 Específicos). Cronometre 3 horas, marque tudo e clique em <strong>Corrigir</strong>.</p>
+      <div id="quiz-sim3"></div>
+    </div></section>
+
+    <!-- ============ SIMULADO 4 ============ -->
+    <section id="simulado4"><div class="card">
+      <p class="eyebrow">Prova online 4 · 40 questões · 3 horas</p>
+      <h2 class="sec">Simulado 4 (inédito)</h2>
+      <p>Quarta prova completa no formato Fundep. Use o <strong>cronômetro</strong> da barra de correção para treinar o ritmo (≈ 4,5 min por questão). Marque tudo e clique em <strong>Corrigir</strong> — o painel <em>Revise seus erros</em> aparece no fim.</p>
+      <div id="quiz-sim4"></div>
+    </div></section>
+
+    <!-- ============ SIMULADO ALEATÓRIO ============ -->
+    <section id="aleatorio"><div class="card">
+      <p class="eyebrow">Prova sorteada do banco · 40 questões · 3 horas</p>
+      <h2 class="sec">Simulado aleatório</h2>
+      <p>Sorteia <strong>40 questões do banco inteiro</strong> (todos os simulados e treinos, ~300 questões), <strong>sempre diferentes</strong> — assim você treina o conteúdo, e não a ordem das respostas. Tem cronômetro de 3 h, e os erros vão para o seu <a href="#caderno">caderno</a>.</p>
+      <button class="btn" id="aleatorio-gerar" type="button">Gerar 40 questões</button>
+      <div id="quiz-aleatorio" style="margin-top:14px"></div>
+    </div></section>
+
+    <!-- ============ SÓ ESPECÍFICOS ============ -->
+    <section id="especifico"><div class="card">
+      <p class="eyebrow">Treino focado · a matéria que mais pesa</p>
+      <h2 class="sec">Só Conhecimentos Específicos</h2>
+      <p>Específicos vale <strong>40% da nota</strong> (2 pontos por questão) e é o 1º critério de desempate. Aqui você treina <strong>só essa matéria</strong>: 10 questões sorteadas do banco de Específicos, sempre diferentes. Os erros vão para o seu <a href="#caderno">caderno</a>.</p>
+      <button class="btn" id="espec-gerar" type="button">Gerar 10 de Específicos</button>
+      <div id="espec-list" style="margin-top:14px"></div>
+    </div></section>
+
+    <!-- ============ CADERNO DE ERROS ============ -->
+    <section id="caderno"><div class="card">
+      <p class="eyebrow">Revisar</p>
+      <h2 class="sec">Meu caderno de erros <span id="cad-count" class="cadcount"></span></h2>
+      <p>Toda questão que você errar nos simulados e nos treinos entra aqui <strong>automaticamente</strong> e fica salva no seu navegador. Refaça-as quantas vezes precisar — <strong>rever o próprio erro é o que mais fixa</strong>. Quando acertar, clique em <em>Tirar do caderno as que acertei</em> para ele ir enxugando.</p>
+      <div class="cadtools">
+        <button class="btn ghost" id="cad-remove" type="button">Tirar do caderno as que acertei</button>
+        <button class="btn ghost" id="cad-download" type="button">Baixar para imprimir</button>
+        <button class="btn ghost" id="cad-clear" type="button">Limpar caderno</button>
+      </div>
+      <div id="caderno-list"></div>
+    </div></section>
+
+    <!-- ============ 9. FLASHCARDS ============ -->
+    <section id="flashcards"><div class="card">
+      <p class="eyebrow">Seção 9 · 80 cartões</p>
+      <h2 class="sec">Flashcards — revisão diária</h2>
+      <p>Toque no cartão para ver a resposta. Responda em voz alta <em>antes</em> de virar (recuperação ativa).</p>
+      <div class="fctools">
+        <button class="btn ghost" id="fc-shuffle">Embaralhar</button>
+        <button class="btn ghost" id="fc-all">Mostrar/ocultar todas</button>
+        <span class="score" id="fc-count"></span>
+      </div>
+      <div id="fcs" class="weights" style="gap:12px"></div>
+    </div></section>
+
+    <!-- ============ REVISÃO DE VÉSPERA ============ -->
+    <section id="vespera"><div class="card">
+      <p class="eyebrow">Reta final · leia na véspera e na manhã da prova</p>
+      <h2 class="sec">Revisão de véspera — tudo numa folha</h2>
+      <p>Na véspera (28/11) e na manhã de <strong>29/11/2026</strong>, <strong>não estude matéria nova</strong>. Releia só isto: os mnemônicos, os números que caem e as pegadinhas campeãs. Depois, feche o material e descanse.</p>
+      <h3>Mnemônicos que salvam</h3>
+      <ul>
+        <li><strong>LIMPE</strong> · <strong>PODC</strong> · Indireta = Autarquia/Fundação/Empresa pública/Soc. economia mista.</li>
+        <li><strong>14.133 — modalidades:</strong> pregão, concorrência, concurso, leilão, diálogo competitivo (julga e depois habilita).</li>
+        <li><strong>Arquivo:</strong> corrente → intermediário → permanente (nunca elimina).</li>
+        <li><strong>Fechos:</strong> Respeitosamente (superior) / Atenciosamente (igual/inferior).</li>
+        <li><strong>GMD = despesas · GMR = receitas.</strong></li>
+        <li><strong>Crase:</strong> troca por masculino → “ao” = crase.</li>
+      </ul>
+      <h3>Números e fatos que caem</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Tema</th><th>Número / fato</th></tr></thead>
+        <tbody>
+        <tr><td class="k">Prova</td><td>40 questões · 4 h · 50 pontos · mín. 30 (60%) sem zerar</td></tr>
+        <tr><td class="k">Peso dos Específicos</td><td>2 pts/questão = 40% · 1º desempate</td></tr>
+        <tr><td class="k">EMATER-MG</td><td>empresa pública estadual vinculada à SEAPA-MG; faz ATER à agricultura familiar</td></tr>
+        <tr><td class="k">Licitação</td><td>Lei 14.133/2021 (convite e tomada de preços não existem mais)</td></tr>
+        <tr><td class="k">Convênios/parcerias</td><td>Lei 13.019/2014 · Estatais: Lei 13.303/2016</td></tr>
+        <tr><td class="k">Curva ABC</td><td>classe A ≈ 20% dos itens / 80% do valor</td></tr>
+        <tr><td class="k">3 idades do arquivo</td><td>corrente · intermediário · permanente (não elimina)</td></tr>
+        <tr><td class="k">LAI — sigilo</td><td>reservado 5 · secreto 15 · ultrassecreto 25 anos</td></tr>
+        <tr><td class="k">Patrimônio</td><td>Ativo = Passivo + Patrimônio Líquido</td></tr>
+        </tbody>
+      </table></div>
+      <h3>As pegadinhas campeãs</h3>
+      <ul>
+        <li><strong>“Houveram” não existe</strong> nesse sentido: haver = existir é impessoal → “Houve”.</li>
+        <li><strong>Negação de “Se p, então q”</strong> = “p e não q”; equivalente = contrapositiva “se não q, então não p”.</li>
+        <li><strong>Aumentos sucessivos multiplicam:</strong> +10% e +20% = +32%.</li>
+        <li><strong>Mediana:</strong> ordene os dados antes.</li>
+        <li><strong>Vírgula</strong> nunca separa sujeito do verbo; adjetiva explicativa (com vírgula) = todos.</li>
+        <li><strong>Convite e Tomada de Preços</strong> não existem mais (Lei 14.133).</li>
+        <li><strong>Arquivo permanente</strong> nunca é eliminado.</li>
+        <li><strong>Empresa pública</strong> é administração indireta; desconcentração não cria pessoa jurídica.</li>
+        <li><strong>GMD (despesas) ≠ GMR (receitas).</strong></li>
+      </ul>
+      <p class="peg">No dia: leia o comando 2× (INCORRETA? EXCETO?), priorize os Específicos, <strong>não deixe nada em branco</strong> e reserve 15 min para passar o gabarito a limpo.</p>
+    </div></section>
+
+    <!-- ============ 10. FONTES ============ -->
+    <section id="fontes"><div class="card">
+      <p class="eyebrow">Seção 10</p>
+      <h2 class="sec">Fontes oficiais — onde baixar</h2>
+      <div class="tw"><table>
+        <thead><tr><th>Material</th><th>Onde</th></tr></thead>
+        <tbody>
+        <tr><td class="k">Edital 01/2026, Anexos (III quadro de provas, VI conteúdo programático, VII cronograma), retificações, gabarito</td><td>fundep.selecao.net.br/informacoes/71/ · gestaodeconcursos.com.br</td></tr>
+        <tr><td class="k">EMATER-MG (institucional, missão, ATER)</td><td>emater.mg.gov.br</td></tr>
+        <tr><td class="k">Lei 14.133/2021, 13.019/2014, 13.303/2016, LAI (12.527), LGPD (13.709), CF/88</td><td>planalto.gov.br</td></tr>
+        <tr><td class="k">Manual de Redação da Presidência (3ª ed., 2018)</td><td>gov.br</td></tr>
+        <tr><td class="k">Código de Conduta Ética do Agente Público de MG (Decreto 46.644/2014)</td><td>almg.gov.br (legislação mineira)</td></tr>
+        <tr><td class="k">Minas Gerais / Brasil (dados e atualidades)</td><td>IBGE Cidades (panorama MG) · portais de notícias de agro e meio ambiente</td></tr>
+        </tbody>
+      </table></div>
+      <p class="peg">Baixe o <strong>Anexo VI</strong> (conteúdo programático e referências) e use-o como checklist — este cursinho segue exatamente esse programa.</p>
+    </div></section>
+
+    <!-- ============ 11. CLAUDE ============ -->
+    <section id="claude"><div class="card">
+      <p class="eyebrow">Seção 11</p>
+      <h2 class="sec">Seu tutor infinito no Claude Code</h2>
+      <p>Este site é o material fixo. Para <strong>questões ilimitadas e correção personalizada</strong>, use o Claude Code como cursinho particular:</p>
+      <ol>
+        <li>Crie uma pasta <code>emater-2026</code> e coloque nela: <code>CLAUDE.md</code>, <code>base_conhecimento_emater.md</code> e uma subpasta <code>leis/</code> com os PDFs (Anexo VI, Lei 14.133, 13.019, 13.303, LAI, LGPD, Manual de Redação).</li>
+        <li>Abra o terminal na pasta e rode <code>claude</code> — o <code>CLAUDE.md</code> ativa o modo tutor.</li>
+        <li>Peça em português: <em>"monte a sessão de hoje"</em>, <em>"10 questões de licitação (14.133) com gabarito comentado"</em>, <em>"corrija: 1-B, 2-C…"</em>, <em>"sorteie 20 flashcards de Específicos"</em>, <em>"faltam 10 dias: revisão final por prioridade"</em>.</li>
+        <li>O tutor mantém <code>progresso.md</code> e <code>erros.md</code> — peça a atualização ao fim de cada sessão.</li>
+      </ol>
+      <div class="alert blue"><span class="tag">Dica</span> — coloque a lei seca e o Anexo VI em <code>leis/</code> para o tutor citar artigo e prazo sem inventar.</div>
+    </div></section>
+
+    <footer>
+      Material de estudo · Concurso EMATER-MG 2026 (Fundep) · Assistente Administrativo II · com base no Edital 01/2026 e no Anexo VI (conteúdo programático). Prova em 29/11/2026.<br>
+      Confira sempre os dados no edital oficial. Bons estudos e boa prova. 🌱
+    </footer>
+  </main>
+</div>
+<button class="back" id="back" aria-label="Voltar ao topo">↑</button>
+
+<script>
+/* ---------- tema ---------- */
+(function(){
+  var root=document.documentElement, key="dmae:theme";
+  try{var s=localStorage.getItem(key); if(s)root.setAttribute("data-theme",s);}catch(e){}
+  document.getElementById("theme").onclick=function(){
+    var cur=root.getAttribute("data-theme");
+    var dark=cur? cur==="dark" : matchMedia("(prefers-color-scheme:dark)").matches;
+    var nx=dark?"light":"dark"; root.setAttribute("data-theme",nx);
+    try{localStorage.setItem(key,nx);}catch(e){}
+  };
+})();
+/* ---------- countdown ---------- */
+(function(){
+  var prova=new Date(2026,10,29,8,0,0); // 29/11/2026
+  function upd(){var d=Math.max(0,Math.ceil((prova-new Date())/86400000));var e=document.getElementById("cddays");if(e)e.textContent=d;}
+  upd();
+})();
+/* ---------- menu mobile + TOC ativo ---------- */
+(function(){
+  var toc=document.getElementById("toc"),mb=document.getElementById("menub");
+  mb.onclick=function(){var o=toc.classList.toggle("open");document.body.classList.toggle("navopen",o);};
+  toc.addEventListener("click",function(e){if(e.target.tagName==="A"){toc.classList.remove("open");document.body.classList.remove("navopen");}});
+  var links=[].slice.call(toc.querySelectorAll("a"));
+  var map={}; links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});
+  var obs=new IntersectionObserver(function(en){
+    en.forEach(function(x){ if(x.isIntersecting){ links.forEach(function(a){a.classList.remove("on");}); var a=map[x.target.id]; if(a)a.classList.add("on"); }});
+  },{rootMargin:"-64px 0px -70% 0px"});
+  document.querySelectorAll("section[id]").forEach(function(s){obs.observe(s);});
+  var back=document.getElementById("back");
+  addEventListener("scroll",function(){back.classList.toggle("show",scrollY>600);});
+  back.onclick=function(){scrollTo({top:0,behavior:"smooth"});};
+})();
+/* ---------- plano checklist ---------- */
+(function(){
+  function K(){return window.DMAE_KEY("plano");}
+  function readSt(){try{return JSON.parse(localStorage.getItem(K())||"{}");}catch(e){return{};}}
+  function renderProg(){
+    var boxes=document.querySelectorAll("#diario-list input");
+    var total=boxes.length,done=0;[].forEach.call(boxes,function(c){if(c.checked)done++;});
+    var pct=total?Math.round(done/total*100):0;
+    var el=document.getElementById("crono-prog");
+    if(el)el.innerHTML='<div class="cprow"><span><b>Progresso do plano diário</b></span><span class="cbar"><i style="width:'+pct+'%"></i></span><span>'+done+'/'+total+' dias ('+pct+'%)</span></div>';
+  }
+  window.DMAE_planoApply=function(){
+    var st=readSt();
+    document.querySelectorAll("#plano-list input, #diario-list input").forEach(function(c){
+      var on=!!st[c.id];c.checked=on;c.closest(".chk").classList.toggle("done",on);
+    });
+    renderProg();
+  };
+  document.querySelectorAll("#plano-list input, #diario-list input").forEach(function(c){
+    c.onchange=function(){
+      var st=readSt();st[c.id]=c.checked;try{localStorage.setItem(K(),JSON.stringify(st));}catch(e){}
+      c.closest(".chk").classList.toggle("done",c.checked);renderProg();
+      if(window.DMAE_syncPush)window.DMAE_syncPush();
+    };
+  });
+  var pr=document.getElementById("plano-reset");
+  if(pr)pr.onclick=function(){
+    if(!confirm("Desmarcar todos os dias e semanas do cronograma?"))return;
+    try{localStorage.removeItem(K());}catch(e){}
+    document.querySelectorAll("#plano-list input, #diario-list input").forEach(function(c){c.checked=false;c.closest(".chk").classList.remove("done");});
+    renderProg();
+    if(window.DMAE_syncPush)window.DMAE_syncPush();
+  };
+  window.DMAE_planoApply();
+})();
+
+/* ---------- SIMULADO ---------- */
+var SIM=[
+{b:"Língua Portuguesa (1–6)"},
+{n:1,t:"Assinale a alternativa em que a crase foi empregada corretamente.",o:["O produtor rural compareceu à reunião técnica.","Ele voltou à pé para a propriedade.","Refiro-me à Vossa Senhoria.","Fomos à Belo Horizonte para o treinamento."],c:0,e:"“Comparecer a” + “a reunião” (fem., com artigo) = à (troca: “ao encontro” → ao). Erros: antes de verbo/“a pé”, pronome de tratamento e cidade sem artigo."},
+{n:2,t:"Assinale a alternativa correta quanto à concordância verbal.",o:["Houveram muitas inscrições no concurso.","Fazem cinco anos que ele trabalha na EMATER.","Existem vários escritórios locais no interior.","Chegou os relatórios da regional."],c:2,e:"“Existir” concorda: “Existem escritórios”. “Haver”(existir) e “fazer”(tempo) são impessoais: “Houve”, “Faz cinco anos”. D: “Chegaram”."},
+{n:3,t:"Reescrita de \"Embora o serviço seja essencial, muitos o ignoram\" que PRESERVA o sentido:",o:["Como o serviço é essencial, muitos o ignoram.","O serviço é essencial; portanto, muitos o ignoram.","O serviço é essencial, mas muitos o ignoram.","Se o serviço for essencial, muitos o ignorarão."],c:2,e:"“Embora” é concessivo; a adversativa “mas” mantém a oposição. A=causa, B=conclusão, D=condição mudam o sentido."},
+{n:4,t:"Assinale a alternativa com pontuação de acordo com a norma-padrão.",o:["Os servidores, que chegaram atrasados perderam a reunião.","O gerente solicitou, ao setor de compras, agilidade.","Se houver demanda, o atendimento será ampliado.","O setor analisou os pedidos, e aprovou todos."],c:2,e:"Oração adverbial anteposta pede vírgula. A: falta a 2ª vírgula (ou é restritiva, sem vírgula). B: vírgula separando verbo do complemento. D: sem vírgula antes de “e” com mesmo sujeito."},
+{n:5,t:"Quanto à colocação pronominal, assinale a alternativa correta.",o:["Me informaram sobre o edital.","Nunca esqueça-se do prazo.","Não se admite inscrição fora do prazo.","Trata-se de assuntos que resolvem-se rápido."],c:2,e:"Palavra atrativa (“não”) exige próclise: “não se admite”. A: início de frase não começa com pronome oblíquo. B: “nunca” atrai (não se esqueça). D: “que” atrai (que se resolvem)."},
+{n:6,t:"Sobre interpretação de texto, assinale a alternativa correta.",o:["A extrapolação (ir além do texto) costuma ser a resposta certa.","Uma alternativa verdadeira no mundo real está sempre correta.","A resposta correta deve estar apoiada no que o texto afirma.","A ideia central é sempre o último parágrafo."],c:2,e:"A resposta certa se ancora no texto; extrapolar e trazer verdades externas são armadilhas típicas."},
+{b:"Matemática e Raciocínio Lógico (7–12)"},
+{n:7,t:"Um produto que custa R$ 200,00 recebe dois aumentos sucessivos de 10% e 20%. O preço final é:",o:["R$ 260,00","R$ 264,00","R$ 262,00","R$ 266,00"],c:1,e:"Aumentos sucessivos multiplicam: 200 × 1,10 × 1,20 = 264. (Somar 30% daria 260 — errado.)"},
+{n:8,t:"Em uma turma, 18 gostam de café, 15 de chá e 7 dos dois. Quantas pessoas há, se todas gostam de pelo menos uma?",o:["33","26","40","23"],c:1,e:"n(A∪B)=18+15−7=26."},
+{n:9,t:"A negação de “Todo servidor é pontual” é:",o:["Nenhum servidor é pontual.","Algum servidor não é pontual.","Todo servidor é impontual.","Nenhum servidor é impontual."],c:1,e:"Negar “todo A é B” = “existe pelo menos um A que não é B”."},
+{n:10,t:"A proposição “Se chove, então a colheita atrasa” é logicamente equivalente a:",o:["Se a colheita atrasa, então chove.","Se não chove, então a colheita não atrasa.","Se a colheita não atrasa, então não chove.","Chove e a colheita não atrasa."],c:2,e:"Equivalente = contrapositiva “~q→~p”. A e B são recíproca/inversa; D é a negação."},
+{n:11,t:"Aplicando R$ 1.000,00 a juros simples de 2% ao mês por 5 meses, o total de juros é:",o:["R$ 100,00","R$ 104,00","R$ 110,00","R$ 120,00"],c:0,e:"J = C·i·t = 1000 × 0,02 × 5 = R$ 100,00."},
+{n:12,t:"Os números 3, 7, 7, 10, 13 têm, respectivamente, média, moda e mediana iguais a:",o:["8, 7, 7","8, 7, 10","7, 7, 7","8, 10, 7"],c:0,e:"Média = 40/5 = 8; moda = 7 (mais frequente); mediana = valor central (ordenado) = 7."},
+{b:"Conhecimentos Gerais (13–18)"},
+{n:13,t:"A EMATER-MG é, quanto à natureza jurídica e vinculação:",o:["Autarquia federal vinculada ao Ministério da Agricultura.","Empresa pública estadual vinculada à SEAPA-MG.","Órgão da administração direta do Estado.","Fundação privada sem vínculo com o Estado."],c:1,e:"A EMATER-MG é empresa pública estadual vinculada à Secretaria de Estado de Agricultura, Pecuária e Abastecimento (SEAPA-MG)."},
+{n:14,t:"A principal missão da EMATER-MG é:",o:["Fiscalizar o trânsito nas rodovias estaduais.","Prestar assistência técnica e extensão rural (ATER), com foco na agricultura familiar.","Arrecadar tributos estaduais.","Licenciar empresas industriais."],c:1,e:"A EMATER-MG promove o desenvolvimento rural por meio de ATER, com foco na agricultura familiar."},
+{n:15,t:"Sobre a Lei de Acesso à Informação (Lei 12.527/2011), assinale a correta.",o:["O sigilo é a regra e a publicidade a exceção.","A publicidade é a regra e o sigilo a exceção.","Nenhuma informação pública pode ser negada.","Só servidores podem solicitar informações."],c:1,e:"Na LAI, a publicidade é a regra e o sigilo, a exceção."},
+{n:16,t:"Quanto aos princípios da Administração Pública (art. 37 da CF — LIMPE), assinale a correta.",o:["A impessoalidade permite favorecer conhecidos.","A moralidade e a legalidade são a mesma coisa.","A publicidade é dever, salvo sigilo previsto em lei.","A eficiência foi retirada da Constituição."],c:2,e:"A publicidade é regra (transparência), com exceções legais de sigilo. Impessoalidade veda favorecimento; eficiência integra o LIMPE."},
+{n:17,t:"Sobre Minas Gerais, assinale a alternativa correta.",o:["É o estado com o menor número de municípios do país.","Tem 853 municípios, o maior número entre os estados.","Sua capital é Ouro Preto.","Não possui atividade agropecuária relevante."],c:1,e:"MG tem 853 municípios (o maior número do país); capital BH; forte agropecuária (café, leite)."},
+{n:18,t:"A vedação ao nepotismo e o tratamento de conflito de interesses são temas de:",o:["Integridade e ética no serviço público.","Direito penal militar.","Legislação de trânsito.","Matemática financeira."],c:0,e:"Integridade/ética pública: nepotismo e conflito de interesses (Código de Conduta e Integridade)."},
+{b:"Conhecimentos Específicos (19–24)"},
+{n:19,t:"Sobre a Lei 14.133/2021 (Licitações), assinale a alternativa correta.",o:["As modalidades incluem convite e tomada de preços.","As modalidades são pregão, concorrência, concurso, leilão e diálogo competitivo.","A habilitação ocorre sempre antes do julgamento das propostas.","Dispensa e inexigibilidade são sinônimos."],c:1,e:"Convite e tomada de preços foram extintos. Na nova lei, em regra o julgamento vem antes da habilitação. Dispensa (competição possível) ≠ inexigibilidade (inviável)."},
+{n:20,t:"Na gestão de estoques, a Curva ABC indica que:",o:["Todos os itens têm a mesma importância.","Poucos itens (classe A) representam a maior parte do valor.","A classe C é a mais valiosa.","Ela serve para calcular férias."],c:1,e:"Curva ABC: classe A ≈ 20% dos itens e ~80% do valor (poucos itens, muito valor)."},
+{n:21,t:"Sobre a Teoria das 3 idades dos arquivos, assinale a correta.",o:["O arquivo permanente pode ser eliminado a qualquer tempo.","Corrente → intermediário → permanente; o permanente não é eliminado.","Recolhimento é passar do corrente para o intermediário.","Todo documento nasce permanente."],c:1,e:"Corrente → intermediário → permanente (valor secundário, jamais eliminado). Transferência = corrente→intermediário; recolhimento = →permanente."},
+{n:22,t:"Na redação oficial (Manual da Presidência), o fecho “Respeitosamente” é usado para:",o:["Autoridades de hierarquia igual ou inferior.","Autoridades superiores.","Qualquer destinatário, sem distinção.","Apenas e-mails pessoais."],c:1,e:"“Respeitosamente” = a superiores; “Atenciosamente” = a iguais ou inferiores."},
+{n:23,t:"Sobre administração direta e indireta, assinale a correta.",o:["Empresa pública integra a administração indireta.","Autarquia integra a administração direta.","Ministérios integram a administração indireta.","Desconcentração cria nova pessoa jurídica."],c:0,e:"Administração indireta: autarquias, fundações, empresas públicas e sociedades de economia mista. Desconcentração é dentro do mesmo órgão (não cria PJ)."},
+{n:24,t:"No departamento de pessoal, o SISPATRI destina-se a:",o:["Registrar a frequência diária dos servidores.","Registrar a declaração de bens dos agentes públicos.","Controlar o estoque do almoxarifado.","Emitir notas fiscais."],c:1,e:"SISPATRI = Sistema de Registro de Bens (declaração de bens) dos agentes públicos."}
+];
+/* Painel "Revise seus erros" — usado por todos os simulados e treinos */
+window.renderErrPanel=function(host,anchorEl,errors,total){
+  var id=host.id+"-errpanel";
+  var old=document.getElementById(id); if(old)old.parentNode.removeChild(old);
+  var d=document.createElement("div"); d.className="errpanel"; d.id=id;
+  if(!errors.length){
+    d.className+=" zero";
+    d.innerHTML='<h4>Você não errou nenhuma! 🎉</h4><p>Acertou todas as '+total+'. Refaça daqui a alguns dias sem olhar — se continuar acertando, está fixado.</p>';
+  } else {
+    var lis=errors.map(function(e){
+      return '<li><a href="#'+e.anchor+'">Questão '+e.n+'</a> — você marcou <b class="you">'+(e.you||'em branco')+'</b>; a certa é <b class="ok">'+e.correct+'</b>.'
+        +'<div class="eq">"'+e.qt+'"</div>'
+        +'<div class="ei"><b>Entenda o porquê:</b> '+e.expl+'</div></li>';
+    }).join("");
+    d.innerHTML='<h4>Revise seus erros — '+errors.length+' de '+total+'</h4>'
+      +'<p><b>Não passe reto:</b> leia o porquê de cada uma. É entendendo o motivo (não decorando a letra) que você fixa na memória e reconhece a mesma pegadinha na prova. Clique no número para reler a questão inteira.</p>'
+      +'<ol>'+lis+'</ol>'
+      +'<p class="tip">Anote cada erro no seu caderno de erros: o que errou · a regra certa · como não repetir. Revise esse caderno em 24 h, 7 dias e 21 dias.</p>';
+  }
+  anchorEl.parentNode.insertBefore(d,anchorEl.nextSibling);
+  d.scrollIntoView({behavior:"smooth",block:"nearest"});
+  return d;
+};
+
+/* Cronômetro de prova (treina o ritmo das 3 h) */
+window.attachTimer=function(simbar,minutes){
+  if(!simbar||simbar.querySelector(".timer"))return;
+  var total=minutes*60,left=total,iv=null;
+  function two(n){return(n<10?"0":"")+n;}
+  function fmt(s){var h=Math.floor(s/3600),m=Math.floor((s%3600)/60),x=s%60;return h>0?h+":"+two(m)+":"+two(x):m+":"+two(x);}
+  var wrap=document.createElement("span");wrap.className="timer";
+  var disp=document.createElement("b");disp.className="tdisp";
+  var start=document.createElement("button");start.type="button";start.className="btn ghost tbtn2";start.textContent="▶ Cronômetro";
+  var reset=document.createElement("button");reset.type="button";reset.className="btn ghost tbtn2";reset.textContent="Zerar";reset.style.display="none";
+  function paint(){disp.textContent="⏱ "+fmt(left);disp.classList.toggle("low",left<=300);}
+  function stop(){if(iv){clearInterval(iv);iv=null;}start.textContent="▶ Retomar";}
+  function tick(){left--;if(left<=0){left=0;stop();disp.textContent="⏱ Tempo esgotado";disp.classList.add("low");return;}paint();}
+  paint();
+  start.onclick=function(){if(iv){stop();return;}if(left<=0)left=total;iv=setInterval(tick,1000);start.textContent="⏸ Pausar";reset.style.display="";};
+  reset.onclick=function(){stop();left=total;paint();start.textContent="▶ Cronômetro";};
+  wrap.appendChild(disp);wrap.appendChild(start);wrap.appendChild(reset);
+  simbar.appendChild(wrap);
+};
+
+/* Histórico de desempenho (salvo no navegador) */
+window.recordScore=function(key,label,pct,ac,total,pts,mp,bymat){
+  var K=window.DMAE_KEY("scores"),arr=[];
+  try{arr=JSON.parse(localStorage.getItem(K)||"[]");}catch(e){}
+  function two2(n){return(n<10?"0":"")+n;}
+  var d=new Date();
+  var rec={k:key,l:label,p:pct,a:ac,n:total,d:two2(d.getDate())+"/"+two2(d.getMonth()+1)};
+  if(pts!=null){rec.pt=pts;rec.mp=mp;}
+  if(bymat)rec.m=bymat;
+  arr.push(rec);
+  if(arr.length>40)arr=arr.slice(-40);
+  try{localStorage.setItem(K,JSON.stringify(arr));}catch(e){}
+  if(window.renderDesempenho)window.renderDesempenho();
+  if(window.renderProxima)window.renderProxima();
+  if(window.DMAE_syncPush)window.DMAE_syncPush();
+};
+/* agrega acerto por matéria a partir do histórico */
+window.DMAE_fraca=function(scores){
+  var agg={};(scores||[]).forEach(function(s){if(s.m){for(var k in s.m){agg[k]=agg[k]||{ok:0,tot:0};agg[k].ok+=s.m[k].ok;agg[k].tot+=s.m[k].tot;}}});
+  var ks=Object.keys(agg).filter(function(k){return agg[k].tot>=3;});
+  if(!ks.length)return null;
+  ks.sort(function(a,b){return (agg[a].ok/agg[a].tot)-(agg[b].ok/agg[b].tot);});
+  return {mat:ks[0],pct:Math.round(agg[ks[0]].ok/agg[ks[0]].tot*100)};
+};
+/* recomendação personalizada "Sua próxima ação" */
+window.renderProxima=function(){
+  var host=document.getElementById("proxima");if(!host)return;
+  var scores=[],cad=[];
+  try{scores=JSON.parse(localStorage.getItem(window.DMAE_KEY("scores"))||"[]");}catch(e){}
+  try{cad=JSON.parse(localStorage.getItem(window.DMAE_KEY("cadernoerros"))||"[]");}catch(e){}
+  var txt,href,bt;
+  if(!scores.length){
+    txt="Faça o <b>Simulado 1</b> cronometrado, <b>sem estudar antes</b>. É o diagnóstico: mostra onde você está mais fraco e já enche seu caderno de erros.";
+    href="#simulado";bt="Fazer o Simulado 1 →";
+  } else if(cad.length>0){
+    txt="Você tem <b>"+cad.length+"</b> quest"+(cad.length>1?"ões":"ão")+" no seu <b>caderno de erros</b>. Refazer o próprio erro é o que mais fixa — comece por aí.";
+    href="#caderno";bt="Abrir meu caderno →";
+  } else {
+    txt="Sem erros pendentes! Bora ganhar pontos onde vale o dobro: treine <b>Só Conhecimentos Específicos</b> (40% da nota).";
+    href="#especifico";bt="Treinar Específicos →";
+  }
+  var f=window.DMAE_fraca(scores),foco="";
+  if(f)foco='<p class="foco">🎯 Sua matéria mais fraca até agora: <b>'+f.mat+'</b> ('+f.pct+'% de acerto). Dê atenção extra a ela.</p>';
+  host.innerHTML='<h4>Sua próxima ação</h4><p>'+txt+'</p><a class="btn" href="'+href+'">'+bt+'</a>'+foco;
+  host.hidden=false;
+};
+window.renderDesempenho=function(){
+  var host=document.getElementById("desempenho");if(!host)return;
+  var arr=[];try{arr=JSON.parse(localStorage.getItem(window.DMAE_KEY("scores"))||"[]");}catch(e){}
+  if(!arr.length){host.innerHTML='<p class="dhint">Faça um simulado e clique em <b>Corrigir</b>: suas notas ficam salvas aqui para você acompanhar a evolução.</p>';return;}
+  var best={},bpt={},bmp={};arr.forEach(function(s){if(best[s.l]==null||s.p>best[s.l])best[s.l]=s.p;if(s.pt!=null&&(bpt[s.l]==null||s.pt>bpt[s.l])){bpt[s.l]=s.pt;bmp[s.l]=s.mp;}});
+  var bestHTML=Object.keys(best).map(function(l){
+    if(bpt[l]!=null){var ok=bpt[l]>=25;return '<span class="dchip">'+l+': <b>'+bpt[l]+'/'+bmp[l]+' pts</b> '+(ok?'✅':'⚠️')+'</span>';}
+    return '<span class="dchip">'+l+': <b>'+best[l]+'%</b></span>';
+  }).join("");
+  var last=arr.slice(-6).reverse().map(function(s){var nota=s.pt!=null?(s.pt+'/'+s.mp+' pts · '+s.p+'%'):(s.a+'/'+s.n+' ('+s.p+'%)');return '<li>'+s.d+' · '+s.l+' — <b>'+nota+'</b></li>';}).join("");
+  var f=window.DMAE_fraca?window.DMAE_fraca(arr):null;
+  var focoD=f?'<p class="dhint" style="margin:0 0 8px">🎯 Matéria mais fraca: <b>'+f.mat+'</b> ('+f.pct+'%) — foque nela.</p>':'';
+  host.innerHTML='<div class="dbest"><span class="dlbl">Melhor nota:</span> '+bestHTML+'</div>'+focoD+'<p class="dhint" style="margin:0 0 8px">✅ = atingiu o mínimo de 30 pontos do edital.</p><ol class="dlast">'+last+'</ol><button class="btn ghost dclear" type="button">Limpar histórico</button>';
+  host.querySelector(".dclear").onclick=function(){try{localStorage.removeItem(window.DMAE_KEY("scores"));}catch(e){}window.renderDesempenho();};
+};
+
+(function(){
+  var box=document.getElementById("sim"),html="";
+  SIM.forEach(function(q,i){
+    if(q.b){html+='<div class="blocklabel">'+q.b+'</div>';}
+    if(q.passage){html+='<div class="passage">'+q.passage+'</div>';}
+    if(q.n){
+      html+='<div class="q" data-i="'+i+'" id="simq'+q.n+'"><div class="qn">Questão '+q.n+'</div><div class="qt">'+q.t+'</div>';
+      "ABCD".split("").forEach(function(L,j){
+        html+='<label class="opt"><input type="radio" name="q'+q.n+'" value="'+j+'"><span class="lt">'+L+')</span><span>'+q.o[j]+'</span></label>';
+      });
+      html+='<div class="expl"><b>Gabarito: '+"ABCD"[q.c]+'.</b> '+q.e+'</div></div>';
+    }
+  });
+  box.innerHTML=html;
+  var total=SIM.filter(function(q){return q.n;}).length;
+  window.__SIM1=SIM.filter(function(q){return q.t;}).map(function(q){return {t:q.t,o:q.o,c:q.c,e:q.e};});
+
+  var LT="ABCD".split("");
+  document.getElementById("corrigir").onclick=function(){
+    var acertos=0, errs=[], cadErrs=[], pts=0, maxpts=0, byMat={}, curMat="";
+    SIM.forEach(function(q){
+      if(q.b){curMat=q.b.replace(/\s*\(.*\)\s*/,"");return;}
+      if(!q.n)return;
+      var qd=document.getElementById('simq'+q.n);
+      if(!qd)return;
+      var opts=qd.querySelectorAll('.opt');
+      var sel=qd.querySelector('input:checked');
+      opts.forEach(function(o){o.classList.remove('right','wrong');});
+      opts[q.c].classList.add('right');
+      var acertou=false;
+      if(sel){var v=+sel.value; if(v===q.c){acertos++;acertou=true;} else {opts[v].classList.add('wrong');}}
+      qd.querySelector('.expl').classList.add('show');
+      var w=/específ/i.test(curMat)?2:1; maxpts+=w; byMat[curMat]=byMat[curMat]||{ok:0,tot:0}; byMat[curMat].tot++;
+      if(acertou){pts+=w;byMat[curMat].ok++;}
+      if(!acertou){
+        errs.push({n:q.n,anchor:'simq'+q.n,qt:q.t,you:sel?LT[+sel.value]:'',correct:LT[q.c],expl:q.e});
+        cadErrs.push({label:"Simulado 1",t:q.t,o:q.o,c:q.c,e:q.e});
+      }
+    });
+    var pct=Math.round(acertos/total*100);
+    var zeros=Object.keys(byMat).filter(function(m){return byMat[m].ok===0;});
+    var st=zeros.length?('<b style="color:var(--red)">⚠️ Você zerou: '+zeros.join(", ")+'</b> — no critério do edital, zerar qualquer conteúdo reprova.'):(pts>=Math.round(maxpts*0.6)?'<b style="color:var(--green)">✅ Você atingiu 60% dos pontos deste simulado e não zerou — no ritmo de aprovação (a prova exige mín. 30 de 50 e sem zerar).</b> Agora suba a nota!':'<b>Abaixo de 60% dos pontos.</b> A prova pede no mínimo 30 de 50 — reveja os erros abaixo.');
+    document.getElementById("scorebox").innerHTML='Nota: <b>'+pts+'</b>/'+maxpts+' pontos · '+acertos+'/'+total+' acertos ('+pct+'%).<br>'+st;
+    window.renderErrPanel(document.getElementById("simulado"),document.querySelector("#simulado .simbar"),errs,total);
+    window.recordScore("sim1","Simulado 1",pct,acertos,total,pts,maxpts,byMat);
+    if(window.saveErrors)window.saveErrors(cadErrs);
+  };
+  document.getElementById("limpar").onclick=function(){
+    box.querySelectorAll('input:checked').forEach(function(i){i.checked=false;});
+    box.querySelectorAll('.opt').forEach(function(o){o.classList.remove('right','wrong');});
+    box.querySelectorAll('.expl').forEach(function(e){e.classList.remove('show');});
+    document.getElementById("scorebox").textContent='';
+    var ep=document.getElementById("simulado-errpanel"); if(ep)ep.parentNode.removeChild(ep);
+  };
+  window.attachTimer(document.querySelector("#simulado .simbar"),180);
+})();
+if(window.renderDesempenho)window.renderDesempenho();
+if(window.renderProxima)window.renderProxima();
+
+/* ---------- FLASHCARDS ---------- */
+var FC=[
+["Quantas questões e como se distribuem?","40: Português 10, Matemática/RLM 10, Conhec. Gerais 10, Específicos 10 (peso 2)."],
+["Total de pontos e aprovação?","50 pontos; mínimo 30 (60%) e não zerar nenhuma disciplina."],
+["Data da prova?","29/11/2026 (banca Fundep)."],
+["O que pesa mais?","Conhecimentos Específicos: 2 pts/questão = 40% e 1º critério de desempate."],
+["Desempate (nível médio)","Idade >=60 -> Específicos -> Português -> Mat/RLM -> Gerais -> maior idade -> sorteio."],
+["O que é a EMATER-MG?","Empresa pública estadual vinculada à SEAPA-MG; faz ATER à agricultura familiar."],
+["ATER","Assistência Técnica e Extensão Rural."],
+["LAI (12.527/2011)","Acesso à informação: publicidade é a regra, sigilo é exceção (reservado 5, secreto 15, ultrassecreto 25 anos)."],
+["LGPD (13.709/2018)","Proteção de dados pessoais."],
+["LIMPE","Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência (art. 37)."],
+["Integridade","Prevenir conflito de interesses e nepotismo; Código de Conduta e Integridade."],
+["Adm. direta x indireta","Direta: União/estados/municípios e órgãos. Indireta: autarquia, fundação, empresa pública, soc. economia mista."],
+["Descentralização x desconcentração","Descentralização: outra PJ. Desconcentração: dentro do mesmo órgão."],
+["Modalidades (Lei 14.133)","Pregão, concorrência, concurso, leilão, diálogo competitivo (sem convite/tomada de preços)."],
+["Dispensa x inexigibilidade","Dispensa: competição possível, lei permite não licitar. Inexigibilidade: competição inviável."],
+["Fases da 14.133","Julgamento vem, em regra, ANTES da habilitação."],
+["Lei 13.019/2014","Parcerias com organizações da sociedade civil (colaboração, fomento, cooperação)."],
+["Lei 13.303/2016","Estatuto das empresas públicas e sociedades de economia mista (aplica-se à EMATER-MG)."],
+["Curva ABC","Classe A ~ 20% dos itens e ~80% do valor."],
+["Ponto de pedido","Consumo médio x prazo de reposição + estoque de segurança."],
+["Inventário","Confere o estoque físico com os registros."],
+["3 idades do arquivo","Corrente -> intermediário -> permanente (nunca eliminado)."],
+["Transferência x recolhimento","Transferência: corrente->intermediário. Recolhimento: ->permanente."],
+["Fechos oficiais","Respeitosamente (superior) / Atenciosamente (igual ou inferior)."],
+["GMD x GMR","GMD = despesas; GMR = receitas."],
+["Equação do patrimônio","Ativo = Passivo + Patrimônio Líquido."],
+["Regime de competência","Reconhece receita/despesa no fato gerador (não no caixa)."],
+["SISPATRI","Registro/declaração de bens dos agentes públicos."],
+["Crase - teste","Troque por masculino: deu 'ao' = tem crase."],
+["'Houveram' existe?","Não, nesse sentido: haver=existir é impessoal -> 'Houve'."],
+["Negação de 'se p então q'","'p e não q' (equivalente = contrapositiva '~q->~p')."],
+["Estratégia no dia","Não há desconto por erro: nunca deixe em branco; eliminando 2, o chute vira 50%."]
+];
+(function(){
+  var box=document.getElementById("fcs"),order=FC.map(function(_,i){return i;});
+  function render(){
+    box.innerHTML=order.map(function(idx,pos){
+      return '<div class="fc" data-i="'+idx+'"><div class="fn">Flashcard '+(pos+1)+'</div><div class="fq">'+FC[idx][0]+'</div><div class="fa">'+FC[idx][1]+'</div><div class="hint">toque para ver a resposta</div></div>';
+    }).join("");
+    document.getElementById("fc-count").textContent=FC.length+" cartões";
+  }
+  render();
+  box.addEventListener("click",function(e){var c=e.target.closest(".fc");if(c)c.classList.toggle("open");});
+  document.getElementById("fc-shuffle").onclick=function(){for(var i=order.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=order[i];order[i]=order[j];order[j]=t;}render();};
+  var allOpen=false;
+  document.getElementById("fc-all").onclick=function(){allOpen=!allOpen;box.querySelectorAll(".fc").forEach(function(c){c.classList.toggle("open",allOpen);});};
+})();
+</script>
+<script>
+/* ===== Motor genérico de provas/treinos (aula + questões + correção) ===== */
+(function(){
+  var L="ABCD".split("");
+  function qHTML(q,n){
+    var h='<div class="q" data-c="'+q.c+'"><div class="qn">'+(q.label?q.label:('Questão '+n))+'</div><div class="qt">'+q.t+'</div>';
+    for(var j=0;j<q.o.length;j++){h+='<label class="opt"><input type="radio"><span class="lt">'+L[j]+')</span><span>'+q.o[j]+'</span></label>';}
+    h+='<div class="expl"><b>Gabarito: '+L[q.c]+'.</b> '+q.e+'</div></div>';
+    return h;
+  }
+  function wire(host){
+    var qs=[].slice.call(host.querySelectorAll(".q"));
+    qs.forEach(function(qd,i){qd.id=host.id+"_q"+(i+1);[].forEach.call(qd.querySelectorAll("input"),function(inp){inp.name=host.id+"_"+i;});});
+    var mats=[],curMat="";
+    [].forEach.call(host.children,function(ch){
+      if(ch.classList&&ch.classList.contains("blocklabel"))curMat=ch.textContent.replace(/\s*\(.*\)\s*/,"");
+      else if(ch.classList&&ch.classList.contains("q"))mats.push(curMat);
+    });
+    var structured=host.id.indexOf("quiz-sim")===0;
+    var b=document.createElement("div"); b.className="simbar";
+    b.innerHTML='<button class="btn cor">Corrigir</button><button class="btn ghost lim">Limpar</button><span class="score sc" aria-live="polite"></span>';
+    host.appendChild(b);
+    var isSim=host.id.indexOf("quiz-")===0;
+    var simLabel=host.id==="quiz-aleatorio"?"Simulado aleatório":"Simulado "+host.id.replace("quiz-sim","");
+    if(isSim)window.attachTimer(b,180);
+    b.querySelector(".cor").onclick=function(){
+      var ac=0, errs=[], cadErrs=[], pts=0, maxpts=0, byMat={};
+      var card=host.closest(".card"), cardh3=card&&card.querySelector("h3");
+      var lbl=isSim?simLabel:(cardh3?cardh3.textContent.replace("Aula + treino: ",""):"Treino");
+      qs.forEach(function(qd,i){
+        var opts=qd.querySelectorAll(".opt"), ins=qd.querySelectorAll("input"), c=+qd.getAttribute("data-c");
+        var sel=qd.querySelector("input:checked");
+        [].forEach.call(opts,function(o){o.classList.remove("right","wrong");});
+        if(opts[c])opts[c].classList.add("right");
+        var acertou=false, v=-1;
+        if(sel){v=[].indexOf.call(ins,sel); if(v===c){ac++;acertou=true;} else if(opts[v])opts[v].classList.add("wrong");}
+        qd.querySelector(".expl").classList.add("show");
+        if(structured){var w=/específ/i.test(mats[i]||"")?2:1;maxpts+=w;var mk=mats[i]||"?";byMat[mk]=byMat[mk]||{ok:0,tot:0};byMat[mk].tot++;if(acertou){pts+=w;byMat[mk].ok++;}}
+        if(!acertou){
+          var expl=qd.querySelector(".expl").innerHTML.replace(/^\s*<b>.*?<\/b>\s*/,"");
+          errs.push({n:i+1,anchor:qd.id,qt:qd.querySelector(".qt").innerHTML,you:v>=0?L[v]:"",correct:L[c],expl:expl});
+          var oarr=[].map.call(opts,function(o){var sp=o.querySelectorAll("span");return sp[sp.length-1].innerHTML;});
+          cadErrs.push({label:lbl,t:qd.querySelector(".qt").innerHTML,o:oarr,c:c,e:expl});
+        }
+      });
+      var pct=Math.round(ac/qs.length*100);
+      if(structured){
+        var zeros=Object.keys(byMat).filter(function(m){return byMat[m].ok===0;});
+        var st=zeros.length?('<b style="color:var(--red)">⚠️ Você zerou: '+zeros.join(", ")+'</b> — no critério do edital, zerar qualquer conteúdo reprova.'):(pts>=Math.round(maxpts*0.6)?'<b style="color:var(--green)">✅ Você atingiu 60% dos pontos deste simulado e não zerou — no ritmo de aprovação (a prova exige mín. 30 de 50 e sem zerar).</b> Agora suba a nota!':'<b>Abaixo de 60% dos pontos.</b> A prova pede no mínimo 30 de 50 — reveja os erros abaixo.');
+        b.querySelector(".sc").innerHTML="Nota: <b>"+pts+"</b>/"+maxpts+" pontos · "+ac+"/"+qs.length+" acertos ("+pct+"%).<br>"+st;
+      } else {
+        var msg=pct>=70?"Ótimo!":pct>=50?"Bom — revise os erros abaixo.":"Releia a aula e veja os erros abaixo.";
+        b.querySelector(".sc").innerHTML="Acertos: <b>"+ac+"</b>/"+qs.length+" ("+pct+"%). "+msg;
+      }
+      window.renderErrPanel(host,b,errs,qs.length);
+      if(isSim)window.recordScore(host.id,simLabel,pct,ac,qs.length,structured?pts:null,structured?maxpts:null,structured?byMat:null);
+      if(host.id!=="caderno-list"&&window.saveErrors)window.saveErrors(cadErrs);
+    };
+    b.querySelector(".lim").onclick=function(){
+      host.querySelectorAll("input:checked").forEach(function(i){i.checked=false;});
+      host.querySelectorAll(".opt").forEach(function(o){o.classList.remove("right","wrong");});
+      host.querySelectorAll(".expl").forEach(function(e){e.classList.remove("show");});
+      b.querySelector(".sc").textContent="";
+      var ep=document.getElementById(host.id+"-errpanel"); if(ep)ep.parentNode.removeChild(ep);
+    };
+  }
+  function mountList(host,items){ // items: {b},{passage},{t,o,c,e}
+    var h="",n=0;
+    items.forEach(function(q){
+      if(q.b)h+='<div class="blocklabel">'+q.b+'</div>';
+      if(q.passage)h+='<div class="passage">'+q.passage+'</div>';
+      if(q.t){n++;h+=qHTML(q,n);}
+    });
+    host.innerHTML=h; wire(host);
+  }
+  function mountQs(host,qs){var h="";qs.forEach(function(q,i){h+=qHTML(q,i+1);});host.innerHTML=h;wire(host);}
+
+  /* ===== Caderno de erros (salvo no navegador) ===== */
+  window.saveErrors=function(list){
+    if(!list||!list.length)return;
+    var K=window.DMAE_KEY("cadernoerros"),arr=[];
+    try{arr=JSON.parse(localStorage.getItem(K)||"[]");}catch(e){}
+    var seen={};arr.forEach(function(x){seen[x.id]=1;});
+    list.forEach(function(it){
+      var id=it.label+"§"+it.t;
+      if(!seen[id]){arr.push({id:id,label:it.label,t:it.t,o:it.o,c:it.c,e:it.e});seen[id]=1;}
+    });
+    if(arr.length>200)arr=arr.slice(-200);
+    try{localStorage.setItem(K,JSON.stringify(arr));}catch(e){}
+    if(window.renderCaderno)window.renderCaderno();
+    if(window.DMAE_syncPush)window.DMAE_syncPush();
+  };
+  window.renderCaderno=function(){
+    var host=document.getElementById("caderno-list");if(!host)return;
+    var arr=[];try{arr=JSON.parse(localStorage.getItem(window.DMAE_KEY("cadernoerros"))||"[]");}catch(e){}
+    var cnt=document.getElementById("cad-count");if(cnt)cnt.textContent=arr.length?("· "+arr.length):"";
+    if(!arr.length){host.innerHTML='<p class="dhint">Seu caderno está vazio. Assim que você errar questões nos simulados ou treinos, elas aparecem aqui para você refazer.</p>';if(window.renderProxima)window.renderProxima();return;}
+    mountQs(host,arr);
+    if(window.renderProxima)window.renderProxima();
+  };
+  (function(){
+    var rm=document.getElementById("cad-remove"),cl=document.getElementById("cad-clear");
+    if(rm)rm.onclick=function(){
+      var arr=[];try{arr=JSON.parse(localStorage.getItem(window.DMAE_KEY("cadernoerros"))||"[]");}catch(e){}
+      var qs=document.querySelectorAll("#caderno-list .q");
+      if(!arr.length||qs.length!==arr.length){window.renderCaderno();return;}
+      var keep=[];
+      [].forEach.call(qs,function(qd,i){
+        var ins=qd.querySelectorAll("input"),sel=qd.querySelector("input:checked");
+        var ok=sel&&[].indexOf.call(ins,sel)===+qd.getAttribute("data-c");
+        if(!ok)keep.push(arr[i]);
+      });
+      try{localStorage.setItem(window.DMAE_KEY("cadernoerros"),JSON.stringify(keep));}catch(e){}
+      window.renderCaderno();
+      if(window.DMAE_syncPush)window.DMAE_syncPush();
+      var host=document.getElementById("caderno");if(host)host.scrollIntoView({behavior:"smooth",block:"start"});
+    };
+    if(cl)cl.onclick=function(){
+      if(!confirm("Apagar todas as questões do caderno de erros?"))return;
+      try{localStorage.removeItem(window.DMAE_KEY("cadernoerros"));}catch(e){}
+      window.renderCaderno();
+      if(window.DMAE_syncPush)window.DMAE_syncPush();
+    };
+    var dl=document.getElementById("cad-download");
+    if(dl)dl.onclick=function(){
+      var arr=[];try{arr=JSON.parse(localStorage.getItem(window.DMAE_KEY("cadernoerros"))||"[]");}catch(e){}
+      if(!arr.length){alert("Seu caderno está vazio — faça um simulado ou treino primeiro.");return;}
+      var LL="ABCD".split("");
+      var body=arr.map(function(q,i){
+        var opts=q.o.map(function(o,j){return '<div>'+LL[j]+') '+o+'</div>';}).join("");
+        return '<div class="q"><p><b>'+(i+1)+'. ['+q.label+']</b> '+q.t+'</p><div class="o">'+opts+'</div><div class="a"><b>Gabarito: '+LL[q.c]+'.</b> '+q.e+'</div></div>';
+      }).join("");
+      var html='<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Caderno de erros - EMATER-MG 2026</title>'
+        +'<style>body{font-family:Arial,Helvetica,sans-serif;max-width:820px;margin:24px auto;padding:0 18px;color:#111;line-height:1.5}'
+        +'h1{font-size:20px} .q{border-bottom:1px solid #ccc;padding:12px 0} .o div{margin:2px 0} '
+        +'.a{background:#eef2f4;padding:8px 10px;border-radius:6px;margin-top:6px;font-size:14px}</style></head>'
+        +'<body><h1>Meu caderno de erros — DMAE 2026 ('+arr.length+' questões)</h1>'
+        +'<p>Refaça cada uma tapando o gabarito; leia a explicação só depois de responder.</p>'+body+'</body></html>';
+      try{
+        var blob=new Blob([html],{type:"text/html;charset=utf-8"});
+        var url=URL.createObjectURL(blob);
+        var a=document.createElement("a");a.href=url;a.download="caderno-de-erros-dmae.html";
+        document.body.appendChild(a);a.click();document.body.removeChild(a);
+        setTimeout(function(){URL.revokeObjectURL(url);},3000);
+      }catch(e){alert("Não foi possível baixar neste navegador.");}
+    };
+    window.renderCaderno();
+  })();
+
+  /* ===================== SIMULADO 2 ===================== */
+  var SIM2=[
+{b:"Língua Portuguesa"},
+{t:"Assinale a alternativa em que NÃO há crase.",o:["Entreguei o ofício à secretária.","Ela se referiu à norma vigente.","Estou disposto à colaborar.","Compareceu à audiência pública."],c:2,e:"Não há crase antes de verbo (“a colaborar”)."},
+{t:"Assinale a frase correta quanto à regência/uso.",o:["Assisti o documentário sobre o campo.","Prefiro trabalhar de casa do que no escritório.","Obedeço às normas internas.","Cheguei no escritório cedo."],c:2,e:"“Obedecer a algo” (TI): obedeço às normas. Assistir(ver)=assistir A; “preferir X a Y”; “chegar a/ao”."},
+{t:"A oração destacada em \"As sementes, que estavam estragadas, foram descartadas\" é:",o:["Restritiva (só algumas sementes).","Explicativa (todas as sementes estavam estragadas).","Objetiva direta.","Adverbial de causa."],c:1,e:"Entre vírgulas = adjetiva explicativa (todas). Sem vírgula seria restritiva (só algumas)."},
+{t:"Assinale a alternativa com acentuação conforme o Novo Acordo.",o:["idéia","vôo","heroico","assembléia"],c:2,e:"“Heroico” não tem acento (ditongo aberto ei/oi em paroxítona perdeu o acento). As demais são grafias antigas."},
+{t:"O “que” em “Espero que você compareça” é:",o:["Pronome relativo.","Conjunção integrante.","Preposição.","Advérbio."],c:1,e:"Introduz oração subordinada substantiva → conjunção integrante (não retoma nome)."},
+{b:"Matemática e Raciocínio Lógico"},
+{t:"30% de 250 é:",o:["70","75","80","85"],c:1,e:"0,30 × 250 = 75."},
+{t:"Uma comissão de 3 pessoas será formada a partir de 5. O nº de comissões é (ordem não importa):",o:["60","10","20","15"],c:1,e:"Combinação C(5,3)=10 (ordem não importa)."},
+{t:"A negação de “Algum servidor faltou” é:",o:["Todos os servidores faltaram.","Nenhum servidor faltou.","Algum servidor não faltou.","Muitos servidores faltaram."],c:1,e:"Negar “algum” (existencial) leva a “nenhum”."},
+{t:"Se “todo mineiro é brasileiro”, então é correto concluir que:",o:["Todo brasileiro é mineiro.","Quem não é brasileiro não é mineiro.","Algum brasileiro não é mineiro.","Nenhum mineiro é brasileiro."],c:1,e:"Contrapositiva de “se é mineiro, então é brasileiro”: “se não é brasileiro, não é mineiro”."},
+{t:"Numa PA de razão 4 e primeiro termo 3, o 5º termo é:",o:["15","19","23","20"],c:1,e:"a5 = 3 + (5−1)·4 = 19."},
+{b:"Conhecimentos Gerais"},
+{t:"A EMATER-MG atua principalmente com:",o:["Ensino superior no campo.","Assistência técnica e extensão rural (ATER).","Fiscalização de bancos.","Construção de rodovias."],c:1,e:"ATER — assistência técnica e extensão rural."},
+{t:"A LGPD (Lei 13.709/2018) trata de:",o:["Proteção de dados pessoais.","Licitações públicas.","Trânsito de veículos.","Aposentadoria rural."],c:0,e:"Lei Geral de Proteção de Dados Pessoais."},
+{t:"Assinale a correta sobre ética/integridade no serviço público.",o:["Aceitar presente para agilizar processo é permitido.","Conflito de interesses deve ser evitado e comunicado.","Nepotismo é incentivado.","O servidor pode usar o cargo em proveito próprio."],c:1,e:"Conflito de interesses deve ser evitado; nepotismo e uso do cargo em proveito próprio são vedados."},
+{t:"A SEAPA-MG, à qual a EMATER-MG se vincula, é a Secretaria de:",o:["Educação.","Agricultura, Pecuária e Abastecimento.","Fazenda.","Segurança Pública."],c:1,e:"Secretaria de Estado de Agricultura, Pecuária e Abastecimento."},
+{t:"Sobre o Brasil, assinale a correta.",o:["É uma federação com estados, DF e municípios.","É um Estado unitário sem municípios.","Não possui Constituição escrita.","Minas Gerais é a capital do país."],c:0,e:"O Brasil é uma república federativa (União, estados, DF e municípios)."},
+{b:"Conhecimentos Específicos"},
+{t:"As parcerias entre a administração e organizações da sociedade civil são regidas pela:",o:["Lei 8.666/93.","Lei 13.019/2014.","Lei 14.133/2021.","Lei 8.112/90."],c:1,e:"Lei 13.019/2014 (MROSC): termos de colaboração, de fomento e acordo de cooperação."},
+{t:"O ponto de pedido em um estoque é calculado, em regra, por:",o:["Apenas o estoque de segurança.","Consumo médio × tempo de reposição + estoque de segurança.","Giro de estoque ÷ 2.","Custo do pedido × quantidade."],c:1,e:"Ponto de pedido = consumo médio × prazo de reposição + estoque de segurança."},
+{t:"Sobre a EMATER-MG ser empresa pública, aplica-se a ela a:",o:["Lei 13.303/2016 (estatuto das estatais).","Lei de Trânsito.","Lei de Diretrizes e Bases da Educação.","Lei de Improbidade apenas."],c:0,e:"Lei 13.303/2016 dispõe sobre empresas públicas e sociedades de economia mista."},
+{t:"No controle de frequência, o absenteísmo é:",o:["A pontualidade exemplar.","A ausência habitual do trabalhador ao serviço.","O banco de horas positivo.","O adicional noturno."],c:1,e:"Absenteísmo = faltas/ausências ao trabalho."},
+{t:"Na redação oficial, o expediente que registra decisões de uma reunião é a:",o:["Portaria.","Ata.","Certidão.","Procuração."],c:1,e:"Ata registra o que ocorreu/foi decidido em reunião."}
+];
+  mountList(document.getElementById("quiz-sim2"),SIM2);
+
+  /* ===================== SIMULADO 3 ===================== */
+  var SIM3=[
+{b:"Língua Portuguesa"},
+{t:"Assinale a alternativa correta quanto à concordância.",o:["Fazem dois meses que enviei o pedido.","Precisa-se de auxiliares administrativos.","Aluga-se salas comerciais.","Houveram falhas no sistema."],c:1,e:"“Precisa-se de” (índice de indeterminação do sujeito, verbo no singular). B correto. Aluga-se salas → alugam-se; “fazem/houveram” impessoais no singular."},
+{t:"Na frase “Vendem-se produtos agrícolas”, o “se” é:",o:["Índice de indeterminação do sujeito.","Partícula apassivadora (produtos são vendidos).","Objeto direto.","Conjunção."],c:1,e:"“Vendem-se produtos” = produtos são vendidos (voz passiva sintética); “se” = partícula apassivadora — por isso o verbo vai ao plural."},
+{t:"Assinale a alternativa com uso adequado de “mas” (oposição).",o:["Estudou muito, mas foi aprovado.","Choveu, mas a colheita foi perdida.","Trabalhou pouco, mas foi promovido sem mérito.","Era esforçado, mas dedicado."],c:1,e:"“Mas” liga ideias opostas. B opõe corretamente (choveu × perda esperada não). D une ideias iguais (erro)."},
+{t:"O termo destacado em “amor à pátria” é:",o:["Adjunto adnominal.","Complemento nominal.","Objeto direto.","Aposto."],c:1,e:"“À pátria” completa o sentido do nome “amor” → complemento nominal (quem sente é ativo; a pátria é o alvo)."},
+{t:"Assinale a alternativa em que o verbo está no imperativo corretamente.",o:["Faça o relatório e envie ao setor.","Faz o relatório e envia ao setor (norma-padrão).","Fazei o relatório, faça o envio.","Faças o relatório."],c:0,e:"Imperativo (norma-padrão) para “você”: faça, envie."},
+{b:"Matemática e Raciocínio Lógico"},
+{t:"Um item com 20% de desconto passou a custar R$ 160,00. O preço original era:",o:["R$ 180,00","R$ 192,00","R$ 200,00","R$ 210,00"],c:2,e:"160 = 0,80 × x → x = 200."},
+{t:"A probabilidade de, ao lançar um dado honesto, sair número par é:",o:["1/6","1/3","1/2","2/3"],c:2,e:"Pares {2,4,6} = 3 em 6 = 1/2."},
+{t:"A negação de “Se estudo, então passo” é:",o:["Se não estudo, então não passo.","Estudo e não passo.","Passo e não estudo.","Não estudo ou passo."],c:1,e:"~(p→q) = p ∧ ~q → “estudo e não passo”."},
+{t:"Em juros compostos, R$ 1.000 a 10% ao mês, após 2 meses o montante é:",o:["R$ 1.200,00","R$ 1.210,00","R$ 1.100,00","R$ 1.221,00"],c:1,e:"M = 1000·(1,1)² = 1210. (Simples daria 1200.)"},
+{t:"Se um mapa tem escala 1:300.000, 2 cm no mapa correspondem, no real, a:",o:["600 m","6 km","60 km","3 km"],c:1,e:"2 cm × 300.000 = 600.000 cm = 6 km."},
+{b:"Conhecimentos Gerais"},
+{t:"O foco da EMATER-MG na 'agricultura familiar' significa priorizar:",o:["Grandes latifúndios exportadores.","Pequenos produtores rurais e suas famílias.","Indústrias automobilísticas.","Bancos de investimento."],c:1,e:"Agricultura familiar = pequenos produtores e suas famílias."},
+{t:"O Código de Conduta Ética do Agente Público de MG foi instituído pelo:",o:["Decreto 46.644/2014.","Código de Trânsito.","Lei 8.666/93.","Estatuto do Idoso."],c:0,e:"Decreto estadual 46.644/2014."},
+{t:"Desenvolvimento sustentável concilia:",o:["Só crescimento econômico.","Economia, sociedade e meio ambiente.","Apenas preservação ambiental.","Somente aspectos sociais."],c:1,e:"Sustentabilidade equilibra dimensões econômica, social e ambiental."},
+{t:"Assinale a correta sobre transparência pública.",o:["Dados públicos nunca podem ser divulgados.","A transparência ativa divulga informações por iniciativa do órgão.","Só há transparência mediante ordem judicial.","Transparência e sigilo são a mesma coisa."],c:1,e:"Transparência ativa = divulgação espontânea; passiva = mediante pedido (LAI)."},
+{t:"Sobre a organização político-administrativa do Brasil, é correto afirmar que os Municípios:",o:["Não têm autonomia.","São entes federativos com autonomia.","São órgãos da União.","Pertencem aos Estados sem autonomia."],c:1,e:"Municípios são entes federativos autônomos (CF, art. 18)."},
+{b:"Conhecimentos Específicos"},
+{t:"As funções da administração, segundo a abordagem clássica, são:",o:["Comprar, vender, estocar e transportar.","Planejar, organizar, dirigir e controlar (PODC).","Recrutar, treinar, demitir e aposentar.","Arrecadar, empenhar, liquidar e pagar."],c:1,e:"PODC: planejar, organizar, dirigir e controlar."},
+{t:"Na Lei 14.133/2021, a inexigibilidade de licitação ocorre quando:",o:["Há vários fornecedores disputando.","A competição é inviável (ex.: fornecedor exclusivo).","O valor é baixo, mas há concorrência.","Sempre que a administração quiser."],c:1,e:"Inexigibilidade = competição inviável (fornecedor exclusivo, notória especialização, artista consagrado)."},
+{t:"O inventário de materiais serve para:",o:["Aumentar o preço dos itens.","Conferir e ajustar os saldos físicos com os registros.","Contratar pessoal.","Emitir portarias."],c:1,e:"Inventário confronta o estoque físico com o contábil/registrado."},
+{t:"Na gestão de frotas, o controle de abastecimento visa:",o:["Aumentar o consumo de combustível.","Monitorar e controlar gastos e uso dos veículos.","Eliminar a manutenção preventiva.","Dispensar o licenciamento."],c:1,e:"Controle de abastecimento acompanha custos e uso, evitando desperdício/fraude."},
+{t:"O documento pelo qual alguém concede poderes a outrem para agir em seu nome é a:",o:["Certidão.","Procuração.","Ata.","Portaria."],c:1,e:"Procuração outorga poderes de representação."}
+];
+  mountList(document.getElementById("quiz-sim3"),SIM3);
+
+  /* ===================== SIMULADO 4 ===================== */
+  var SIM4=[
+{b:"Língua Portuguesa"},
+{t:"Assinale a alternativa em que a vírgula está corretamente empregada.",o:["O gerente, analisou os pedidos.","Analisados os pedidos, o gerente respondeu.","O setor de compras, aprovou a proposta.","Comprou canetas, papéis e, grampeadores."],c:1,e:"Oração reduzida anteposta pede vírgula. A/C: vírgula entre sujeito e verbo (erro). D: vírgula mal colocada antes de “grampeadores”."},
+{t:"Em “Ele agiu conforme as normas”, a palavra “conforme” expressa ideia de:",o:["Oposição.","Conformidade.","Condição.","Finalidade."],c:1,e:"“Conforme” = conformidade (de acordo com)."},
+{t:"Assinale a alternativa com a forma verbal correta.",o:["Quando ele ver o edital, avisará.","Quando ele vir o edital, avisará.","Se ele ver o documento, assina.","Se eu ver o prazo, aviso."],c:1,e:"Futuro do subjuntivo de “ver” = “vir”: “quando ele vir”. “Ver” é presente do indicativo."},
+{t:"O prefixo em “infelizmente” indica que a palavra é formada por:",o:["Parassíntese.","Derivação prefixal e sufixal (não simultânea).","Composição por justaposição.","Derivação regressiva."],c:1,e:"“Infeliz” já existe; “-mente” foi acrescido depois → prefixal e sufixal (não parassíntese)."},
+{t:"Assinale o par de sinônimos adequado ao contexto administrativo.",o:["Prazo / atraso.","Ofício / comunicação oficial.","Receita / despesa.","Ativo / passivo."],c:1,e:"Ofício ≈ comunicação oficial. Os demais pares são antônimos/opostos."},
+{b:"Matemática e Raciocínio Lógico"},
+{t:"Regra de três: se 4 servidores fazem um trabalho em 6 dias, 8 servidores (mesmo ritmo) fazem em:",o:["12 dias","3 dias","4 dias","2 dias"],c:1,e:"Grandezas inversamente proporcionais: 4×6 = 8×x → x = 3 dias."},
+{t:"A média aritmética entre 12, 15 e 18 é:",o:["14","15","16","17"],c:1,e:"(12+15+18)/3 = 45/3 = 15."},
+{t:"Se hoje é quarta-feira, que dia será daqui a 100 dias?",o:["Quinta-feira","Sexta-feira","Sábado","Domingo"],c:1,e:"100 = 14×7 + 2 → avança 2 dias a partir de quarta = sexta-feira."},
+{t:"A disjunção “p ou q” (inclusiva) é FALSA somente quando:",o:["p e q são ambas verdadeiras.","p é verdadeira e q falsa.","p e q são ambas falsas.","p é falsa e q verdadeira."],c:2,e:"O “ou” inclusivo só é falso quando ambas são falsas."},
+{t:"Um reservatório com 1,5 m³ de capacidade comporta, em litros:",o:["150 L","1.500 L","15.000 L","15 L"],c:1,e:"1 m³ = 1.000 L → 1,5 m³ = 1.500 L."},
+{b:"Conhecimentos Gerais"},
+{t:"A vinculação da EMATER-MG à SEAPA-MG significa que a empresa:",o:["É independente do governo estadual.","Integra a estrutura do Estado, na área de agricultura.","Pertence ao governo federal.","É uma ONG privada."],c:1,e:"Vinculada à SEAPA-MG, atua na política estadual de agricultura."},
+{t:"Sobre a LAI (12.527/2011), o prazo de sigilo classificado como 'reservado' é de:",o:["5 anos.","15 anos.","25 anos.","50 anos."],c:0,e:"Reservado 5, secreto 15, ultrassecreto 25 anos."},
+{t:"Responsabilidade socioambiental no serviço público implica:",o:["Ignorar impactos ambientais.","Considerar impactos sociais e ambientais das ações.","Priorizar apenas o lucro.","Reduzir a transparência."],c:1,e:"Atuar considerando os impactos sociais e ambientais."},
+{t:"O bioma predominante em grande parte de Minas Gerais é o:",o:["Pampa.","Cerrado.","Pantanal.","Manguezal."],c:1,e:"O Cerrado predomina em boa parte de MG (com trechos de Mata Atlântica e Caatinga)."},
+{t:"Atualidades ligadas ao meio rural incluem temas como:",o:["Segurança alimentar e sustentabilidade no campo.","Regras de futebol.","Tabela do campeonato estadual.","Moda e entretenimento."],c:0,e:"Agro/meio ambiente: segurança alimentar, sustentabilidade, clima."},
+{b:"Conhecimentos Específicos"},
+{t:"A descentralização administrativa ocorre quando:",o:["Cria-se uma divisão interna no mesmo órgão.","Transfere-se atividade a outra pessoa jurídica (ex.: autarquia/empresa pública).","Um chefe delega a um subordinado.","Extingue-se um cargo."],c:1,e:"Descentralização = transferência para outra PJ; desconcentração = divisão interna no mesmo órgão."},
+{t:"Na Lei 14.133/2021, a ordem correta das fases inclui:",o:["Habilitação antes do julgamento das propostas.","Julgamento das propostas antes da habilitação (em regra).","Homologação antes do edital.","Recurso antes das propostas."],c:1,e:"Na nova lei, em regra, julga-se primeiro e habilita-se depois."},
+{t:"O 'GMR' (Gerenciamento Matricial de Receitas) trata de:",o:["Controle de despesas.","Planejamento e controle das receitas.","Gestão de estoques.","Redação de ofícios."],c:1,e:"GMR = receitas; GMD = despesas."},
+{t:"Sobre recrutamento de pessoal, o recrutamento interno:",o:["Busca candidatos fora da organização.","Aproveita empregados já pertencentes à organização.","É proibido no serviço público.","É o mesmo que demissão."],c:1,e:"Recrutamento interno aproveita pessoas de dentro; externo busca fora."},
+{t:"No arquivo, 'recolhimento' é a passagem do arquivo:",o:["Corrente para o intermediário.","Intermediário (ou corrente) para o permanente.","Permanente para o corrente.","Permanente para a eliminação."],c:1,e:"Recolhimento = envio ao arquivo permanente; transferência = corrente→intermediário."}
+];
+  mountList(document.getElementById("quiz-sim4"),SIM4);
+
+  /* ===================== TREINOS (aula + questões) ===================== */
+  var TREINOS=[
+  {mat:"Português",titulo:"Aula + treino: Crase",aula:"Crase é a fusão da preposição <b>a</b> com o artigo <b>a(s)</b> (ou com o “a” de <i>aquele/aquela</i>). Só existe diante de palavra <b>feminina</b>. <b>Teste infalível:</b> troque a palavra feminina por uma masculina — se surgir <b>“ao”</b>, tem crase; se surgir só “a”, não tem.<br><b>Sempre tem:</b> às vezes, à noite, à vista, à medida que, às 8h. <b>Nunca tem:</b> antes de verbo, de palavra masculina, de pronome (a ela, a você) e de cidade que não pede artigo.",qs:[
+    {t:"Assinale a alternativa em que a crase foi empregada corretamente.",o:["Ela se dedica à leitura dos relatórios.","Cheguei à pé ao escritório.","Refiro-me à ela.","Fui à cavalo até a fazenda."],c:0,e:"“Dedicar-se a” + “a leitura” (fem.) = à (troca: “ao estudo”). As demais: antes de verbo/masculino/pronome (sem crase)."},
+    {t:"Assinale a frase SEM erro de crase.",o:["Pague a taxa à vista.","Fui à Uberlândia visitar a regional.","Estou disposto à ajudar.","Refiro-me à Vossa Senhoria."],c:0,e:"“À vista” é locução adverbial feminina. Erros: cidade sem artigo, antes de verbo, pronome de tratamento."},
+    {t:"Em qual caso NÃO há crase?",o:["Entreguei o ofício à secretária.","Ele obedeceu à norma.","Começo a trabalhar às 8h.","Vou a reuniões toda semana."],c:3,e:"“A reuniões” (plural sem artigo definido) não tem crase. Em A/B/C há preposição+artigo/locução."},
+    {t:"Assinale a correta.",o:["Assisti à reunião do conselho.","Assisti a reunião do conselho (sem crase é obrigatório).","Assisti na reunião.","Assisti pela reunião."],c:0,e:"“Assistir” (presenciar) é transitivo indireto: assistir A algo; “a reunião” (fem.) → à."}
+  ]},
+  {mat:"Português",titulo:"Aula + treino: Concordância verbal",aula:"O verbo concorda com o sujeito. Cuidado com os verbos <b>impessoais</b> (sem sujeito), que ficam sempre no <b>singular</b>: <b>haver</b> no sentido de existir (“Houve reclamações”) e <b>fazer</b> indicando tempo (“Faz dois anos”). Já <b>existir</b> tem sujeito e concorda (“Existem reclamações”). Na voz passiva sintética, o verbo concorda com o sujeito: “Vendem-se produtos”.",qs:[
+    {t:"Assinale a alternativa correta.",o:["Houveram muitas inscrições.","Fazem dez anos que ele saiu.","Existem falhas no processo.","Aluga-se salas comerciais."],c:2,e:"“Existir” concorda (“Existem falhas”). Impessoais no singular: “Houve”, “Faz dez anos”. “Alugam-se salas”."},
+    {t:"Assinale a correta.",o:["Precisa-se de auxiliares.","Precisam-se de auxiliares.","Vende-se casas.","Fazem calor hoje."],c:0,e:"“Precisa-se de” (sujeito indeterminado, verbo no singular). “Vendem-se casas”; “Faz calor”."},
+    {t:"Complete corretamente: “____ problemas no sistema ontem.”",o:["Houveram","Houve","Existiu","Fizeram"],c:1,e:"“Haver” (existir) é impessoal → “Houve problemas”."},
+    {t:"Assinale a correta quanto à concordância.",o:["Chegaram os relatórios da regional.","Chegou os relatórios da regional.","Faz-se necessário medidas.","Bastam pouco esforço."],c:0,e:"Sujeito “os relatórios” (plural) → “Chegaram”. “Fazem-se necessárias medidas”; “Basta pouco esforço”."}
+  ]},
+  {mat:"Português",titulo:"Aula + treino: Conectivos e reescrita",aula:"Cada conectivo carrega uma relação lógica fixa. Reescrever mantendo o sentido só funciona se a relação continuar a mesma: <b>mas/porém</b> = oposição · <b>portanto/logo</b> = conclusão · <b>porque/pois</b> = causa · <b>embora/ainda que</b> = concessão · <b>se</b> = condição. Trocar por um de valor diferente muda o sentido.",qs:[
+    {t:"A reescrita que mantém o sentido de “Embora chovesse, o técnico foi a campo” é:",o:["Como chovia, o técnico foi a campo.","Chovia; portanto, o técnico foi a campo.","Mesmo chovendo, o técnico foi a campo.","Se chovesse, o técnico iria a campo."],c:2,e:"“Embora” = concessão; “mesmo chovendo” mantém a concessão. As outras são causa/conclusão/condição."},
+    {t:"Em “Ele foi promovido porque cumpriu as metas”, a oração destacada exprime:",o:["Concessão.","Causa.","Condição.","Finalidade."],c:1,e:"“Porque” = causa."},
+    {t:"Qual conectivo indica conclusão?",o:["porque","embora","portanto","caso"],c:2,e:"“Portanto/logo” = conclusão."},
+    {t:"A troca que MUDA o sentido é:",o:["“mas” por “porém”.","“porque” por “embora”.","“logo” por “portanto”.","“todavia” por “contudo”."],c:1,e:"Causa (porque) → concessão (embora) muda o sentido; os demais são equivalentes."}
+  ]},
+  {mat:"Português",titulo:"Aula + treino: Pontuação",aula:"A vírgula organiza a frase, mas <b>nunca separa o sujeito do verbo</b> nem o verbo do complemento. Ela é obrigatória para isolar <b>vocativo</b> e <b>aposto</b>, separar <b>oração adverbial anteposta</b> e a <b>adjetiva explicativa</b> (entre vírgulas). A explicativa fala de todos; a restritiva (sem vírgula), só de alguns.",qs:[
+    {t:"Assinale a frase corretamente pontuada.",o:["O servidor, analisou os pedidos.","Analisados os pedidos, o servidor respondeu.","O setor de compras, aprovou a proposta.","Comprou canetas papéis, e grampeadores."],c:1,e:"Oração reduzida anteposta pede vírgula. A/C: vírgula entre sujeito e verbo. D: vírgula fora de lugar."},
+    {t:"“Os produtores, que participaram do curso, foram certificados.” A oração entre vírgulas é:",o:["Restritiva (só alguns).","Explicativa (todos participaram).","Adverbial.","Substantiva."],c:1,e:"Entre vírgulas = explicativa (todos). Sem vírgula seria restritiva (só os que participaram)."},
+    {t:"Assinale a alternativa correta.",o:["Solicitou, ao gerente, um relatório.","Solicitou ao gerente, um relatório.","Solicitou ao gerente um relatório.","Solicitou, ao gerente um relatório."],c:2,e:"Não se separa verbo do complemento por vírgula: “Solicitou ao gerente um relatório.”"},
+    {t:"A vírgula é obrigatória em:",o:["Sujeito + verbo.","Vocativo: “Senhores, iniciemos a reunião”.","Verbo + objeto direto.","Entre artigo e substantivo."],c:1,e:"Vocativo é isolado por vírgula."}
+  ]},
+  {mat:"Matemática",titulo:"Aula + treino: Porcentagem e juros",aula:"Porcentagem é “de cada 100”: 20% = 0,20. Para <b>aumentar</b> 20%, multiplique por <b>1,20</b>; para <b>tirar</b> 20%, por <b>0,80</b>. Aumentos sucessivos <b>multiplicam</b> os fatores. Juros <b>simples</b> crescem sempre igual (J = C·i·t); juros <b>compostos</b> rendem “juro sobre juro” (M = C·(1+i)ᵗ).",qs:[
+    {t:"Dois aumentos sucessivos de 10% e 20% equivalem a um aumento único de:",o:["30%","32%","33%","28%"],c:1,e:"1,10 × 1,20 = 1,32 → 32%."},
+    {t:"R$ 500 a juros simples de 3% ao mês por 4 meses rendem de juros:",o:["R$ 45","R$ 60","R$ 75","R$ 20"],c:1,e:"J = 500 × 0,03 × 4 = R$ 60."},
+    {t:"Um produto de R$ 80 com 25% de desconto sai por:",o:["R$ 55","R$ 60","R$ 65","R$ 70"],c:1,e:"80 × 0,75 = R$ 60."},
+    {t:"R$ 1.000 a juros compostos de 10% a.m. por 2 meses resultam em montante de:",o:["R$ 1.200","R$ 1.210","R$ 1.100","R$ 1.220"],c:1,e:"1000 × (1,1)² = 1210."}
+  ]},
+  {mat:"Matemática",titulo:"Aula + treino: Raciocínio lógico (proposições e negações)",aula:"Proposição é frase que é V ou F. Conectivos: <b>e</b> (∧, só V se ambos) · <b>ou</b> (∨, F só se ambos F) · <b>se...então</b> (→, F só quando 1º V e 2º F). <b>Negações:</b> ~(p∧q)=~p∨~q; <b>~(p→q)=p∧~q</b>. O equivalente de “p→q” é a <b>contrapositiva</b> “~q→~p” (não a recíproca). Negar “todo” vira “existe um que não”.",qs:[
+    {t:"A negação de “Se estudo, então passo” é:",o:["Se não estudo, não passo.","Estudo e não passo.","Passo e não estudo.","Não estudo ou passo."],c:1,e:"~(p→q) = p ∧ ~q."},
+    {t:"O equivalente de “Se chove, a rua molha” é:",o:["Se a rua molha, chove.","Se a rua não molha, não chove.","Chove e a rua não molha.","Se não chove, a rua não molha."],c:1,e:"Contrapositiva ~q→~p."},
+    {t:"A negação de “Todo produtor é cadastrado” é:",o:["Nenhum produtor é cadastrado.","Algum produtor não é cadastrado.","Todo produtor é descadastrado.","Poucos produtores são cadastrados."],c:1,e:"Negar “todo A é B” = existe A que não é B."},
+    {t:"A conjunção “p e q” é verdadeira somente quando:",o:["pelo menos uma é verdadeira.","ambas são verdadeiras.","ambas são falsas.","uma é falsa."],c:1,e:"O “e” só é V se ambas forem V."}
+  ]},
+  {mat:"Matemática",titulo:"Aula + treino: Estatística e conjuntos",aula:"<b>Média</b> = soma ÷ quantidade. <b>Moda</b> = o valor que mais aparece. <b>Mediana</b> = o valor central com os dados <b>ordenados</b> (se a quantidade for par, é a média dos dois centrais). Conjuntos: n(A∪B) = n(A) + n(B) − n(A∩B).",qs:[
+    {t:"Em 4, 8, 8, 10, 20, a mediana é:",o:["8","10","9","12"],c:0,e:"Ordenados, o valor central (3º de 5) é 8."},
+    {t:"A moda de 2, 3, 3, 5, 7, 7, 7 é:",o:["3","5","7","2"],c:2,e:"7 é o valor mais frequente."},
+    {t:"Numa sala, 20 falam inglês, 12 espanhol e 5 os dois. Quantos falam ao menos um idioma?",o:["27","32","25","37"],c:0,e:"20+12−5 = 27."},
+    {t:"A média de 10, 20 e 30 é:",o:["18","20","22","25"],c:1,e:"(10+20+30)/3 = 20."}
+  ]},
+  {mat:"Conhecimentos Gerais",titulo:"Aula + treino: A EMATER-MG e a ATER",aula:"A <b>EMATER-MG</b> é uma <b>empresa pública estadual</b> vinculada à <b>SEAPA-MG</b>. Sua missão é promover o desenvolvimento rural sustentável por meio da <b>assistência técnica e extensão rural (ATER)</b>, com foco na <b>agricultura familiar</b>, atuando em todo o território mineiro. A política nacional da área é a <b>Pnater</b>.",qs:[
+    {t:"A natureza jurídica da EMATER-MG é de:",o:["Autarquia federal.","Empresa pública estadual.","Órgão da administração direta.","Fundação privada."],c:1,e:"Empresa pública estadual vinculada à SEAPA-MG."},
+    {t:"ATER significa:",o:["Assistência Técnica e Extensão Rural.","Agência de Transporte e Energia Rural.","Autarquia de Tratamento de Esgoto Regional.","Associação de Trabalhadores Rurais."],c:0,e:"Assistência Técnica e Extensão Rural."},
+    {t:"O público prioritário da EMATER-MG é:",o:["Grandes exportadores.","A agricultura familiar.","A indústria automobilística.","O setor bancário."],c:1,e:"Foco na agricultura familiar."},
+    {t:"A EMATER-MG está vinculada à Secretaria de:",o:["Fazenda.","Agricultura, Pecuária e Abastecimento (SEAPA).","Educação.","Segurança Pública."],c:1,e:"SEAPA-MG."}
+  ]},
+  {mat:"Conhecimentos Gerais",titulo:"Aula + treino: Ética, integridade, LAI e LGPD",aula:"A Administração segue o <b>LIMPE</b> (art. 37). A <b>integridade</b> envolve prevenir <b>conflito de interesses</b> e o <b>nepotismo</b>. A <b>LAI (Lei 12.527/2011)</b> garante o acesso à informação (publicidade é a regra, sigilo é exceção). A <b>LGPD (Lei 13.709/2018)</b> protege dados pessoais. Em MG, o <b>Decreto 46.644/2014</b> traz o Código de Conduta Ética do Agente Público.",qs:[
+    {t:"Na LAI, em regra:",o:["O sigilo é a regra.","A publicidade é a regra e o sigilo é exceção.","Só o Judiciário acessa informações.","Nada pode ser divulgado."],c:1,e:"Publicidade é a regra; sigilo, exceção."},
+    {t:"A LGPD trata de:",o:["Licitações.","Proteção de dados pessoais.","Trânsito.","Orçamento público."],c:1,e:"Lei Geral de Proteção de Dados Pessoais."},
+    {t:"Sobre integridade no serviço público, assinale a correta.",o:["Nepotismo é permitido entre setores.","Conflito de interesses deve ser evitado e declarado.","Presente para agilizar processo é aceitável.","O cargo pode ser usado em proveito próprio."],c:1,e:"Conflito de interesses deve ser evitado; nepotismo e uso indevido do cargo são vedados."},
+    {t:"O prazo de sigilo de informação 'secreta' (LAI) é de:",o:["5 anos.","15 anos.","25 anos.","30 anos."],c:1,e:"Reservado 5, secreto 15, ultrassecreto 25 anos."}
+  ]},
+  {mat:"Específicos",titulo:"Aula + treino: Administração geral e pública",aula:"Administrar é <b>planejar, organizar, dirigir e controlar (PODC)</b>. No <b>serviço público</b>, tudo gira em torno do interesse público e do <b>usuário</b>. A <b>administração pública</b> se divide em <b>direta</b> (União, estados, municípios e seus órgãos) e <b>indireta</b> (autarquias, fundações, <b>empresas públicas</b> e sociedades de economia mista). <b>Descentralização</b> = transferir a outra pessoa jurídica; <b>desconcentração</b> = dividir dentro do mesmo órgão.",qs:[
+    {t:"As funções da administração (PODC) são:",o:["Prever, orçar, distribuir e cobrar.","Planejar, organizar, dirigir e controlar.","Comprar, vender, estocar e transportar.","Empenhar, liquidar, pagar e arquivar."],c:1,e:"PODC."},
+    {t:"Integra a administração INDIRETA:",o:["Um ministério.","Uma empresa pública.","A Presidência.","Uma secretaria estadual."],c:1,e:"Indireta: autarquias, fundações, empresas públicas e sociedades de economia mista."},
+    {t:"Descentralização administrativa é:",o:["Dividir tarefas dentro do mesmo órgão.","Transferir atividade a outra pessoa jurídica.","Extinguir um cargo.","Delegar a um subordinado."],c:1,e:"Descentralização cria/usa outra PJ; desconcentração é interna."},
+    {t:"O foco do serviço público é:",o:["O lucro dos gestores.","O interesse público e o usuário.","A concorrência de mercado.","A publicidade comercial."],c:1,e:"Serviço público visa ao interesse público e ao usuário."}
+  ]},
+  {mat:"Específicos",titulo:"Aula + treino: RH e Departamento de Pessoal",aula:"O departamento de pessoal cuida das rotinas: <b>recrutamento</b> (atrair candidatos) × <b>seleção</b> (escolher), admissão, demissão, <b>controle de férias</b>, licença-prêmio, <b>frequência e ponto</b>, banco de horas e <b>absenteísmo</b> (faltas). O <b>SISPATRI</b> registra a declaração de bens dos agentes públicos. A avaliação de desempenho pode ter vícios como o <b>efeito halo</b>.",qs:[
+    {t:"Recrutamento interno é:",o:["Buscar candidatos fora da organização.","Aproveitar empregados de dentro da organização.","Demitir por justa causa.","Conceder férias."],c:1,e:"Interno = de dentro; externo = de fora."},
+    {t:"Absenteísmo é:",o:["A pontualidade do empregado.","A ausência habitual ao trabalho.","O banco de horas positivo.","A hora extra."],c:1,e:"Ausência/faltas ao trabalho."},
+    {t:"O SISPATRI serve para:",o:["Registrar a declaração de bens dos agentes públicos.","Controlar o estoque.","Emitir notas fiscais.","Gerir a frota."],c:0,e:"Sistema de Registro de Bens (declaração de bens)."},
+    {t:"O 'efeito halo' na avaliação de desempenho é:",o:["Avaliar por um único traço que contamina o resto.","Avaliar todos com nota média.","Considerar só o fato mais recente.","Não avaliar ninguém."],c:0,e:"Efeito halo = uma característica influencia toda a avaliação (tendência central e recência são outros vícios)."}
+  ]},
+  {mat:"Específicos",titulo:"Aula + treino: Estoques, almoxarifado e logística",aula:"O almoxarifado <b>recebe</b> (confere NF × pedido × material), <b>armazena</b>, <b>distribui</b> e <b>controla</b> materiais, com <b>inventário</b> periódico. A <b>Curva ABC</b> mostra que poucos itens (A ≈ 20%) valem a maior parte (≈ 80%). <b>Ponto de pedido</b> = consumo médio × prazo de reposição + estoque de segurança. Na logística e <b>gestão de frotas</b>, controla-se rotas, manutenção e <b>abastecimento</b>.",qs:[
+    {t:"Na Curva ABC, os itens da classe A:",o:["São muitos e valem pouco.","São poucos e representam a maior parte do valor.","Não precisam de controle.","São os mais baratos."],c:1,e:"A ≈ 20% dos itens / ~80% do valor."},
+    {t:"O inventário de materiais serve para:",o:["Aumentar preços.","Conferir os saldos físicos com os registros.","Contratar pessoal.","Emitir portarias."],c:1,e:"Confronta estoque físico × registrado."},
+    {t:"O ponto de pedido considera:",o:["Só o preço unitário.","Consumo médio, prazo de reposição e estoque de segurança.","Apenas o giro.","O custo de pedido dividido por 2."],c:1,e:"Ponto de pedido = consumo médio × prazo de reposição + estoque de segurança."},
+    {t:"Na gestão de frotas, controlar o abastecimento visa:",o:["Aumentar o consumo.","Monitorar gastos e uso, evitando desperdício.","Dispensar manutenção.","Eliminar rotas."],c:1,e:"Controle de gastos e uso dos veículos."}
+  ]},
+  {mat:"Específicos",titulo:"Aula + treino: Licitações (Lei 14.133/2021) e convênios",aula:"Desde 2021, a única lei geral é a <b>14.133</b> (a 8.666 foi revogada). <b>Modalidades:</b> pregão, concorrência, concurso, leilão e <b>diálogo competitivo</b> (Convite e Tomada de Preços não existem mais). Em regra, o <b>julgamento vem antes da habilitação</b>. <b>Dispensa</b> = competição possível, mas a lei permite não licitar; <b>inexigibilidade</b> = competição inviável (fornecedor exclusivo). As <b>parcerias</b> com a sociedade civil seguem a <b>Lei 13.019/2014</b>.",qs:[
+    {t:"São modalidades da Lei 14.133:",o:["Convite e tomada de preços.","Pregão, concorrência, concurso, leilão e diálogo competitivo.","Apenas pregão.","Carta-convite e concorrência."],c:1,e:"Convite e tomada de preços foram extintos."},
+    {t:"Inexigibilidade de licitação ocorre quando:",o:["Há muitos fornecedores.","A competição é inviável (ex.: fornecedor exclusivo).","O valor é alto.","A administração prefere."],c:1,e:"Inexigibilidade = competição inviável."},
+    {t:"Na Lei 14.133, em regra:",o:["A habilitação vem antes do julgamento.","O julgamento das propostas vem antes da habilitação.","Não há fase recursal.","O edital vem por último."],c:1,e:"Julga-se primeiro; habilita-se depois."},
+    {t:"As parcerias com organizações da sociedade civil são regidas pela:",o:["Lei 14.133/2021.","Lei 13.019/2014.","Lei 8.666/93.","Lei 8.112/90."],c:1,e:"Lei 13.019/2014 (MROSC)."}
+  ]},
+  {mat:"Específicos",titulo:"Aula + treino: Redação oficial e gestão de arquivos",aula:"Na <b>redação oficial</b> (Manual da Presidência): existe o <b>padrão ofício</b>; os fechos são <b>Respeitosamente</b> (a superior) e <b>Atenciosamente</b> (a igual/inferior). Documentos comuns: ofício, memorando, <b>ata</b>, portaria, requerimento, parecer, certidão, declaração, procuração. Nos <b>arquivos</b>, a <b>Teoria das 3 idades</b>: corrente → intermediário → <b>permanente</b> (nunca eliminado). Transferência = corrente→intermediário; recolhimento = →permanente.",qs:[
+    {t:"O fecho “Atenciosamente” é usado para:",o:["Autoridades superiores.","Autoridades de igual ou inferior hierarquia.","Ninguém.","Somente e-mails pessoais."],c:1,e:"“Respeitosamente” = superior; “Atenciosamente” = igual/inferior."},
+    {t:"Na Teoria das 3 idades, o arquivo permanente:",o:["Pode ser eliminado a qualquer tempo.","Tem valor secundário e não é eliminado.","É o de uso mais frequente.","É o mesmo que corrente."],c:1,e:"Permanente = valor secundário, jamais eliminado."},
+    {t:"O documento que registra o que foi tratado em uma reunião é a:",o:["Portaria.","Ata.","Certidão.","Procuração."],c:1,e:"Ata."},
+    {t:"'Recolhimento' de documentos é a passagem:",o:["Do corrente para o intermediário.","Para o arquivo permanente.","Do permanente para o corrente.","Para a eliminação."],c:1,e:"Recolhimento = envio ao permanente; transferência = corrente→intermediário."}
+  ]},
+  {mat:"Específicos",titulo:"Aula + treino: Contabilidade, finanças e GMD/GMR",aula:"Na rotina financeira: <b>contas a pagar e a receber</b>, lançamento de <b>notas fiscais</b> e pagamentos (sistema <b>Protheus</b>), <b>prestação de contas</b> (adiantamentos, relatórios de viagem), demonstrativos e contas patrimoniais. O <b>GMD</b> (Gerenciamento Matricial de <b>Despesas</b>) e o <b>GMR</b> (de <b>Receitas</b>) apoiam o planejamento financeiro do mês, o <b>fechamento de caixa</b> e a <b>previsão do orçamento anual</b>. Base contábil: <b>Ativo = Passivo + Patrimônio Líquido</b>; regime de <b>competência</b>.",qs:[
+    {t:"O GMD trata de:",o:["Receitas.","Despesas.","Estoques.","Arquivos."],c:1,e:"GMD = Gerenciamento Matricial de Despesas (GMR = Receitas)."},
+    {t:"A equação básica do patrimônio é:",o:["Ativo = Passivo − PL.","Ativo = Passivo + Patrimônio Líquido.","Passivo = Ativo + PL.","PL = Ativo + Passivo."],c:1,e:"Ativo = Passivo + Patrimônio Líquido."},
+    {t:"Pelo regime de competência, a receita/despesa é reconhecida:",o:["Quando o dinheiro entra/sai do caixa.","No fato gerador, independentemente do pagamento.","Só no fim do ano.","Nunca."],c:1,e:"Competência = no fato gerador (diferente do regime de caixa)."},
+    {t:"A prestação de contas de um adiantamento de viagem envolve:",o:["Ignorar os comprovantes.","Apresentar relatório e comprovantes das despesas.","Aumentar o valor recebido.","Emitir portaria."],c:1,e:"Prestação de contas = comprovar as despesas com relatório e documentos."}
+  ]}
+];
+
+  var tv=document.getElementById("treinos"), lastMat="";
+  TREINOS.forEach(function(tr,ti){
+    if(tr.mat!==lastMat){lastMat=tr.mat; var dv=document.createElement("h3"); dv.className="matdiv"; dv.setAttribute("data-mat",tr.mat); dv.textContent=tr.mat; tv.appendChild(dv);}
+    var card=document.createElement("div"); card.className="card"; card.style.marginTop="16px"; card.setAttribute("data-mat",tr.mat);
+    card.innerHTML='<p class="eyebrow">'+tr.mat+'</p><h3 style="margin-top:0">'+tr.titulo+'</h3><div class="aula">'+tr.aula+'</div><div class="tq" id="treino-'+ti+'"></div>';
+    tv.appendChild(card);
+    mountQs(document.getElementById("treino-"+ti),tr.qs);
+  });
+
+  /* filtro por matéria */
+  var mats=["Todos"]; TREINOS.forEach(function(t){if(mats.indexOf(t.mat)<0)mats.push(t.mat);});
+  var mf=document.getElementById("matfilter");
+  mf.innerHTML=mats.map(function(m,i){return '<button class="'+(i===0?"on":"")+'" data-m="'+m+'">'+m+'</button>';}).join("");
+  mf.addEventListener("click",function(e){
+    var b=e.target.closest("button"); if(!b)return;
+    [].forEach.call(mf.children,function(x){x.classList.remove("on");}); b.classList.add("on");
+    var m=b.getAttribute("data-m");
+    [].forEach.call(tv.children,function(c){c.style.display=(m==="Todos"||c.getAttribute("data-mat")===m)?"":"none";});
+  });
+
+  /* Banco de questões + Simulado aleatório */
+  var BANK=[];
+  [SIM2,SIM3,SIM4].forEach(function(S){S.forEach(function(q){if(q.t)BANK.push({t:q.t,o:q.o,c:q.c,e:q.e});});});
+  TREINOS.forEach(function(tr){tr.qs.forEach(function(q){BANK.push({t:q.t,o:q.o,c:q.c,e:q.e});});});
+  if(window.__SIM1)window.__SIM1.forEach(function(q){BANK.push(q);});
+  var agBtn=document.getElementById("aleatorio-gerar");
+  if(agBtn)agBtn.onclick=function(){
+    var pool=BANK.slice();
+    for(var i=pool.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=pool[i];pool[i]=pool[j];pool[j]=t;}
+    mountList(document.getElementById("quiz-aleatorio"),pool.slice(0,Math.min(40,pool.length)));
+    agBtn.textContent="Gerar outras 40 questões";
+    var s=document.getElementById("aleatorio"); if(s)s.scrollIntoView({behavior:"smooth",block:"start"});
+  };
+
+  /* Banco só de Conhecimentos Específicos */
+  var BANK_ESPEC=[];
+  TREINOS.forEach(function(tr){if(tr.mat==="Específicos"&&tr.titulo.indexOf("Informática")<0)tr.qs.forEach(function(q){BANK_ESPEC.push({t:q.t,o:q.o,c:q.c,e:q.e});});});
+  [SIM2,SIM3,SIM4].forEach(function(S){S.filter(function(q){return q.t;}).slice(-10).forEach(function(q){BANK_ESPEC.push({t:q.t,o:q.o,c:q.c,e:q.e});});});
+  if(window.__SIM1)window.__SIM1.slice(-10).forEach(function(q){BANK_ESPEC.push(q);});
+  var egBtn=document.getElementById("espec-gerar");
+  if(egBtn)egBtn.onclick=function(){
+    var pool=BANK_ESPEC.slice();
+    for(var i=pool.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=pool[i];pool[i]=pool[j];pool[j]=t;}
+    mountQs(document.getElementById("espec-list"),pool.slice(0,Math.min(10,pool.length)));
+    egBtn.textContent="Gerar outras 10 de Específicos";
+    var s=document.getElementById("especifico"); if(s)s.scrollIntoView({behavior:"smooth",block:"start"});
+  };
+})();
+</script>
+<script>
+/* ===== Sincronização do progresso com a nuvem (Supabase) ===== */
+window.DMAE_syncPull=async function(){
+  if(!window.sb)return;
+  var uid="";try{uid=localStorage.getItem("dmae:uid")||"";}catch(e){}
+  if(!uid)return;
+  try{
+    var r=await window.sb.from("progress").select("data").eq("user_id",uid).eq("slug",window.DMAE_SLUG||"dmae").maybeSingle();
+    if(r.error)return;
+    if(r.data&&r.data.data){
+      var d=r.data.data;
+      try{
+        if(d.scores)localStorage.setItem(window.DMAE_KEY("scores"),JSON.stringify(d.scores));
+        if(d.caderno)localStorage.setItem(window.DMAE_KEY("cadernoerros"),JSON.stringify(d.caderno));
+        if(d.plano)localStorage.setItem(window.DMAE_KEY("plano"),JSON.stringify(d.plano));
+      }catch(e){}
+      if(window.renderDesempenho)window.renderDesempenho();
+      if(window.renderCaderno)window.renderCaderno();
+      if(window.renderProxima)window.renderProxima();
+      if(window.DMAE_planoApply)window.DMAE_planoApply();
+    } else {
+      /* sem linha na nuvem: sobe o que já existir localmente (migração) */
+      if(window.DMAE_syncPush)window.DMAE_syncPush(true);
+    }
+  }catch(e){}
+};
+(function(){
+  var t=null;
+  window.DMAE_syncPush=function(now){
+    if(!window.sb)return;
+    clearTimeout(t);
+    t=setTimeout(function(){
+      var uid="";try{uid=localStorage.getItem("dmae:uid")||"";}catch(e){}
+      if(!uid)return;
+      var scores=[],caderno=[],plano={};
+      try{scores=JSON.parse(localStorage.getItem(window.DMAE_KEY("scores"))||"[]");}catch(e){}
+      try{caderno=JSON.parse(localStorage.getItem(window.DMAE_KEY("cadernoerros"))||"[]");}catch(e){}
+      try{plano=JSON.parse(localStorage.getItem(window.DMAE_KEY("plano"))||"{}");}catch(e){}
+      window.sb.from("progress").upsert({user_id:uid,slug:(window.DMAE_SLUG||"dmae"),data:{scores:scores,caderno:caderno,plano:plano},updated_at:new Date().toISOString()},{onConflict:"user_id,slug"}).then(function(){},function(){});
+    }, now?0:900);
+  };
+})();
+</script>
+</body>
+</html>
