@@ -1533,7 +1533,13 @@ var FC=[
 ["Crase - teste","Troque por masculino: deu 'ao' = tem crase."],
 ["'Houveram' existe?","Não, nesse sentido: haver=existir é impessoal -> 'Houve'."],
 ["Negação de 'se p então q'","'p e não q' (equivalente = contrapositiva '~q->~p')."],
-["Estratégia no dia","Não há desconto por erro: nunca deixe em branco; eliminando 2, o chute vira 50%."]
+["Estratégia no dia","Não há desconto por erro: nunca deixe em branco; eliminando 2, o chute vira 50%."],
+["Lei das parcerias (OSC)","Lei 13.019/2014: colaboração, fomento e acordo de cooperação."],
+["Acordo de cooperação","Parceria SEM repasse de recursos."],
+["Fechos oficiais","Respeitosamente (superior) / Atenciosamente (igual ou inferior)."],
+["Ata","Documento que registra uma reunião."],
+["Regra de três inversa","Grandezas opostas: mais máquinas, menos dias."],
+["Aumentar 15%","Multiplicar por 1,15."]
 ];
 (function(){
   var box=document.getElementById("fcs"); if(!box||typeof FC==="undefined")return;
@@ -1911,6 +1917,30 @@ var FC=[
     {t:"A equação básica do patrimônio é:",o:["Ativo = Passivo − PL.","Ativo = Passivo + Patrimônio Líquido.","Passivo = Ativo + PL.","PL = Ativo + Passivo."],c:1,e:"Ativo = Passivo + Patrimônio Líquido."},
     {t:"Pelo regime de competência, a receita/despesa é reconhecida:",o:["Quando o dinheiro entra/sai do caixa.","No fato gerador, independentemente do pagamento.","Só no fim do ano.","Nunca."],c:1,e:"Competência = no fato gerador (diferente do regime de caixa)."},
     {t:"A prestação de contas de um adiantamento de viagem envolve:",o:["Ignorar os comprovantes.","Apresentar relatório e comprovantes das despesas.","Aumentar o valor recebido.","Emitir portaria."],c:1,e:"Prestação de contas = comprovar as despesas com relatório e documentos."}
+  ]},
+  {mat:"Português",titulo:"Aula + treino: Interpretação e coesão",aula:"Interpretar é responder pelo que o texto <b>diz</b>, não pela sua opinião. A <b>coesão</b> amarra o texto com pronomes e conectivos: quando aparece “isso”, “ele”, “tal”, volte e ache <b>a que palavra se refere</b>. Conectivo errado muda o sentido.",qs:[
+    {t:"Numa questão de interpretação, a alternativa correta é a que:",o:["traz uma verdade do mundo real","está apoiada no que o texto afirma","amplia a ideia com “sempre/todos”","contradiz o texto"],c:1,e:"A resposta se ancora no texto."},
+    {t:"Em “O produtor recebeu o crédito; ele investiu na lavoura”, o “ele” retoma:",o:["o crédito","o produtor","a lavoura","o investimento"],c:1,e:"“Ele” retoma “o produtor” (masculino singular, quem age)."},
+    {t:"O conectivo que indica CONCLUSÃO é:",o:["porque","embora","portanto","caso"],c:2,e:"“Portanto/logo” = conclusão."},
+    {t:"Trocar “Choveu, por isso a colheita melhorou” por “Choveu, embora a colheita melhorasse”:",o:["mantém o sentido","muda o sentido (causa vira concessão)","corrige um erro","não altera nada"],c:1,e:"“Por isso” (causa/conclusão) vira “embora” (concessão) — muda o sentido."}
+  ]},
+  {mat:"Matemática",titulo:"Aula + treino: Regra de três e porcentagem",aula:"Regra de três: monte a proporção e veja se as grandezas são <b>diretas</b> (uma sobe, a outra sobe) ou <b>inversas</b> (uma sobe, a outra desce). Porcentagem: para aumentar 20%, multiplique por 1,20; para tirar 20%, por 0,80.",qs:[
+    {t:"Se 3 funcionários organizam 600 processos, quantos 5 organizam (mesmo ritmo)?",o:["800","1000","900","1200"],c:1,e:"Direta: 3→600, 5→x; x=600×5/3=1000."},
+    {t:"Um valor de R$ 400 com aumento de 15% passa a:",o:["R$ 415","R$ 460","R$ 440","R$ 340"],c:1,e:"400×1,15=460."},
+    {t:"Se 4 máquinas fazem um serviço em 9 dias, 6 máquinas fazem em (inversa):",o:["6 dias","13,5 dias","4 dias","3 dias"],c:0,e:"Inversa: 4×9=6×x → x=6."},
+    {t:"30% de 250 é:",o:["60","75","70","80"],c:1,e:"0,30×250=75."}
+  ]},
+  {mat:"Específicos",titulo:"Aula + treino: Redação oficial e documentos",aula:"A <b>redação oficial</b> (Manual da Presidência) usa o <b>padrão ofício</b> e linguagem clara, impessoal e formal. Fechos: <b>Respeitosamente</b> (a superior) e <b>Atenciosamente</b> (a igual/inferior). Documentos comuns: <b>ata</b> (registra reunião), <b>ofício/memorando</b> (comunicação), <b>portaria</b> (ato do chefe), <b>parecer</b> (opinião técnica), <b>procuração</b> (concede poderes).",qs:[
+    {t:"O fecho “Atenciosamente” é usado para:",o:["autoridades superiores","autoridades de igual ou inferior hierarquia","qualquer pessoa","apenas e-mails pessoais"],c:1,e:"“Respeitosamente” = superior; “Atenciosamente” = igual/inferior."},
+    {t:"O documento que registra o que foi tratado numa reunião é a:",o:["portaria","ata","certidão","procuração"],c:1,e:"Ata registra a reunião."},
+    {t:"Sobre a redação oficial, assinale a correta.",o:["Deve usar linguagem rebuscada e pessoal.","Deve ser clara, impessoal e formal.","Aceita gírias.","Não segue padrão."],c:1,e:"Redação oficial: clareza, impessoalidade e formalidade."},
+    {t:"O documento que concede poderes para alguém agir em nome de outrem é a:",o:["ata","procuração","certidão","portaria"],c:1,e:"Procuração outorga poderes."}
+  ]},
+  {mat:"Específicos",titulo:"Aula + treino: Convênios e parcerias (Lei 13.019/2014)",aula:"Quando o poder público faz parceria com <b>organizações da sociedade civil</b> (OSC), aplica-se a <b>Lei 13.019/2014</b>. Os instrumentos são: <b>termo de colaboração</b> (proposto pela administração), <b>termo de fomento</b> (proposto pela OSC) e <b>acordo de cooperação</b> (sem repasse de dinheiro). Em regra, exige-se <b>chamamento público</b>.",qs:[
+    {t:"As parcerias entre a administração e organizações da sociedade civil são regidas pela:",o:["Lei 8.666/93","Lei 14.133/2021","Lei 13.019/2014","Lei 8.112/90"],c:2,e:"Lei 13.019/2014 (MROSC)."},
+    {t:"O instrumento SEM repasse de recursos financeiros é o:",o:["termo de colaboração","termo de fomento","acordo de cooperação","contrato"],c:2,e:"Acordo de cooperação não envolve repasse."},
+    {t:"Em regra, a seleção da OSC parceira ocorre por:",o:["indicação política","chamamento público","sorteio","ordem de chegada"],c:1,e:"Chamamento público é a regra."},
+    {t:"A Lei 13.019/2014 aplica-se a:",o:["compras de material","parcerias com organizações da sociedade civil","folha de pagamento","licitação de obras"],c:1,e:"Trata das parcerias com OSC."}
   ]}
 ];
 
